@@ -5,4 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :posts, dependent: :destroy
+  has_one :profile
+
+  def prepare_profile
+    profile || build_profile
+  end
 end
