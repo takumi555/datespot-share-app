@@ -4,7 +4,7 @@
   %div
     = post.title
   - if post.images&.attached?
-    = image_tag post.images.first
+    = image_tag post.images.first, class: 'w-25'
   %div
     = post.prefecture 
   %div
