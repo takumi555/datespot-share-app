@@ -1,6 +1,14 @@
-= @post.title 
+%div
+  = @post.title 
 - if @post.images&.attached?
   - @post.images.each do |image|
     = image_tag image
-= link_to '編集', edit_post_path(@post)
-= link_to '削除', post_path(@post), data: { method: 'delete', confirm: '本当に削除してよろしいですか？' }
+%div
+  = link_to '編集', edit_post_path(@post)
+  = link_to '削除', post_path(@post), data: { method: 'delete', confirm: '本当に削除してよろしいですか？' }
+
+%p Comment
+- @comments.each do |comment|
+  %p= comment.content
+
+= link_to 'コメントする', new_post_comment_path(@post.id)
