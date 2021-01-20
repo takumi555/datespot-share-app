@@ -10,5 +10,6 @@
 %p Comment
 - @comments.each do |comment|
   %p= comment.content
-
-= link_to 'コメントする', new_post_comment_path(@post.id)
+  = link_to '削除', post_comment_path(post_id: @post.id, id: comment),data: { method: 'delete', confirm: 'コメントを削除しますか？' }
+%div
+  = link_to 'コメントする', new_post_comment_path(@post.id)

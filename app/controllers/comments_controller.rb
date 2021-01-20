@@ -8,10 +8,10 @@ class CommentsController < ApplicationController
   end
 
   def create
-    post = Post.find(params[:post_id])
-    @comment = post.comments.build(comment_params.merge!(user_id: current_user.id))
+    @post = Post.find(params[:post_id])
+    @comment = @post.comments.build(comment_params.merge!(user_id: current_user.id))
     if @comment.save!
-      redirect_to post_path(post), notice: 'コメントできました'
+      redirect_to post_path(@post), notice: 'コメントできました'
     else
       flash.now[:error] = 'コメントできませんでした'
       render :new
@@ -20,6 +20,11 @@ class CommentsController < ApplicationController
   end
 
   def destroy
+
+    @post = Post.find(params[:post_id])
+    @comment = @post.comments.find(params[:id])
+    @comment.destroy!
+    redirect_to post_path(@post)
   end
 
   private
