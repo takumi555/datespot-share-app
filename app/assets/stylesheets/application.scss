@@ -13,5 +13,31 @@
  *= require_tree .
  *= require_self
  */
+
+ @import 'header';
+ @import 'footer';
+
+html,body {
+  height: 100%;
+  text-decoration: none;
+ 
+}
+
+.main_container {
+   padding-bottom: 90px;
+   
+ }
+ 
+.wrap {
+  width: 100%;
+  position: relative;
+  min-height: 100%;
+}
+
+.clear::after{
+  content:"";
+  clear: both;
+  display: block;
+}
  @import "bootstrap";
  

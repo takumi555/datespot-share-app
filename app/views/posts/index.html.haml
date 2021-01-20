@@ -1,21 +1,39 @@
-%p.text-primary 新着投稿一覧
+.container
+  .content_left
+    %h4 新着投稿一覧
 
-- @posts.each do |post|
-  %div
-    = post.title
-  - if post.images&.attached?
-    = image_tag post.images.first, class: 'w-25'
-  %div
-    = post.prefecture 
-  %div
-    = post.area 
-  %div 
-    = post.content 
-  %div
-    = post.url
-  = link_to '詳細', post_path(id: post.id)
+    - @posts.each do |post|
+      .post_container.clear
+        .post_container_left
+          - if post.images&.attached?
+            = image_tag post.images.first, class: 'image'
+        .post_container_right
+          .post_title
+            = post.title
+          .post_prefecture
+            = post.prefecture 
+          .post_area
+            = post.area 
+          .post_content
+            = post.content 
+          = link_to '詳細', post_path(id: post.id), class: 'link_detail'
 
-%div
-  = link_to '新規投稿',new_post_path
-%div
-  = link_to 'ログアウト', destroy_user_session_path, data: { method: 'delete', confirm: 'ログアウトしますか？' }
+
+  .content_right
+    .new_post_link
+      = link_to '新規投稿',new_post_path, class: 'new_post_link_text'
+    .area_wrap
+      %p エリアから探す
+      .area_container
+        = link_to '東京', '#'
+        = link_to '神奈川', '#'
+      .area_container
+        = link_to '千葉', '#'
+        = link_to '埼玉', '#'
+    .tag_wrap
+      %p 人気タグ
+      %p #記念日　＃カフェ　＃レストラン
+      = link_to 'タグ一覧へ', '#'
+
+    %div
+      = link_to 'ログアウト', destroy_user_session_path, data: { method: 'delete', confirm: 'ログアウトしますか？' }
