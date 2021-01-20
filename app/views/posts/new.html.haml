@@ -1,0 +1,25 @@
+= form_with model: @post do |f|
+  %div
+    = f.label :title, 'Title'
+  %div
+    = f.text_field :title
+  %div 
+
+  %div 
+    = f.label :prefecture, '都道府県'
+  %div
+    = f.select :prefecture, [['東京都', '東京都'], ['神奈川県','神奈川県'],['千葉県','千葉県'],['埼玉県','埼玉県'],['その他','その他']], include_blank: '選択して下さい'
+  %div
+    = f.label :area, '場所'
+  %div
+    = f.text_field :area
+  %div
+    = f.label :Description
+  %div
+    = f.text_area :content
+  %div
+    = f.label :url, 'URL'
+  %div
+    = f.text_field :url
+  %div
+    = f.submit 'Submit'

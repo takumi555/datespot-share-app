@@ -1,1 +1,16 @@
-%h2.text-primary hello
+%p.text-primary 新着投稿一覧
+
+- @posts.each do |post|
+  %div
+    = post.title 
+  %div
+    = post.prefecture 
+  %div
+    = post.area 
+  %div 
+    = post.content 
+  %div
+    = post.url
+
+
+= link_to '新規投稿',new_post_path
