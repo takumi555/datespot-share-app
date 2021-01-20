@@ -3,8 +3,10 @@
     = f.label :title, 'Title'
   %div
     = f.text_field :title
-  %div 
-
+  %div
+    = f.label :image, '画像'
+  %div
+    = f.file_field :images, multiple: true
   %div 
     = f.label :prefecture, '都道府県'
   %div

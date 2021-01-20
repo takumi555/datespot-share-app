@@ -2,7 +2,9 @@
 
 - @posts.each do |post|
   %div
-    = post.title 
+    = post.title
+  - if post.images&.attached?
+    = image_tag post.images.first
   %div
     = post.prefecture 
   %div
