@@ -11,6 +11,7 @@
     = post.content 
   %div
     = post.url
+  = link_to '詳細', post_path(id: post.id)
 
-
-= link_to '新規投稿',new_post_path
+%div
+  = link_to '新規投稿',new_post_path
