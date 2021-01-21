@@ -1,0 +1,15 @@
+.post_container.clear
+  .post_container_left
+    - if post.images&.attached?
+      = image_tag post.images.first, class: 'image'
+  .post_container_right
+    .post_title
+      = post.title
+    .post_prefecture
+      = post.prefecture 
+    .post_area
+      = post.area 
+    .post_content.box_read
+      = post.content 
+    = link_to '詳細', post_path(id: post.id), class: 'link_detail'
+

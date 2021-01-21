@@ -13,5 +13,37 @@
  *= require_tree .
  *= require_self
  */
+
+ @import 'header';
+ @import 'footer';
+ @import 'devise';
+ @import 'profile';
+
+html,body {
+  text-decoration: none;
+  height: 100%;
+  margin: 0;
+ 
+}
+
+.main_container {
+   min-height: 100%;
+   margin-bottom: -100px;
+   
+ }
+
+ .push {
+   height: 100px;
+ }
+
+.clear::after{
+  content:"";
+  clear: both;
+  display: block;
+}
+.submit_btn {
+  background-color:  #eb5e6b;
+  color: white;
+}
  @import "bootstrap";
  

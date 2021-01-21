@@ -1,7 +1,7 @@
 class ProfilesController < ApplicationController
   def show
     @profile = current_user.prepare_profile
-    @post = Post.where(user_id: current_user.id )
+    @posts = Post.where(user_id: current_user.id )
   end
 
   def update

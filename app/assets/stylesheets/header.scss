@@ -1,0 +1,32 @@
+header {
+  background-color: #082B48;
+  color: white;
+}
+
+.header_container {
+  padding: 12px 0;
+  width: 95%;
+  margin: 0 auto;
+}
+
+
+.header_left {
+  float: left;
+
+  .header_title {
+    font-size: 25px;
+    letter-spacing: 3px;
+    
+  }
+}
+
+.header_right {
+  float: right;
+}
+
+.header_user_icon img {
+  width: 50px;
+  height: 50px;
+  border-radius: 99px;
+}
+
