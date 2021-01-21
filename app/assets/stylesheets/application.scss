@@ -16,28 +16,34 @@
 
  @import 'header';
  @import 'footer';
+ @import 'devise';
+ @import 'profile';
 
 html,body {
-  height: 100%;
   text-decoration: none;
+  height: 100%;
+  margin: 0;
  
 }
 
 .main_container {
-   padding-bottom: 90px;
+   min-height: 100%;
+   margin-bottom: -100px;
    
  }
- 
-.wrap {
-  width: 100%;
-  position: relative;
-  min-height: 100%;
-}
+
+ .push {
+   height: 100px;
+ }
 
 .clear::after{
   content:"";
   clear: both;
   display: block;
+}
+.submit_btn {
+  background-color:  #eb5e6b;
+  color: white;
 }
  @import "bootstrap";
  

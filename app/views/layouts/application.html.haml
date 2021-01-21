@@ -8,21 +8,22 @@
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    .wrap
-      %header
-        .header_container.clear
-          .header_left
-            .header_title
-              %p 東京デート日和
-          .header_right
-            .header_user_icon
+    %header
+      %div.header_container.clear
+        .header_left
+          .header_title
+            %p 東京デート日和
+        .header_right
+          .header_user_icon
+            - if user_signed_in?
               - if current_user.profile&.avatar&.attached?
                 = image_tag current_user.profile.avatar
       
-      .main_container
-        %p.notice= notice
-        %p.alert= alert
-        = yield
-      %footer
-        .footer_text
-          %p Copyright 2021 takumi
+    .main_container
+      %p.notice= notice
+      %p.alert= alert
+      = yield
+      %div.push
+
+    
+    

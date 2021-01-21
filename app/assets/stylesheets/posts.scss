@@ -1,12 +1,18 @@
+.container {
+  width: 99%;
+}
+
 .content_left {
-  width: 70%;
+  width: 75%;
   float: left;
+  border-right: 1px solid lightgray;
   
 
 }
 .content_right {
-  width: 30%;
+  width: 22%;
   float: right;
+  height: 1000px;
   
 }
 
@@ -14,6 +20,7 @@
   background-color: #eb5e6b;
   border-radius: 10px;
   margin: 30px 10px;
+  margin-top: 0px;
   height: 100px;
 
   a {
@@ -85,3 +92,54 @@
 
 }
 
+.box_read {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/*===============================
+post/show
+=================================*/
+.post_show_container {
+  width: 60%;
+  margin-left: 50px;
+}
+.post_show_title {
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  float: left;
+
+}
+.show_image {
+  width: 400px;
+  height: 300px;
+  border-radius: 5px;
+  margin: 20px 0;
+
+}
+
+.post_content {
+  margin: 20px 0;
+}
+.post_url {
+  margin-bottom: 30px;
+}
+
+.link_container a {
+  color: lightgray;
+  float: right;
+}
+/*===============================
+post/new
+=================================*/
+
+.form {
+  width: 50%;
+  background: #F4F4F4;
+  border-radius: 10px; 
+  border: none;   
+  height: 40px;
+  margin-bottom: 8px;
+  
+}

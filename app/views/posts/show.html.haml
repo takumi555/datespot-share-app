@@ -1,15 +1,30 @@
-%div
-  = @post.title 
-- if @post.images&.attached?
-  - @post.images.each do |image|
-    = image_tag image
-%div
-  = link_to '編集', edit_post_path(@post)
-  = link_to '削除', post_path(@post), data: { method: 'delete', confirm: '本当に削除してよろしいですか？' }
+.post_show_container
+  .post_show_title
+    = @post.title 
+  .link_container
+    
+    = link_to '削除', post_path(@post), data: { method: 'delete', confirm: '本当に削除してよろしいですか？' }
+    = link_to '編集', edit_post_path(@post)
+  .clear
+  - if @post.images&.attached?
+    - @post.images.each do |image|
+      = image_tag image, class: 'show_image'
+  .post_show_place
+    = '場所▶︎'
+    = @post.prefecture
+    = @post.area
+  .post_content
+    = '紹介文'
+    %br
+    = @post.content
 
-%p Comment
-- @comments.each do |comment|
-  %p= comment.content
-  = link_to '削除', post_comment_path(post_id: @post.id, id: comment),data: { method: 'delete', confirm: 'コメントを削除しますか？' }
-%div
-  = link_to 'コメントする', new_post_comment_path(@post.id)
+  .post_url 
+    = 'URL▶︎'
+    = @post.url
+  
+  %p Comment
+  - @comments.each do |comment|
+    %p= comment.content
+    = link_to '削除', post_comment_path(post_id: @post.id, id: comment),data: { method: 'delete', confirm: 'コメントを削除しますか？' }
+  %div
+    = link_to 'コメントする', new_post_comment_path(@post.id)

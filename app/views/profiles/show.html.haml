@@ -1,31 +1,16 @@
-%p プロフィール
-%div
-  = current_user.username
-%div
-  = link_to '登録内容変更', edit_user_registration_path
+.container
+  .profile_username
+    = current_user.username
 
-- if current_user.profile&.avatar&.attached?
-  = image_tag current_user.profile.avatar,class: 'w-25'
+  - if current_user.profile&.avatar&.attached?
+    = image_tag current_user.profile.avatar,class: 'profile_avatar'
 
-= form_with(model: @profile, url: profile_path, method: 'put', local: true ) do |f|
-  %div 
-    = f.file_field :avatar
-  %div
-    = f.submit 'submit'
-%p あなたの投稿一覧
+  = form_with(model: @profile, url: profile_path, method: 'put', local: true ) do |f|
+    %div 
+      = f.file_field :avatar
+    %div
+      = f.submit 'submit', class: 'mt-2 btn submit_btn'
 
-- @post.each do |post|
-  %div
-    = post.title
-  - if post.images&.attached?
-    = image_tag post.images.first,class: 'w-25'
-  %div
-    = post.prefecture 
-  %div
-    = post.area 
-  %div 
-    = post.content 
-  %div
-    = post.url
-  = link_to '詳細', post_path(id: post.id)
-  
+  %h4.mt-3 あなたの投稿一覧
+  - @posts.each do |post|
+    = render 'commons/post', post: post
