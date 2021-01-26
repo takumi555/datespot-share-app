@@ -12,5 +12,6 @@
       = f.submit 'submit', class: 'mt-2 btn submit_btn'
 
   %h4.mt-3 あなたの投稿一覧
-  - @posts.each do |post|
-    = render 'commons/post', post: post
+  .profile_post_container
+    - @posts.each do |post|
+      = render 'commons/post', post: post

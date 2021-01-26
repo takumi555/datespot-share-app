@@ -5,6 +5,17 @@
   .post_container_right
     .post_title
       = post.title
+    - if current_user&.has_liked?(post)
+      .post_heart.active-heart{class: "#{post.id}" , id: "#{post.id}"}
+        = image_tag '赤ハート.png'
+      .post_heart.hidden.inactive-heart{class: "#{post.id}" , id: "#{post.id}"}
+        = image_tag '白ハート.png'
+    - else 
+      .post_heart.inactive-heart{class: "#{post.id}" , id: "#{post.id}"}
+        = image_tag '白ハート.png'
+      .post_heart.hidden.active-heart{class: "#{post.id}" , id: "#{post.id}"}
+        = image_tag '赤ハート.png'
+    .clear
     .post_prefecture
       = post.prefecture 
     .post_area
@@ -13,3 +24,4 @@
       = post.content 
     = link_to '詳細', post_path(id: post.id), class: 'link_detail'
 
+= javascript_pack_tag 'post_index'
