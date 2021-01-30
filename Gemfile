@@ -26,6 +26,7 @@ gem "jquery-rails"
 gem "jquery-ui-rails"
 gem 'devise'
 gem 'haml-rails'
+gem 'active_model_serializers'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
