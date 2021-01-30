@@ -1,5 +1,12 @@
 .new_post_link
   = link_to '新規投稿',new_post_path, class: 'new_post_link_text'
+
+.search_form.mb-3
+  %p 検索する
+  = form_tag(search_index_path,:method => 'get') do
+    = text_field_tag :search, '', class: 'form w-100'
+    = submit_tag 'Search', :name => nil, class: 'btn submit_btn w-100 mt-2'
+
 .area_wrap
   %p エリアから探す
   .area_container
@@ -23,3 +30,4 @@
   = link_to 'いいねした投稿一覧',favorites_path, data: {"turbolinks" => false}
 %div 
   = link_to '人気投稿を見る',populars_path, data: {"turbolinks" => false}
+

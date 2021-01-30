@@ -104,6 +104,19 @@
   float: right;
   margin-right: 20px;
 }
+
+.user_info {
+  margin-top: 10px;
+  .post_user_avatar {
+    width: 30px;
+    border-radius: 100%;
+    float: left;
+  }
+  .post_username {
+    margin-left: 40px;
+    padding-top: 3px;
+  }
+}
 /*===============================
 post/show
 =================================*/

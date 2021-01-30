@@ -23,5 +23,8 @@
     .post_content.box_read
       = post.content 
     = link_to '詳細', post_path(id: post.id), data: {"turbolinks" => false}, class: 'link_detail'
+    .user_info
+      = image_tag post.user.avatar_image, class: 'post_user_avatar'
+      %p.post_username=  post.user.username
 
 = javascript_pack_tag 'post_index'
