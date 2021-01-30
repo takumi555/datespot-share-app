@@ -20,6 +20,7 @@ const appendNewComment = (comment) => {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  
   const dataset = $('#post-show').data()
   const postId = dataset.postId
 

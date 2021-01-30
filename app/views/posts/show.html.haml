@@ -10,7 +10,7 @@
   .clear
   .link_container
     = link_to '編集', edit_post_path(@post)
-    = link_to '削除', post_path(@post), data: { method: 'delete', confirm: '本当に削除してよろしいですか？' }
+    = link_to '削除/', post_path(@post), data: { method: 'delete', confirm: '本当に削除してよろしいですか？' }
   - if @post.images&.attached?
     - @post.images.each do |image|
       = image_tag image, class: 'show_image'
@@ -26,10 +26,11 @@
     = @post.content
 
   .post_url
-    %p.post_url_description URLとか
+    %p.post_url_description URL
     = @post.url
   
-  %p.comment_index Comment
+  %p.comment_index コメント
+  
   .comments-container
 
   .comment_post_form
@@ -37,4 +38,5 @@
     %div
       .btn.add_comment_btn.submit_btn
         コメント
+
 = javascript_pack_tag 'post_show'

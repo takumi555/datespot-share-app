@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   
   resources :favorites, only: [:index]
   resource :profile, only: [:show, :update]
+
+  resources :populars, only: [:index]
 end
