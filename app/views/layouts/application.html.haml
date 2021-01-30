@@ -3,6 +3,7 @@
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %title DatespotShareApp
+    = favicon_link_tag('favicon.png')
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
@@ -12,7 +13,7 @@
       %div.header_container.clear
         .header_left
           .header_title
-            %p 東京デート日和
+            = image_tag 'ロゴ.png', class: 'title'
         .header_right
           .header_user_icon
             - if user_signed_in?
@@ -23,7 +24,5 @@
       %p.notice= notice
       %p.alert= alert
       = yield
-      %div.push
 
-    
     

@@ -6,7 +6,6 @@
   width: 75%;
   float: left;
   border-right: 1px solid lightgray;
-  
 
 }
 .content_right {
@@ -81,6 +80,7 @@
       font-size: 20px;
       font-weight: bold;
       margin-bottom: 3px;
+      float: left;
     }
 
     .link_detail {
@@ -97,11 +97,17 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+.post_heart img{
+  width: 30px;
+  float: right;
+  margin-right: 20px;
+}
 /*===============================
 post/show
 =================================*/
 .post_show_container {
-  width: 60%;
+  width: 50%;
   margin-left: 50px;
 }
 .post_show_title {
@@ -128,7 +134,16 @@ post/show
 
 .link_container a {
   color: lightgray;
+  
+  
+}
+
+.post_show_heart img{
+  width: 30px;
+  height: 30px;
   float: right;
+  margin-top: 5px;
+  
 }
 /*===============================
 post/new
@@ -142,4 +157,8 @@ post/new
   height: 40px;
   margin-bottom: 8px;
   
+}
+
+.favorite_container {
+  width: 60%;
 }

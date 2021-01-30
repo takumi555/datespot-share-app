@@ -1,30 +1,38 @@
-.post_show_container
+.post_show_container#post-show{data: {post_id: @post.id}}
   .post_show_title
     = @post.title 
+
+  .post_show_heart.hidden.active-heart
+    = image_tag '赤ハート.png'
+  .post_show_heart.hidden.inactive-heart
+    = image_tag '白ハート.png'
+
+  .clear
   .link_container
-    
     = link_to '削除', post_path(@post), data: { method: 'delete', confirm: '本当に削除してよろしいですか？' }
     = link_to '編集', edit_post_path(@post)
-  .clear
   - if @post.images&.attached?
     - @post.images.each do |image|
       = image_tag image, class: 'show_image'
+
   .post_show_place
-    = '場所▶︎'
+    %p【場所】
     = @post.prefecture
     = @post.area
+    
   .post_content
-    = '紹介文'
-    %br
+    %p【説明】
     = @post.content
 
   .post_url 
-    = 'URL▶︎'
+    %p【URLとか】
     = @post.url
   
-  %p Comment
+  %p 【Comment】
   - @comments.each do |comment|
     %p= comment.content
     = link_to '削除', post_comment_path(post_id: @post.id, id: comment),data: { method: 'delete', confirm: 'コメントを削除しますか？' }
   %div
     = link_to 'コメントする', new_post_comment_path(@post.id)
+
+= javascript_pack_tag 'post_show'
