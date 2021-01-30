@@ -5,8 +5,7 @@ import { csrfToken } from 'rails-ujs'
 axios.defaults.headers.common['X-CSRF-Token'] = csrfToken()
 
 document.addEventListener('DOMContentLoaded', () => {
-
-
+  
     $('.inactive-heart').on('click', (e) => {
       e.preventDefault();
       const id = $(e.currentTarget).attr('id')
@@ -28,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const id = $(e.currentTarget).attr('id')
       axios.delete(`/posts/${id}/like`)
         .then((response) => {
-          debugger
           if (response.data.status === 'ok') {
             $(`.active-heart.${id}`).addClass('hidden')
             $(`.inactive-heart.${id}`).removeClass('hidden')

@@ -1,0 +1,4 @@
+.favorite_container
+  %p いいねした投稿一覧
+  - @posts.each do |post|
+    = render 'commons/post', post: post
