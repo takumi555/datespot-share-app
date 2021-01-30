@@ -1,4 +1,8 @@
-.favorite_container
-  %p いいねした投稿一覧
-  - @posts.each do |post|
-    = render 'commons/post', post: post
+.container
+  .content_right
+    = render 'commons/content_right'
+
+  .content_left
+    %h4 いいねした投稿
+    - @posts.each do |post|
+      = render 'commons/post', post: post

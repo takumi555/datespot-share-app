@@ -5,13 +5,16 @@
   - if current_user.profile&.avatar&.attached?
     = image_tag current_user.profile.avatar,class: 'profile_avatar'
 
-  = form_with(model: @profile, url: profile_path, method: 'put', local: true ) do |f|
-    %div 
-      = f.file_field :avatar
-    %div
-      = f.submit 'submit', class: 'mt-2 btn submit_btn'
+  .avatar_form.hidden
+    = form_with(model: @profile, url: profile_path, method: 'put', local: true ) do |f|
+      %div 
+        = f.file_field :avatar
+      %div
+        = f.submit 'submit', class: 'mt-2 btn submit_btn'
 
   %h4.mt-3 あなたの投稿一覧
   .profile_post_container
     - @posts.each do |post|
       = render 'commons/post', post: post
+
+= javascript_pack_tag 'profile'

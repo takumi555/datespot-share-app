@@ -4,10 +4,12 @@ Rails.application.routes.draw do
   root to: 'posts#index'
 
   resources :posts, only: [:index, :new, :create, :show, :edit, :update, :destroy] do
-    resources :comments, only: [:new, :create, :destroy]
+    resources :comments, only: [:index, :create, :destroy]
     resource :like, only: [:show, :create, :destroy]
   end
   
   resources :favorites, only: [:index]
   resource :profile, only: [:show, :update]
+
+  resources :populars, only: [:index]
 end

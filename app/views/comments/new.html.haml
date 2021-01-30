@@ -1,8 +1,0 @@
-コメント投稿
-= form_with(model: @comment, url: post_comments_path(@comment.post), local: true) do |f|
-  %div
-    = f.label :content
-  %div
-    = f.text_area :content
-  %div 
-    = f.submit 'submit'

@@ -1,22 +1,17 @@
 class CommentsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :destroy]
 
-  def new
+  def index
     post = Post.find(params[:post_id])
-    @comment = post.comments.build
-
+    comments = post.comments
+    render json: comments
   end
 
   def create
     @post = Post.find(params[:post_id])
     @comment = @post.comments.build(comment_params.merge!(user_id: current_user.id))
-    if @comment.save!
-      redirect_to post_path(@post), notice: 'コメントできました'
-    else
-      flash.now[:error] = 'コメントできませんでした'
-      render :new
-    end
-
+    @comment.save!
+    render json: @comment
   end
 
   def destroy
