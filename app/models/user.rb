@@ -19,4 +19,12 @@ class User < ApplicationRecord
   def has_liked?(post)
     likes.exists?(post_id: post.id)
   end
+
+  def avatar_image
+    if profile&.avatar&.attached?
+      profile.avatar
+    else
+      'nice-hiyoko.png'
+    end
+  end
 end

@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   resource :profile, only: [:show, :update]
 
   resources :populars, only: [:index]
+  resources :search, only: [:index]
 end

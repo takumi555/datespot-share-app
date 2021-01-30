@@ -9,4 +9,13 @@ class Post < ApplicationRecord
   belongs_to :user
 
   has_many_attached :images
+
+
+  def self.search(search)
+    if search
+      Post.where(['title LIKE ? OR content LIKE ? OR prefecture LIKE ? OR area LIKE ?', "%#{search}%","%#{search}%","%#{search}%","%#{search}%"])
+    else
+      Post.all
+    end
+  end
 end
