@@ -13,7 +13,7 @@
       %div.header_container.clear
         .header_left
           .header_title
-            = image_tag 'ロゴ.png', class: 'title'
+            = link_to image_tag('ロゴ.png'), root_path, class: 'title'
         .header_right
           .header_user_icon
             - if user_signed_in?

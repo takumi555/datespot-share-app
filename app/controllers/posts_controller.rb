@@ -1,9 +1,15 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
 
-
   def index
-    @posts = Post.all
+
+    if params[:tag_id].present?
+      @tag = Tag.find(params[:tag_id])
+      @posts = @tag.posts
+    else
+      @posts = Post.all
+    end
+    @tag_lists = Tag.all.limit(3)
   end
 
   def show
@@ -16,21 +22,28 @@ class PostsController < ApplicationController
 
   def create
     @post = current_user.posts.build(post_params)
-    if @post.save
+    tag_list = params[:post][:tag_name].split(',')
+    binding.pry
+    if  @post.save
+        @post.save_posts(tag_list)
       redirect_to posts_path, notice: '投稿が完了しました'
     else
       flash.now[:error] = '投稿できませんでした'
       render :new
     end
+    
   end
 
   def edit
     @post = Post.find(params[:id])
+    @tag_list = @post.tags.pluck(:tag_name).join(',')
   end
 
   def update
     @post = Post.find(params[:id])
+    tag_list = params[:post][:tag_name].split(',')
     if @post.update(post_params)
+      @post.save_posts(tag_list)
       redirect_to posts_path, notice: '更新が完了しました'
     else
       flash.now[:error] = '更新できませんでした'
