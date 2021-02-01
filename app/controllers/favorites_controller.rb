@@ -3,5 +3,6 @@ class FavoritesController < ApplicationController
   
   def index
     @posts = current_user.favorite_posts
+    @tag_lists = Tag.all.limit(3)
   end
 end

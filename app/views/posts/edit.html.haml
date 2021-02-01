@@ -25,4 +25,8 @@
     %div
       = f.text_field :url, class: 'form'
     %div
+      = f.label :tag_name, 'タグ'
+    %div
+      = f.text_field :tag_name,value: @tag_list, class: 'form', placeholder: 'タグをカンマ区切りで5つまで入力'
+    %div
       = f.submit 'Submit', class: 'mt-3 btn submit_btn'

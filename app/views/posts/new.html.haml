@@ -1,5 +1,5 @@
 .container
-  = form_with model: @post do |f|
+  = form_with(model:[@tag,@post], local: true) do |f|
     %div
       = f.label :title, 'タイトル'
     %div
@@ -24,5 +24,9 @@
       = f.label :url, 'URL'
     %div
       = f.text_field :url, class: 'form'
+    %div
+      = f.label :tag_name, 'タグ'
+    %div
+      = f.text_field :tag_name, class: 'form', placeholder: 'タグをカンマ区切りで5つまで入力'
     %div
       = f.submit 'Submit', class: 'mt-3 btn  submit_btn'
