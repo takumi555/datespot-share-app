@@ -10,11 +10,11 @@
 .area_wrap
   %p エリアから探す
   .area_container
-    = link_to '東京', '#'
-    = link_to '神奈川', '#'
+    = link_to '東京', prefectures_path(prefecture: '東京都')
+    = link_to '神奈川', prefectures_path(prefecture: '神奈川県')
   .area_container
-    = link_to '千葉', '#'
-    = link_to '埼玉', '#'
+    = link_to '千葉', prefectures_path(prefecture: '千葉県')
+    = link_to '埼玉', prefectures_path(prefecture: '埼玉県')
 .tag_wrap
   %p タグで探す
   - @tag_lists.each do |list|

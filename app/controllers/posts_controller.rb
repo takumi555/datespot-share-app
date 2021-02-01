@@ -23,7 +23,6 @@ class PostsController < ApplicationController
   def create
     @post = current_user.posts.build(post_params)
     tag_list = params[:post][:tag_name].split(',')
-    binding.pry
     if  @post.save
         @post.save_posts(tag_list)
       redirect_to posts_path, notice: '投稿が完了しました'

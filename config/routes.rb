@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   resources :populars, only: [:index]
   resources :search, only: [:index]
   resources :tags, only: [:index]
+  resources :prefectures, only: [:index, :show]
 end
