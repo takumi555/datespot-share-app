@@ -1,0 +1,7 @@
+.container 
+  .content_right
+    = render 'commons/content_right'
+  .content_left
+    - @posts.each do |post|
+      = render 'commons/post', post: post
+    
