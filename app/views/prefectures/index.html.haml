@@ -1,0 +1,9 @@
+.container 
+  .content_right
+    = render 'commons/content_right'
+  .content_left
+    = @params
+    の検索結果
+    - @posts.each do |post|
+      = render 'commons/post', post: post
+    

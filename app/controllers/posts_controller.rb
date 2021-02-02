@@ -9,11 +9,12 @@ class PostsController < ApplicationController
     else
       @posts = Post.all
     end
-    @tag_lists = Tag.all.limit(3)
+    @tag_lists = Tag.all.limit(15)
   end
 
   def show
     @post = Post.find(params[:id])
+    @tag_list = @post.tags.pluck(:tag_name).join(',')
   end
 
   def new
@@ -23,7 +24,6 @@ class PostsController < ApplicationController
   def create
     @post = current_user.posts.build(post_params)
     tag_list = params[:post][:tag_name].split(',')
-    binding.pry
     if  @post.save
         @post.save_posts(tag_list)
       redirect_to posts_path, notice: '投稿が完了しました'

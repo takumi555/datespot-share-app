@@ -3,15 +3,16 @@
 }
 
 .content_left {
-  width: 75%;
+  width: 70%;
   float: left;
-  border-right: 1px solid lightgray;
 
 }
 .content_right {
-  width: 22%;
+  width: 27%;
   float: right;
   height: 1000px;
+  border-left: 1px solid lightgray;
+  padding-left: 25px;
   
 }
 
@@ -28,6 +29,25 @@
     color: white;
     display: block;
     font-size: 20px;
+   }
+  
+}
+
+.new_post_link2 {
+  background-color: #eb5e6b;
+  border-radius: 5px;
+  margin-right: 100px;
+  height: 40px;
+  width: 150px;
+  margin-top: 17px;
+
+  a {
+    line-height: 40px;
+    text-align: center;
+    color: white;
+    display: block;
+    font-size: 18px;
+    margin: 5px 20px;
    }
   
 }
@@ -155,6 +175,11 @@ post/show
   border-bottom: 1px solid lightgray;
 }
 .post_content_description {
+  font-size: 20px;
+  border-bottom: 1px solid lightgray;
+  margin-top: 20px;
+}
+.post_tag_description {
   font-size: 20px;
   border-bottom: 1px solid lightgray;
   margin-top: 20px;
