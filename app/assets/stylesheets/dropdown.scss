@@ -1,0 +1,49 @@
+.dropdwn {
+  position: relative;
+
+ 
+}
+
+.dropdwn_btn {
+  cursor: pointer;
+
+}
+
+.dropdwn_menu {
+  width: 210px;
+  background-color: white;
+  position: absolute;
+  top: 80px;
+  left: 50px;
+  display: none;
+  color: black;
+  box-shadow: 0 2px 6px 2px rgba(60,64,67,0.149), 0 1px 2px 0 rgba(60,64,67,0.302);
+  border-radius: 4px;
+}
+
+.dropdwn_item{
+  display: block;
+  margin: 10px 0;
+  text-decoration: none;
+  a {
+    color: black;
+  }
+
+}
+.dropdwn_btn.is-open::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  cursor: default;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4;
+}
+
+.dropdwn_btn.is-open + .dropdwn_menu {
+  display: block;
+  z-index: 5;
+}
+
+
