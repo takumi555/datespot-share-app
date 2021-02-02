@@ -4,7 +4,7 @@ header {
 }
 
 .header_container {
-  padding: 12px 0;
+  padding: 10px 0;
   width: 95%;
   margin:auto;
   
@@ -26,13 +26,33 @@ header {
   float: right;
 }
 
+.new_post_link2 {
+  background-color: #eb5e6b;
+  border-radius: 5px;
+  height: 40px;
+  width: 150px;
+  margin-top: 25px;
+  float: left;
+  margin-right: 100px;
+
+  a {
+    line-height: 40px;
+    text-align: center;
+    color: white;
+    display: block;
+    font-size: 15px;
+    margin: 5px 20px;
+    margin-top: -1px;
+   }
+  
+}
+
 .header_user_icon img {
   width: 55px;
   height: 55px;
   border-radius: 99px;
-  position: absolute;
-  top: 22px;
-  right: 25px;
-
+  float: right;
+  margin-top: -48px;
+  
 }
 
