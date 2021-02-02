@@ -2,10 +2,8 @@
   .post_show_title
     = @post.title 
 
-  .post_show_heart.hidden.active-heart
-    = image_tag '赤ハート.png'
-  .post_show_heart.hidden.inactive-heart
-    = image_tag '白ハート.png'
+  %div{:id => "likes_buttons_#{@post.id}"}
+    = render partial: 'likes/like', locals: { post: @post}
 
   .clear
   .link_container
