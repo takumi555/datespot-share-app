@@ -6,5 +6,6 @@
 
     - @posts.each do |post|
       = render 'commons/post', post: post
+    = paginate @posts
 
   
