@@ -10,6 +10,8 @@ class PostsController < ApplicationController
       @posts = Post.all
     end
     @tag_lists = Tag.all.limit(15)
+
+    @posts = Kaminari.paginate_array(@posts).page(params[:page]).per(5)
   end
 
   def show
