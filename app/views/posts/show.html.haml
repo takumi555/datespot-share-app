@@ -25,9 +25,13 @@
     %p.post_content_description 説明
     = @post.content
 
+  .post_tag
+    %p.post_tag_description タグ
+    = @tag_list
+
   .post_url
     %p.post_url_description URL
-    = @post.url
+    = link_to @post.url, @post.url
   
   %p.comment_index コメント
   

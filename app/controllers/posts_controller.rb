@@ -9,11 +9,12 @@ class PostsController < ApplicationController
     else
       @posts = Post.all
     end
-    @tag_lists = Tag.all.limit(3)
+    @tag_lists = Tag.all.limit(15)
   end
 
   def show
     @post = Post.find(params[:id])
+    @tag_list = @post.tags.pluck(:tag_name).join(',')
   end
 
   def new

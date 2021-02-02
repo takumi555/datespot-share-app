@@ -1,14 +1,11 @@
-.new_post_link
-  = link_to '新規投稿',new_post_path, class: 'new_post_link_text'
-
 .search_form.mb-3
-  %p 検索ワードで探す
+  %p.font-weight-bold 検索ワードで探す
   = form_tag(search_index_path,:method => 'get') do
     = text_field_tag :search, '', class: 'form w-100'
     = submit_tag 'Search', :name => nil, class: 'btn submit_btn w-100 mt-2'
 
 .area_wrap
-  %p エリアから探す
+  %p.font-weight-bold エリアから探す
   .area_container
     = link_to '東京', prefectures_path(prefecture: '東京都')
     = link_to '神奈川', prefectures_path(prefecture: '神奈川県')
@@ -16,7 +13,7 @@
     = link_to '千葉', prefectures_path(prefecture: '千葉県')
     = link_to '埼玉', prefectures_path(prefecture: '埼玉県')
 .tag_wrap
-  %p タグで探す
+  %p.font-weight-bold タグで探す
   - @tag_lists.each do |list|
     = link_to list.tag_name, posts_path(tag_id: list.id), class: 'tag_list'
   %div
