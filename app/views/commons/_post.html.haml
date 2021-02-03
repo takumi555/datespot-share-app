@@ -5,16 +5,10 @@
   .post_container_right
     .post_title
       = post.title
-    - if current_user&.has_liked?(post)
-      .post_heart.active-heart{class: "#{post.id}" , id: "#{post.id}"}
-        = image_tag '赤ハート.png'
-      .post_heart.hidden.inactive-heart{class: "#{post.id}" , id: "#{post.id}"}
-        = image_tag '白ハート.png'
-    - else 
-      .post_heart.inactive-heart{class: "#{post.id}" , id: "#{post.id}"}
-        = image_tag '白ハート.png'
-      .post_heart.hidden.active-heart{class: "#{post.id}" , id: "#{post.id}"}
-        = image_tag '赤ハート.png'
+
+    %div{:id => "likes_buttons_#{post.id}"}
+      = render partial: 'likes/like', locals: { post: post}
+
     .clear
     .post_prefecture
       = post.prefecture 
@@ -27,4 +21,3 @@
       = image_tag post.user.avatar_image, class: 'post_user_avatar'
       %p.post_username=  post.user.username
 
-= javascript_pack_tag 'post_index'
