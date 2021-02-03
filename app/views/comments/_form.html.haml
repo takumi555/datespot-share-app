@@ -1,0 +1,5 @@
+= form_with(model: [post, comment] ) do |f|
+  %div
+    = f.text_area :content, class: 'form comment_form'
+  %div
+    = f.submit "コメント", class: 'btn add_comment_btn submit_btn'
