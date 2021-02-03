@@ -1,9 +1,8 @@
 .container
   .profile_username
     = current_user.username
-
-  - if current_user.profile&.avatar&.attached?
-    = image_tag current_user.profile.avatar,class: 'profile_avatar'
+    
+  = image_tag current_user.avatar_image,class: 'profile_avatar'
 
   .avatar_form.hidden
     = form_with(model: @profile, url: profile_path, method: 'put', local: true ) do |f|
