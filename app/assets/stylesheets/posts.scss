@@ -192,7 +192,7 @@ post/show
   width: 60%;
 }
 
-.aaa {
+.comment_form {
   width: 100%;
   margin-top: 20px;
 }
@@ -201,10 +201,22 @@ post/show
   width: 100%;
 }
 
-.comment-username {
+.comment_container {
+  margin-top: 10px;
+
+}
+
+.comment_username {
   font-weight: bold;
 }
 
-.comment-content {
-  margin-top: -15px;
+.comment_content {
+  margin-top: 5px;
+  float: left;
+}
+
+.comment_delete {
+  color: lightgray;
+  float: right;
+
 }

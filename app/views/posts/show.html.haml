@@ -30,15 +30,10 @@
   .post_url
     %p.post_url_description URL
     = link_to @post.url, @post.url
-  
-  %p.comment_index コメント
-  
-  .comments-container
 
-  .comment_post_form
-    = text_area_tag :comment_content,'', class: 'form aaa'
-    %div
-      .btn.add_comment_btn.submit_btn
-        コメント
-
-= javascript_pack_tag 'post_show'
+  %div
+    %p.comment_index コメント
+    #comments_area
+      = render partial: 'comments/index', locals: { comments: @comments }
+    - if user_signed_in?
+      = render partial: 'comments/form', locals: { comment: @comment, post: @post }

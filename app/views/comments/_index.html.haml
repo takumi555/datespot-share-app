@@ -1,0 +1,8 @@
+- comments.each do |comment|
+  .comment_container.clear
+    .comment_username
+      = comment.user.username
+    .comment_content
+      = comment.content
+    - if comment.user == current_user
+      = link_to '×', post_comment_path(comment.post_id, comment.id), data: { method: 'delete', confirm: '本当に削除してよろしいですか？' }, remote: true, class: 'comment_delete'
