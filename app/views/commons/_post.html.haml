@@ -1,7 +1,7 @@
 .post_container.clear
   .post_container_left
     - if post.images&.attached?
-      = image_tag post.images.first, class: 'image'
+      = image_tag post.images.first.variant(combine_options:{gravity: :center, resize:"250x200^", crop:"250x200+0+0"}).processed, class: 'thumbnail'
   .post_container_right
     .post_title
       = post.title
@@ -17,7 +17,10 @@
     .post_content.box_read
       = post.content 
     = link_to '詳細', post_path(id: post.id), data: {"turbolinks" => false}, class: 'link_detail'
+    
     .user_info
-      = image_tag post.user.avatar_image, class: 'post_user_avatar'
-      %p.post_username=  post.user.username
+      - if post.user.id == current_user.id
+        = render 'commons/user_info', post: post
+      - else
+        = render 'commons/user_info', post: post
 
