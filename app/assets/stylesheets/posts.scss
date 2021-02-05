@@ -15,6 +15,13 @@
   padding-left: 25px;
   
 }
+
+.thumbnail {
+  max-width: 100%;
+  max-height: 90%;
+  border-radius: 3px;
+
+}
 .new_post_link {
   background-color: #eb5e6b;
   border-radius: 10px;
@@ -132,8 +139,6 @@ post/show
 }
 
 .show_image {
-  width: 80%;
-  height: 300px;
   border-radius: 5px;
   margin: 20px 0;
 

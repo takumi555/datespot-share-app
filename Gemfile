@@ -28,6 +28,7 @@ gem 'devise'
 gem 'haml-rails'
 gem 'active_model_serializers'
 gem 'kaminari'
+gem 'mini_magick'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

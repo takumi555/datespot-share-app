@@ -9,9 +9,10 @@
   .link_container
     = link_to '編集', edit_post_path(@post)
     = link_to '削除/', post_path(@post), data: { method: 'delete', confirm: '本当に削除してよろしいですか？' }
+
   - if @post.images&.attached?
     - @post.images.each do |image|
-      = image_tag image, class: 'show_image'
+      = image_tag image.variant(combine_options:{gravity: :center, resize:"500x300^", crop:"500x300+0+0"}).processed, class: 'show_image'
 
   .post_show_place
     %p.post_place_description 場所
