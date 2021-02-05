@@ -15,5 +15,6 @@
   .profile_post_container
     - @posts.each do |post|
       = render 'commons/post', post: post
+  = paginate @posts
 
 = javascript_pack_tag 'profile'
