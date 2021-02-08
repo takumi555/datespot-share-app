@@ -32,7 +32,7 @@ axios.defaults.headers.common['X-CSRF-Token'] = csrfToken()
 
 
 $(function () {
-  document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('turbolinks:load', function() {
     const btn = document.getElementById('dropdwn_btn');
     if(btn) {
       btn.addEventListener('click', function(){

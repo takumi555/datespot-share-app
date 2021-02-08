@@ -8,44 +8,48 @@
     = csp_meta_tag
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
-    
+    %meta{:content => "width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0", :name => "viewport"}/
   
 
   %body
     %header
       %div.header_container.clear
-        .container
-          .header_left
-            .header_title
-              = link_to image_tag('ロゴ.png'), root_path, class: 'title'
+        .header_left
+          .header_title
+            = link_to image_tag('ロゴ.png'), root_path, class: 'title'
 
-          .header_right
-            .new_post_link2
-              = link_to '新規投稿',new_post_path, class: 'new_post_link_text'
+        .header_right
+          .new_post_link2
+            = link_to '新規投稿',new_post_path, class: 'new_post_link_text'
+          .new_post_link_response
+            = link_to '+',new_post_path, class: 'new_post_response_text'
 
-            %div.header_user_icon.dropdwn
-              - if user_signed_in?
-                = image_tag current_user.avatar_image, class: 'dropdwn_btn' ,id: 'dropdwn_btn'
-                .dropdwn_menu
-                  %ul.dropdwn_list
-                    %li.dropdwn_item
-                      = link_to 'プロフィール', profile_path, data: {"turbolinks" => false}
-                    %li.dropdwn_item 
-                      = link_to 'いいねした投稿',favorites_path, data: {"turbolinks" => false}
-                    %li.dropdwn_item
-                      = link_to '登録内容変更', edit_user_registration_path
-                    %li.dropdwn_item
-                      - if user_signed_in?
-                        = link_to 'ログアウト', destroy_user_session_path, data: { method: 'delete', confirm: 'ログアウトしますか？' }
-                      - else 
-                        = link_to 'ログイン', new_user_session_path
-              - else 
-                = image_tag 'nice-hiyoko.png'
-
-      
-    .main_container
-      %p.notice= notice
-      %p.alert= alert
+          %div.header_user_icon.dropdwn
+            - if user_signed_in?
+              = image_tag current_user.avatar_image, class: 'dropdwn_btn' ,id: 'dropdwn_btn'
+              .dropdwn_menu
+                %ul.dropdwn_list
+                  %li.dropdwn_item
+                    = link_to 'プロフィール', profile_path, data: {"turbolinks" => false}
+                  %li.dropdwn_item 
+                    = link_to 'いいねした投稿',favorites_path, data: {"turbolinks" => false}
+                  %li.dropdwn_item
+                    = link_to '登録内容変更', edit_user_registration_path
+                  %li.dropdwn_item
+                    - if user_signed_in?
+                      = link_to 'ログアウト', destroy_user_session_path, data: { method: 'delete', confirm: 'ログアウトしますか？' }
+                    - else 
+                      = link_to 'ログイン', new_user_session_path
+            - else 
+              = image_tag 'nice-hiyoko.png'
+    
+    %div.main_container
+      %div.notice_container
+        - if notice
+          %p.notice= notice
+        - elsif alert
+          %p.alert= alert
       = yield
+
 
     
