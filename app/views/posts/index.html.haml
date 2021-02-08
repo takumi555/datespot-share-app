@@ -1,13 +1,39 @@
+.response_top_page
+  .response_search.clear
+    .respose_search_form 
+      %p.font-weight-bold 検索ワードで探す
+      = form_tag(search_index_path,:method => 'get') do
+        = text_field_tag :search, '', class: 'form w-100'
+        = submit_tag '検索', :name => nil, class: 'btn submit_btn w-100 mt-2'
+
+  .response_area_search
+    .area_wrap
+      %p.font-weight-bold エリアから探す
+      .area_container
+        = link_to '東京', prefectures_path(prefecture: '東京都')
+        = link_to '神奈川', prefectures_path(prefecture: '神奈川県')
+      .area_container
+        = link_to '千葉', prefectures_path(prefecture: '千葉県')
+        = link_to '埼玉', prefectures_path(prefecture: '埼玉県')
+
 .container
   .content_right
     = render 'commons/content_right'    
   .content_left
-    %h4 投稿一覧
+    %p.font-weight-bold 投稿一覧
 
     - @posts.each do |post|
       = render 'commons/post', post: post
     
     = paginate @posts
 
-  
-  
+.response_top_page
+  .tag_wrap
+    %p.font-weight-bold タグで探す
+    - @tag_lists.each do |list|
+      = link_to list.tag_name, posts_path(tag_id: list.id), class: 'tag_list'
+    %div
+      = link_to 'タグ一覧へ', tags_path
+
+    
+    

@@ -1,5 +1,5 @@
 .container
-  .profile_username
+  .profile_username.font-weight-bold
     = current_user.username
     
   = image_tag current_user.avatar_image,class: 'profile_avatar'
@@ -9,11 +9,12 @@
       %div 
         = f.file_field :avatar
       %div
-        = f.submit 'submit', class: 'mt-2 btn submit_btn'
+        = f.submit 'submit', class: 'mt-2 btn submit_btn profile_submit_btn'
 
-  %h4.mt-3 あなたの投稿一覧
+  %p.mt-3.font-weight-bold あなたの投稿一覧
   .profile_post_container
     - @posts.each do |post|
       = render 'commons/post', post: post
+  = paginate @posts
 
 = javascript_pack_tag 'profile'

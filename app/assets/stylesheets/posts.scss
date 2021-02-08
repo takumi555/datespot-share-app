@@ -1,5 +1,6 @@
 .container {
   width: 99%;
+  margin-top: 30px;
 }
 
 .content_left {
@@ -15,13 +16,10 @@
   padding-left: 25px;
   
 }
-
-.thumbnail {
-  max-width: 100%;
-  max-height: 90%;
-  border-radius: 3px;
-
+.response_top_page{ 
+  display: none;
 }
+
 .new_post_link {
   background-color: #eb5e6b;
   border-radius: 10px;
@@ -65,6 +63,7 @@
 
 
 .post_container {
+
   margin-top: 30px;
   width: 100%;
   margin-bottom: 20px;
@@ -73,10 +72,11 @@
     width: 30%;
     float: left;
 
-    .image {
-      width: 100%;
-      height: 180px;
-      border-radius: 5px;
+ 
+    .thumbnail {
+      max-width: 100%;
+      max-height: 90%;
+      border-radius: 3px;
     }
   }
   
@@ -129,9 +129,11 @@
 /*===============================
 post/show
 =================================*/
+
 .post_show_container {
-  width: 50%;
+  width: 65%;
   margin-left: 50px;
+  float: left;
 }
 .post_show_title {
   font-size: 30px;
@@ -139,23 +141,18 @@ post/show
   letter-spacing: 3px;
   float: left;
 }
-
-.show_image {
-  border-radius: 5px;
-  margin: 20px 0;
-
-}
-.post_show_heart img{
-  width: 30px;
-  height: 30px;
-  float: right;
-  margin-top: 5px;
+.show_heart img{
+  margin-right: 60px;
   
 }
-.link_container a {
+.link_container{
+  margin-right: 60px;
+  
+  a {
   color: lightgray;
   float: right;
   margin-top: 5px;
+  }
 }
 .post_place_description {
   font-size: 20px;
@@ -225,5 +222,112 @@ post/show
 .comment_delete {
   color: lightgray;
   float: right;
+
+}
+
+.new_post_icon img{
+  width: 60px;
+  
+  z-index: 200px;
+  border-radius: 1000px;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+
+}
+
+/*==================================================
+media query
+====================================================*/
+
+@media only screen and (max-width:767px) {
+
+  .content_left {
+    width: 100%;
+  }
+  .content_right {
+    display: none;
+  }
+
+
+  .post_container_left {
+    width: 100%!important;
+
+    img {
+      width: 90%;
+      border-radius: 20px!important;
+      display: block;
+      margin: 0 auto;
+      
+      
+    }
+  }
+  .post_container_right {
+    margin-top: 10px;
+    width: 95%!important;
+    
+  }
+
+
+
+  .response_top_page {
+    display: block;
+  }
+  .response_search {
+    display: block;
+    height: 230px;
+    background-image: url(people-2568954_1920.jpg);
+    background-size: cover;
+    background-color:rgba(255,255,255,0.3);
+    background-blend-mode:lighten;
+
+    .respose_search_form {
+      padding-top: 45px;
+      display: block;
+      width: 70%;
+      margin: 0 auto;
+      p {
+      
+      }
+
+    }
+
+  }
+
+  .response_area_search  {
+
+    width: 70%;
+    margin-top: 30px!important;
+    display: block;
+    margin:  0 auto;
+    
+  }
+
+  .tag_wrap {
+    margin-top: 10px;
+    width: 80%;
+    display: block;
+    margin:  0 auto;
+  }
+
+  
+
+
+  /**==============
+  show
+  ================*/
+  .post_show_container {
+    width: 100%;
+    margin-left: 0px;
+  }
+  .show_heart img{
+    margin-right: 0px;
+    
+  }
+  .link_container{
+    margin-right: 0px;
+
+  }
+
 
 }

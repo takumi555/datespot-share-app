@@ -3,7 +3,8 @@
     = render 'commons/content_right'
     
   .content_left
-    %h4 人気投稿
+    %p.font-weight-bold 人気投稿
     
     - @posts.each do |post|
       = render 'commons/post', post: post
+    = paginate @posts

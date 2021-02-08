@@ -3,6 +3,6 @@
     = render 'commons/content_right'
 
   .content_left
-    %h4 いいねした投稿
+    %p.font-weight-bold いいねした投稿
     - @posts.each do |post|
       = render 'commons/post', post: post

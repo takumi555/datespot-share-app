@@ -22,6 +22,7 @@
  @import 'posts';
  @import 'paginate';
  @import 'dropdown';
+ @import 'show_images';
 
 
 html,body {
@@ -46,6 +47,22 @@ html,body {
 }
 .hidden {
   display: none;
+}
+.notice_container {
+  
+  float: center;
+}
+
+@media only screen and (max-width:767px) {
+  .container {
+    width: 100%;
+  }
+  .form {
+    width: 100%;
+  }
+  .submit_btn {
+    width: 100%;
+  }
 }
 
  @import "bootstrap";
