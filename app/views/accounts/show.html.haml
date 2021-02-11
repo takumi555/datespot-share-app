@@ -1,9 +1,9 @@
 .container
-  .profile_username
+  .profile_username.font-weight-bold
     = @user.username
   = image_tag @user.avatar_image,class: 'profile_avatar'
 
-  %h4.mt-3 #{@user.username}さんの投稿一覧
+  %p.mt-3.font-weight-bold #{@user.username}さんの投稿一覧
   .profile_post_container
     - @posts.each do |post|
       = render 'commons/post', post: post

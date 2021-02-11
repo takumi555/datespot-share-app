@@ -15,6 +15,7 @@
   .thumbs {
     height: 120px;
     &__lists {
+      height: 95%;
       width: 100%;
       display: flex;
       justify-content: flex-start;
@@ -46,8 +47,11 @@
 
 @media only screen and (max-width:767px) {
   .main {
-    height: 220px!important;
-    img {min-width: 100%!important;
+    max-height: 220px;
+
+    img {
+      max-height: 100%!important;
+      min-width: 100%;
     }
   }
   .thumbs {
