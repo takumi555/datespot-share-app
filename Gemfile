@@ -29,6 +29,8 @@ gem 'haml-rails'
 gem 'active_model_serializers'
 gem 'kaminari'
 gem 'mini_magick'
+gem 'activeadmin'
+gem 'rails-i18n'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

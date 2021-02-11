@@ -2,7 +2,7 @@
   .content_right
     = render 'commons/content_right'
   .content_left
-    %p すべてのタグ
+    %p.font-weight-bold すべてのタグ
     .tag_all
       - @tags.each do |tag|
         = link_to tag.tag_name, posts_path(tag_id: tag.id), class: 'tag_list'

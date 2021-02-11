@@ -11,10 +11,14 @@ module DatespotShareApp
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 
+    config.assets.paths << config.root.join("vendor/assets/javascripts")
+    config.assets.paths << config.root.join("vendor/assets/stylesheets")
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
+    config.time_zone = 'Tokyo'
     config.i18n.default_locale = :ja
   end
 end
