@@ -2,14 +2,16 @@
   .post_container_left
     - if post.images&.attached?
       = image_tag post.images.first.variant(combine_options:{gravity: :center, resize:"250x200^", crop:"250x200+0+0"}).processed, class: 'thumbnail'
+    - else
+      = image_tag 'no-image.png', class: 'thumbnail'
   .post_container_right
     .post_title
       = post.title
-
     %div{:id => "likes_buttons_#{post.id}"}
       = render partial: 'likes/like', locals: { post: post}
 
     .clear
+
     .post_prefecture
       = post.prefecture 
     .post_area

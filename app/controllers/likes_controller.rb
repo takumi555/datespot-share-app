@@ -4,6 +4,7 @@ class LikesController < ApplicationController
   def show
     post = Post.find(params[:post_id])
     like_status = current_user.has_liked?(post)
+    
   end
 
   def create

@@ -1,4 +1,7 @@
 .container
+  %ul
+    - @post.errors.full_messages.each do |message|
+      %li= message
   = form_with(model:[@tag,@post], local: true) do |f|
     %div
       = f.label :title, 'タイトル'
@@ -17,7 +20,7 @@
     %div
       = f.text_field :area, class: 'form'
     %div
-      = f.label :Description
+      = f.label:説明
     %div
       = f.text_area :content, class: 'form'
     %div
@@ -29,4 +32,4 @@
     %div
       = f.text_field :tag_name, class: 'form', placeholder: 'タグをカンマ区切りで5つまで入力'
     %div
-      = f.submit 'Submit', class: 'mt-3 btn  submit_btn'
+      = f.submit '登録', class: 'mt-3 btn  submit_btn'

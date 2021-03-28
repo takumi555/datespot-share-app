@@ -6,3 +6,5 @@
     %p.font-weight-bold いいねした投稿
     - @posts.each do |post|
       = render 'commons/post', post: post
+
+    = paginate @posts

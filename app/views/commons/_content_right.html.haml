@@ -18,6 +18,6 @@
     = link_to list.tag_name, posts_path(tag_id: list.id), class: 'tag_list'
   %div
     = link_to 'タグ一覧へ', tags_path
-%div 
+%div.link_to_popular
   = link_to '人気投稿を見る',populars_path, data: {"turbolinks" => false}
 
