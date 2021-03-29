@@ -26,14 +26,9 @@
 
 
 html,body {
-  text-decoration: none;
- 
+  text-decoration: none; 
 }
 
-.main_container {
-   
- }
- 
 .clear::after{
   content:"";
   clear: both;
@@ -47,9 +42,12 @@ html,body {
   display: none;
 }
 .notice_container {
-  
   float: center;
 }
+
+/*===============================================
+レスポンシブ
+================================================*/
 
 @media only screen and (max-width:767px) {
   .container {

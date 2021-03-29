@@ -3,7 +3,7 @@
   = render "devise/shared/error_messages", resource: resource
   = f.hidden_field :reset_password_token
   .field
-    = f.label :password, "New password"
+    = f.label :password, "新しいパスワード"
     %br/
     - if @minimum_password_length
       %em
@@ -11,7 +11,7 @@
       %br/
     = f.password_field :password, autofocus: true, autocomplete: "new-password"
   .field
-    = f.label :password_confirmation, "Confirm new password"
+    = f.label :password_confirmation, "新しいパスワード（確認用）"
     %br/
     = f.password_field :password_confirmation, autocomplete: "new-password"
   .actions

@@ -6,17 +6,14 @@ header {
 .header_container {
   padding: 10px 0;
   width: 90%;
-  margin:auto;
-  
+  margin:auto; 
 }
-
 
 .header_left {
   float: left;
 
   .title img{
     width: 170px;
-    
   }
 }
 
@@ -54,8 +51,11 @@ header {
   border-radius: 99px;
   float: right;
   margin-top: -48px;
-  
 }
+
+/*=====================================
+レスポンシブ
+=======================================*/
 
 @media only screen and (max-width:767px) { 
 
@@ -68,7 +68,6 @@ header {
 
   .header_user_icon {
     float: right;
-
     img {
     margin-top: 5px;
     width: 35px;
@@ -92,9 +91,6 @@ header {
       display: block;
       font-size: 20px;
       font-weight: bold;
-
-
      }
-    
   } 
 }

@@ -5,5 +5,5 @@
     .font-weight-bold
       = "「 #{@params} 」の検索結果"
     - @posts.each do |post|
-      = render 'commons/post', post: post
+      = render 'commons/posts', post: post
     = paginate @posts
