@@ -1,4 +1,6 @@
 class ProfilesController < ApplicationController
+  before_action :authenticate_user!, only: [:update]
+
   def show
     @profile = current_user.prepare_profile
     @posts = Post.where(user_id: current_user.id )

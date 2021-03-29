@@ -128,7 +128,7 @@ post/show
 =================================*/
 
 .post_show_container {
-  width: 65%;
+  width: 50%;
   margin-left: 50px;
   float: left;
 }
@@ -139,12 +139,11 @@ post/show
   float: left;
 }
 .show_heart img{
-  margin-right: 60px;
+  margin-top: 5px;
   
 }
 .link_container{
-  margin-right: 60px;
-  
+  margin-bottom: 20px;
   a {
   color: lightgray;
   float: right;
@@ -152,27 +151,27 @@ post/show
   }
 }
 .post_place_description {
-  font-size: 20px;
+  font-size: 15px;
   border-bottom: 1px solid lightgray;
 }
 .post_content_description {
-  font-size: 20px;
+  font-size: 15px;
   border-bottom: 1px solid lightgray;
   margin-top: 20px;
 }
 .post_tag_description {
-  font-size: 20px;
+  font-size: 15px;
   border-bottom: 1px solid lightgray;
   margin-top: 20px;
 
 }
 .post_url_description {
-  font-size: 20px;
+  font-size: 15px;
   border-bottom: 1px solid lightgray;
   margin-top: 20px;
 }
 .comment_index {
-  font-size: 20px;
+  font-size: 15px;
   border-bottom: 1px solid lightgray;
   margin-top: 20px;
 }
