@@ -41,7 +41,6 @@ class Post < ApplicationRecord
     return self.images.first.variant(resize: '150×100')
 
   end
-  
 
 
 end

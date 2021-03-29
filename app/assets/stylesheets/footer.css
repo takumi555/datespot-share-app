@@ -1,0 +1,12 @@
+footer {
+  margin-top: 30px;
+  background-color: #082b48;
+  height: 50px;
+}
+
+footer p {
+  line-height: 50px;
+  text-align: center;
+  color: white;
+  font-size: 10px;
+}

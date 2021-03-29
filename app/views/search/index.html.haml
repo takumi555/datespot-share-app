@@ -3,7 +3,8 @@
     = render 'commons/content_right'
 
   .content_left
-    = "''#{@search}''の検索結果" 
+    .font-weight-bold
+      = "「 #{@search} 」の検索結果" 
     - @posts.each do |post|
       = render 'commons/post', post: post
     = paginate @posts
