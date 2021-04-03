@@ -21,15 +21,12 @@ RSpec.describe "Posts", type: :request do
         post_params = attributes_for(:post) 
         post posts_path({post: post_params})
         expect(response).to have_http_status(302)
-
         expect(Post.last.title).to eq(post_params[:title])
         expect(Post.last.content).to eq(post_params[:content])
         expect(Post.last.prefecture).to eq(post_params[:prefecture])
       end
     end
   end
-
-
 
 
 end
