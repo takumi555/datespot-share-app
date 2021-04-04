@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy ]
+  before_action :baria_user, only: [:edit, :destroy]
 
   def index
 
@@ -67,6 +68,13 @@ class PostsController < ApplicationController
   private
   def post_params
     params.require(:post).permit(:title, :prefecture, :area, :content, :url, images: [])
+  end
+
+  def baria_user 
+    unless Post.find(params[:id]).user_id == current_user.id
+      flash[:notice] = "権限がありません"
+      redirect_to root_path
+    end
   end
 
 end
