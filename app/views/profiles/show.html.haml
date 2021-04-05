@@ -11,7 +11,7 @@
       %div
         = f.submit '登録', class: 'mt-2 btn submit_btn profile_submit_btn'
 
-  %p.mt-3.font-weight-bold あなたの投稿一覧
+  %p.mt-3.font-weight-bold.your_post あなたの投稿一覧
   .profile_post_container
     - @posts.each do |post|
       = render 'commons/posts', post: post

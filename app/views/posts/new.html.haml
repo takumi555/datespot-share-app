@@ -4,7 +4,7 @@
       %li= message
   = form_with(model:[@tag,@post], local: true) do |f|
     %div
-      = f.label :title, 'タイトル'
+      = f.label :title, 'タイトル', class: 'new_post_title'
     %div
       = f.text_field :title, class: 'form'
     %div
