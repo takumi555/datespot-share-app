@@ -5,6 +5,6 @@
   .content_left
     %p.font-weight-bold いいねした投稿
     - @posts.each do |post|
-      = render 'commons/post', post: post
+      = render 'commons/posts', post: post
 
     = paginate @posts

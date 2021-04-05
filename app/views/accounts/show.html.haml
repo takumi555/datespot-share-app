@@ -6,4 +6,6 @@
   %p.mt-3.font-weight-bold #{@user.username}さんの投稿一覧
   .profile_post_container
     - @posts.each do |post|
-      = render 'commons/post', post: post
+      = render 'commons/posts', post: post
+    
+    = paginate @posts

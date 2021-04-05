@@ -18,7 +18,6 @@ RSpec.describe Post, type: :model do
     end
   end
 
-
   context '内容が空の場合' do
     let!(:post) { build(:post, content: nil) }
     it 'エラーになる' do

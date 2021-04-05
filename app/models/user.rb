@@ -2,7 +2,7 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+         :recoverable, :rememberable
 
   has_many :posts, dependent: :destroy
   has_many :comments, dependent: :destroy
@@ -10,6 +10,11 @@ class User < ApplicationRecord
   
   has_many :favorite_posts, through: :likes, source: :post
   has_one :profile
+
+  validates :username, presence: true
+  validates :email, presence: true
+  validates :password, presence: true
+
   
 
   def prepare_profile
