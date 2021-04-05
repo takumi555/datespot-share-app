@@ -26,7 +26,19 @@
 
 
 html,body {
-  text-decoration: none; 
+  text-decoration: none;
+  height: 100%;
+}
+
+.wrapper {
+  width: 100%;
+  position: relative;
+  min-height: 100%;
+  padding-bottom: 70px;
+}
+
+.main_container {
+ 
 }
 
 .clear::after{
@@ -44,6 +56,7 @@ html,body {
 .notice_container {
   float: center;
 }
+
 
 /*===============================================
 レスポンシブ

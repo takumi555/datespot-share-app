@@ -4,31 +4,31 @@
       %li= message
   = form_with(model:[@tag,@post], local: true) do |f|
     %div
-      = f.label :title, 'タイトル', class: 'new_post_title'
+      = f.label :title, 'タイトル', class: 'new_post_title '
     %div
       = f.text_field :title, class: 'form'
     %div
-      = f.label :image, '画像 ※３枚まで登録できます'
+      = f.label :image, '画像 ※３枚まで登録できます', class: 'mt-2'
     %div
       = f.file_field :images, multiple: true
     %div 
-      = f.label :prefecture, '都道府県'
+      = f.label :prefecture, '都道府県', class: 'mt-2'
     %div
       = f.select :prefecture, [['東京都', '東京都'], ['神奈川県','神奈川県'],['千葉県','千葉県'],['埼玉県','埼玉県'],['その他','その他']], include_blank: '選択して下さい'
     %div
-      = f.label :area, '場所'
+      = f.label :area, '場所', class: 'mt-2'
     %div
       = f.text_field :area, class: 'form'
     %div
-      = f.label:説明
+      = f.label:説明, class: 'mt-1'
     %div
       = f.text_area :content, class: 'form'
     %div
-      = f.label :url, 'URL'
+      = f.label :url, 'URL', class: 'mt-1'
     %div
       = f.text_field :url, class: 'form'
     %div
-      = f.label :tag_name, 'タグ'
+      = f.label :tag_name, 'タグ', class: 'mt-1'
     %div
       = f.text_field :tag_name, class: 'form', placeholder: 'タグをカンマ区切りで5つまで入力'
     %div

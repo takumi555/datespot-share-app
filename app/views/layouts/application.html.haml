@@ -11,18 +11,19 @@
     %meta{:content => "width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0", :name => "viewport"}/
   
   %body
-    %header
-      = render 'commons/header'    
+    %div.wrapper
+      %header
+        = render 'commons/header'    
     
-    %div.main_container
-      %div.notice_container
-        - if notice
-          %p.notice= notice
-        - elsif alert
-          %p.alert= alert
-      = yield
-    .clear
+      %div.main_container
+        %div.notice_container
+          - if notice
+            %p.notice= notice
+          - elsif alert
+            %p.alert= alert
+        = yield
+      .clear
 
-    %footer
-      %p 東京デート日和
-      
+      %footer
+        %p 東京デート日和
+        
