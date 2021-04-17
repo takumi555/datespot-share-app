@@ -1,11 +1,16 @@
-.question_title
-  = @question.title
-.question_content
-  = @question.content
+.question_show_container
+  .question_title
+    = @question.title
+  - if current_user == @user
+    .question_link.clear
+      = link_to '削除する', question_path(@question), data: { method: 'delete', confirm: '本当に削除してよろしいですか？' }
+      = link_to '編集する/', edit_question_path(@question)
+  .question_content
+    = simple_format(@question.content)
 
-%div
-  %p.comment_index 回答
-  #answers_area
-    = render partial: 'answers/index', locals: { answers: @answers }
-  - if user_signed_in?
-    = render partial: 'answers/form', locals: { answer: @answer, question: @question }
+  %div
+    %p.comment_index 回答
+    #answers_area
+      = render partial: 'answers/index', locals: { answers: @answers }
+    - if user_signed_in?
+      = render partial: 'answers/form', locals: { answer: @answer, question: @question }
