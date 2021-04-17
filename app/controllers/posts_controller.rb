@@ -3,7 +3,6 @@ class PostsController < ApplicationController
   before_action :baria_user, only: [:edit, :destroy]
 
   def index
-
     if params[:tag_id].present?
       @tag = Tag.find(params[:tag_id])
       @posts = @tag.posts.order(created_at: :desc)
