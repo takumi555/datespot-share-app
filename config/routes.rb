@@ -9,6 +9,10 @@ Rails.application.routes.draw do
     resources :comments, only: [:index, :create, :destroy]
     resource :like, only: [:show, :create, :destroy]
   end
+
+  resources :questions, only: [:index, :new, :create, :show, :edit, :update, :destroy] do
+    resources :answers, only: [:index, :create, :destroy]
+  end
   
   resources :favorites, only: [:index]
   resource :profile, only: [:show, :update]

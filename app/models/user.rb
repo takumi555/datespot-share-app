@@ -11,6 +11,9 @@ class User < ApplicationRecord
   has_many :favorite_posts, through: :likes, source: :post
   has_one :profile
 
+  has_many :questions, dependent: :destroy
+  has_many :answers, dependent: :destroy
+
   validates :username, presence: true
   validates :email, presence: true
   validates :password, presence: true

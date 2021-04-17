@@ -1,0 +1,8 @@
+- answers.each do |answer|
+  .comment_container.clear
+    .comment_username
+      = answer.user.username
+    .comment_content
+      = simple_format(answer.content)
+    - if answer.user == current_user
+      = link_to '回答を削除する', question_answer_path(answer.question_id, answer.id), data: { method: 'delete', confirm: '本当に削除してよろしいですか？' }, remote: true, class: 'comment_delete'

@@ -1,0 +1,11 @@
+質問部屋
+
+= link_to '質問投稿へ',new_question_path
+
+- @questions.each do |question|
+  .question.mt-3
+    .questios_title
+      = question.title 
+    .questions_content
+      = question.content
+    = link_to '詳細へ',question_path(id: question.id)
