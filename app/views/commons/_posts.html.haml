@@ -18,7 +18,7 @@
       = post.area 
     .post_content.box_read
       = post.content 
-    = link_to '詳細', post_path(id: post.id), data: {"turbolinks" => false}, class: 'link_detail'
+    = link_to '詳しく見る', post_path(id: post.id), data: {"turbolinks" => false}, class: 'link_detail'
     
     .user_info
       - if user_signed_in?

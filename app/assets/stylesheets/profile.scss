@@ -6,12 +6,21 @@
   border-radius: 100%;
   width: 100px;
   height: 100px;
-  margin: 20px 0;
+  margin: 10px 0;
   cursor: pointer;
 }
 
 .profile_post_container {
   width: 60%;
+}
+
+.follow_btn {
+  color: white;
+  margin-top: 20px;
+  a {
+    color: white;
+  }
+
 }
 /*===============================================
 レスポンシブ
