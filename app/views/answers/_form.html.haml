@@ -1,5 +1,5 @@
 = form_with(model: [question, answer] ) do |f|
   %div
-    = f.text_area :content, class: 'form comment_form'
+    = f.text_area :content, class: 'form comment_form answer_form'
   %div
-    = f.submit "回答", class: 'btn add_comment_btn submit_btn'
+    = f.submit "回答", class: 'btn add_comment_btn submit_btn answer_btn'
