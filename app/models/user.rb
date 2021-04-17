@@ -12,6 +12,7 @@ class User < ApplicationRecord
   has_one :profile
 
   has_many :questions, dependent: :destroy
+  has_many :answers, dependent: :destroy
 
   validates :username, presence: true
   validates :email, presence: true

@@ -3,4 +3,9 @@
 .question_content
   = @question.content
 
-  
+%div
+  %p.comment_index 回答
+  #answers_area
+    = render partial: 'answers/index', locals: { answers: @answers }
+  - if user_signed_in?
+    = render partial: 'answers/form', locals: { answer: @answer, question: @question }
