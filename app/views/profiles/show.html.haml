@@ -1,20 +1,30 @@
 .container
-  .profile_username.font-weight-bold
-    = current_user.username
-    
-  = image_tag current_user.avatar_image,class: 'profile_avatar'
+  .account_show_left
+    .profile_username.font-weight-bold
+      = current_user.username
+      
+    = image_tag current_user.avatar_image,class: 'profile_avatar'
+    .avatar_form.hidden
+      = form_with(model: @profile, url: profile_path, method: 'put', local: true ) do |f|
+        %div 
+          = f.file_field :avatar
+        %div
+          = f.submit '登録', class: 'mt-2 btn submit_btn profile_submit_btn'
+  .clear
+  .account_show_right.prof
+    .followers
+      %p.follow_count= @user.follower_count
+      = link_to 'フォロワー', account_followers_path(@user)
+    .followings
+      %p.follow_count= @user.following_count
+      = link_to 'フォロー', account_followings_path(@user)
+  .clear
 
-  .avatar_form.hidden
-    = form_with(model: @profile, url: profile_path, method: 'put', local: true ) do |f|
-      %div 
-        = f.file_field :avatar
-      %div
-        = f.submit '登録', class: 'mt-2 btn submit_btn profile_submit_btn'
 
-  %p.mt-3.font-weight-bold.your_post あなたの投稿一覧
   .profile_post_container
+    %p.mt-3.font-weight-bold.your_post あなたの投稿一覧
     - @posts.each do |post|
       = render 'commons/posts', post: post
-  = paginate @posts
+    = paginate @posts
 
 = javascript_pack_tag 'profile'

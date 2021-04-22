@@ -2,7 +2,8 @@ class ProfilesController < ApplicationController
   before_action :authenticate_user!, only: [:update]
 
   def show
-    @profile = current_user.prepare_profile
+    @user = current_user
+    @profile = @user.prepare_profile
     @posts = Post.where(user_id: current_user.id )
     @posts = Kaminari.paginate_array(@posts).page(params[:page]).per(5)
   end

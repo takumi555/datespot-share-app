@@ -1,0 +1,6 @@
+.container
+  %p.follow_title フォロー一覧
+  - @followings.each do |following|
+    .follow_list
+      .follow_name
+        %p= following.username
