@@ -14,6 +14,12 @@ class User < ApplicationRecord
   has_many :questions, dependent: :destroy
   has_many :answers, dependent: :destroy
 
+  has_many :following_relationships, foreign_key: 'follower_id', class_name: 'Relationship', dependent: :destroy
+  has_many :followings, through: :following_relationships, source: :following
+
+  has_many :follower_relationships, foreign_key: 'following_id', class_name: 'Relationship', dependent: :destroy
+  has_many :followers, through: :follower_relationships, source: :follower
+
   validates :username, presence: true
   validates :email, presence: true
   validates :password, presence: true
@@ -33,6 +39,40 @@ class User < ApplicationRecord
       profile.avatar
     else
       'nice-hiyoko.png'
+    end
+  end
+
+  def follow!(user)
+    user_id = get_user_id(user)
+    following_relationships.create!(following_id: user_id)
+  end
+
+  def unfollow!(user)
+    user_id = get_user_id(user)
+    relation = following_relationships.find_by!(following_id: user_id)
+    relation.destroy!
+  end
+
+  def has_followed?(user)
+    following_relationships.exists?(following_id: user.id)
+
+  end
+
+  def following_count
+    followings.count
+  end
+
+  def follower_count
+    followers.count
+  end
+
+
+  private
+  def get_user_id(user)
+    if user.is_a?(User)
+      user_id = user.id
+    else
+      user_id = user
     end
   end
 end

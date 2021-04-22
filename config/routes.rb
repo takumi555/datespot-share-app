@@ -10,16 +10,22 @@ Rails.application.routes.draw do
     resource :like, only: [:show, :create, :destroy]
   end
 
-  resources :questions, only: [:index, :new, :create, :show, :edit, :update, :destroy] do
-    resources :answers, only: [:index, :create, :destroy]
-  end
-  
   resources :favorites, only: [:index]
   resource :profile, only: [:show, :update]
-  resources :accounts, only: [:show]
+
+  resources :accounts, only: [:show] do
+    resources :follows, only: [:create]
+    resources :unfollows, only: [:create]
+    resources :followings, only: [:index]
+    resources :followers, only: [:index]
+  end
 
   resources :populars, only: [:index]
   resources :search, only: [:index]
   resources :tags, only: [:index]
   resources :prefectures, only: [:index, :show]
+
+  resources :questions, only: [:index, :new, :create, :show, :edit, :update, :destroy] do
+    resources :answers, only: [:index, :create, :destroy]
+  end
 end

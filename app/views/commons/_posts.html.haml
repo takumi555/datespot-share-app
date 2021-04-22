@@ -18,12 +18,12 @@
       = post.area 
     .post_content.box_read
       = post.content 
-    = link_to '詳細', post_path(id: post.id), data: {"turbolinks" => false}, class: 'link_detail'
+    = link_to '詳しく見る', post_path(id: post.id), data: {"turbolinks" => false}, class: 'link_detail'
     
     .user_info
       - if user_signed_in?
         - if post.user.id == current_user.id
-          = link_to profile_path do
+          = link_to profile_path, data: {"turbolinks" => false} do
             = image_tag post.user.avatar_image, class: 'post_user_avatar'
             %p.post_username=  post.user.username
         - else

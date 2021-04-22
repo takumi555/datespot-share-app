@@ -1,0 +1,13 @@
+.container
+  %p.follow_title フォロー中
+  - @followings.each do |following|
+    .follow_list
+      .follow_user_info
+        - if following.id == current_user.id
+          = link_to profile_path do
+            = image_tag following.avatar_image, class: 'follow_list_avatar'
+            %p.follow_name= following.username
+        -else
+          = link_to account_path(following.id) do
+            = image_tag following.avatar_image, class: 'follow_list_avatar'
+            %p.follow_name= following.username

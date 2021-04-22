@@ -1,11 +1,23 @@
 .container
   .profile_username.font-weight-bold
     = @user.username
-  = image_tag @user.avatar_image,class: 'profile_avatar'
+  .account_show_left
+    .profile_avatar
+      = image_tag @user.avatar_image,class: 'profile_avatar'
+    = render 'relationships/follow_form', user: @user
 
-  %p.mt-3.font-weight-bold #{@user.username}さんの投稿一覧
+  .account_show_right
+    .followers
+      %p.follow_count= @user.follower_count
+      = link_to 'フォロワー', account_followers_path(@user), class: ''
+    .followings
+      %p.follow_count= @user.following_count
+      = link_to 'フォロー', account_followings_path(@user), class: ''
+      
+  .clear
   .profile_post_container
+    %p.mt-3.font-weight-bold #{@user.username}さんの投稿一覧
     - @posts.each do |post|
       = render 'commons/posts', post: post
-    
+      
     = paginate @posts
