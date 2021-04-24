@@ -31,21 +31,26 @@
       
       &__item {
         margin-top: 10px;
-        width: 30%;
+        max-width: 32%;
 
         &__image {
           height: 100%;
           opacity: 0.5;
           border-radius: 2px;
           min-width: 100%;
+          
         }
       }
     }
   }
 }
 
+
+
 .image_size_1 {
   margin-bottom: 50px;
+  width: 100%;
+  border-radius: 5px;
 }
 
 .no_image {
