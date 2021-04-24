@@ -218,11 +218,20 @@ post/show
   bottom: 30px;
 }
 
+@media only screen and (max-width: 1024px) {
+  .post_show_container {
+    width: 80%;
+  }
+}
+
 /*==================================================
 レスポンシブ
 ====================================================*/
 
 @media only screen and (max-width:767px) {
+  .post_show_container {
+    width: 100%;
+  } 
 
   .content_left {
     width: 100%;
@@ -303,4 +312,5 @@ post/show
   .link_container{
     margin-right: 0px;
   }
+
 }
