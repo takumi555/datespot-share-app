@@ -14,3 +14,8 @@
     .area_container
       = link_to '千葉', prefectures_path(prefecture: '千葉県')
       = link_to '埼玉', prefectures_path(prefecture: '埼玉県')
+.response_link_background
+  .response_link_question
+    .link_wrap
+      = link_to '質問部屋へ', questions_path, class: 'btn submit_btn'
+      = link_to '人気投稿を見る', populars_path, class: 'btn submit_btn'

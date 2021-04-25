@@ -296,6 +296,25 @@ post/show
     margin:  0 auto;
   }
 
+  .response_link_background{
+    .response_link_question {
+      width: 80%;
+      margin:  0 auto;
+
+      .link_wrap {
+        
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-around;
+        a {
+          width: 140px;
+        }
+
+    
+      }
+    }
+  }
+
   /*==================================
   show
   ====================================*/
