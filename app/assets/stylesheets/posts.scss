@@ -218,11 +218,20 @@ post/show
   bottom: 30px;
 }
 
+@media only screen and (max-width: 1024px) {
+  .post_show_container {
+    width: 80%;
+  }
+}
+
 /*==================================================
 レスポンシブ
 ====================================================*/
 
 @media only screen and (max-width:767px) {
+  .post_show_container {
+    width: 100%;
+  } 
 
   .content_left {
     width: 100%;
@@ -287,6 +296,25 @@ post/show
     margin:  0 auto;
   }
 
+  .response_link_background{
+    .response_link_question {
+      width: 80%;
+      margin:  0 auto;
+
+      .link_wrap {
+        
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-around;
+        a {
+          width: 140px;
+        }
+
+    
+      }
+    }
+  }
+
   /*==================================
   show
   ====================================*/
@@ -303,4 +331,5 @@ post/show
   .link_container{
     margin-right: 0px;
   }
+
 }

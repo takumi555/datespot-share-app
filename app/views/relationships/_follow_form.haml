@@ -1,4 +1,4 @@
-.follow_btn.submit_btn.btn
+.follow_btn
   - if current_user&.has_followed?(@user)
     = render 'relationships/unfollow'
   - else

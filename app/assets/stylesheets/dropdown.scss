@@ -38,9 +38,15 @@
   z-index: 100;
 }
 
+
 .dropdwn_btn.is-open + .dropdwn_menu {
   display: block;
   z-index: 101;
+}
+
+.menu img{
+  width: 50px;
+  
 }
 
 /*==========================================
