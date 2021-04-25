@@ -1,4 +1,6 @@
 class QuestionsController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy ]
+  before_action :baria_user, only: [:edit, :destroy]
 
   def index
     @questions = Question.all.order(created_at: :desc)
@@ -53,6 +55,13 @@ class QuestionsController < ApplicationController
 private
   def question_params
     params.require(:question).permit(:title, :content)
+  end
+
+  def baria_user 
+    unless Question.find(params[:id]).user_id == current_user.id
+      flash[:notice] = "権限がありません"
+      redirect_to questions_path
+    end
   end
 
 end

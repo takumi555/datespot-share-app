@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Comment, type: :model do
-  let!(:user) { create(:user) }
+  
   context 'コメントの内容がある場合' do 
     let!(:comment) { build(:comment) }
 
