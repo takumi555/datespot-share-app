@@ -25,6 +25,8 @@ Rails.application.routes.draw do
   resources :tags, only: [:index]
   resources :prefectures, only: [:index, :show]
 
+  resources :timelines, only: [:index]
+
   resources :questions, only: [:index, :new, :create, :show, :edit, :update, :destroy] do
     resources :answers, only: [:index, :create, :destroy]
   end

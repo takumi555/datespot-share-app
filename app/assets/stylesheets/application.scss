@@ -43,10 +43,7 @@ html,body {
   width:  80%;
   margin: 10px auto;
   height: 50px;
-  position: relative;
-  p {
-    z-index: 99;
-  }
+ 
 }
 
 .clear::after{
@@ -64,9 +61,6 @@ html,body {
 .notice_container {
   float: center;
 }
-
-
-
 
 /*===============================================
 レスポンシブ

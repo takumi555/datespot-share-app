@@ -2,4 +2,5 @@
   .alert.alert-warning
     %ul
       - model.errors.full_messages.each do |message|
-        %li= message
+        .error_msg
+          %li= message
