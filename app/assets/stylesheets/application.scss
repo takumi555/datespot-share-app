@@ -24,6 +24,7 @@
  @import 'dropdown';
  @import 'show_images';
  @import 'question';
+ @import 'error_msg';
 
 
 html,body {
@@ -38,8 +39,14 @@ html,body {
   padding-bottom: 70px;
 }
 
-.main_container {
- 
+.flash_message {
+  width:  80%;
+  margin: 10px auto;
+  height: 50px;
+  position: relative;
+  p {
+    z-index: 99;
+  }
 }
 
 .clear::after{
@@ -57,6 +64,8 @@ html,body {
 .notice_container {
   float: center;
 }
+
+
 
 
 /*===============================================

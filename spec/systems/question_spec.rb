@@ -33,7 +33,7 @@ RSpec.describe 'Post', type: :system do
       fill_in 'question[title]', with: 'Faker::Lorem.characters(number: 10)'
       fill_in 'question[content]', with: 'Faker::Lorem.characters(number: 30)'
       find(".question_submit").click
-      expect(page).to have_content '投稿が完了しました'
+      expect(page).to have_content '投稿が完了しました！'
       expect(page).to have_content '質問部屋'
     end
   end

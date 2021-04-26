@@ -6,6 +6,7 @@
     = favicon_link_tag('favicon.png')
     = csrf_meta_tags
     = csp_meta_tag
+    %script{:crossorigin => "anonymous", :src => "https://kit.fontawesome.com/8a2914ca45.js"}
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
     %meta{:content => "width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0", :name => "viewport"}/
@@ -16,11 +17,12 @@
         = render 'commons/header'    
     
       %div.main_container
-        %div.notice_container
-          - if notice
+        - if flash[:notice]
+          .flash_message.alert.alert-info
             %p.notice= notice
-          - elsif alert
-            %p.alert= alert
+        - if flash[:alert]
+          .flash_message.alert.alert-info
+            %p.alert= alert              
         = yield
       .clear
 

@@ -32,7 +32,7 @@ class PostsController < ApplicationController
     tag_list = params[:post][:tag_name].gsub(/[[:space:]]/, '').split(',')
     if  @post.save
         @post.save_posts(tag_list)
-      redirect_to posts_path, notice: '投稿が完了しました'
+      redirect_to posts_path, notice: '投稿が完了しました！'
     else
       flash.now[:error] = '投稿できませんでした'
       render :new
@@ -50,7 +50,7 @@ class PostsController < ApplicationController
     tag_list = params[:post][:tag_name].gsub(/[[:space:]]/, '').split(',')
     if @post.update(post_params)
       @post.save_posts(tag_list)
-      redirect_to posts_path, notice: '更新が完了しました'
+      redirect_to posts_path, notice: '更新が完了しました！'
     else
       flash.now[:error] = '更新できませんでした'
       render :edit
