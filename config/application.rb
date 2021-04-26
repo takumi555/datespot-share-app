@@ -14,8 +14,10 @@ module DatespotShareApp
     config.assets.paths << config.root.join("vendor/assets/javascripts")
     config.assets.paths << config.root.join("vendor/assets/stylesheets")
 
-    Bundler.require(*Rails.groups)
-    Dotenv::Railtie.load
+    if Rails.env.development? || Rails.env.test?
+      Bundler.require(*Rails.groups)
+      Dotenv::Railtie.load
+    end
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
