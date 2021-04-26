@@ -38,7 +38,7 @@ class User < ApplicationRecord
     if profile&.avatar&.attached?
       profile.avatar
     else
-      'nice-hiyoko.png'
+      'fish.jpeg'
     end
   end
 

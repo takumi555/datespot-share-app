@@ -2,8 +2,8 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title 東京デート日和
-    = favicon_link_tag('favicon.png')
+    %title 東京デート倶楽部
+    = favicon_link_tag('couple.png')
     = csrf_meta_tags
     = csp_meta_tag
     %script{:crossorigin => "anonymous", :src => "https://kit.fontawesome.com/8a2914ca45.js"}
@@ -22,10 +22,10 @@
             %p.notice= notice
         - if flash[:alert]
           .flash_message.alert.alert-info
-            %p.alert= alert              
+            %p.alert= alert         
         = yield
       .clear
 
       %footer
-        %p 東京デート日和
+        %p 東京デート倶楽部
         

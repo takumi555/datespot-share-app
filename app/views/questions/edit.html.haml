@@ -1,7 +1,8 @@
 .question_new_container
   %p.questions_index_title.font-weight-bold 質問の編集
   - @question.errors.full_messages.each do |message|
-    %li= message
+    .error_msg
+      %li= message
   = form_with(model: @question, local: true) do |f|
     %div
       = f.label :title, 'タイトル'
