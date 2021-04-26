@@ -1,0 +1,16 @@
+current directory: /Users/takumi/datespot-share-app/vendor/bundle/ruby/2.6.0/gems/racc-1.5.2/ext/racc/cparse
+/Users/takumi/.rbenv/versions/2.6.6/bin/ruby -I /Users/takumi/.rbenv/versions/2.6.6/lib/ruby/2.6.0 -r ./siteconf20210427-85830-10pk33y.rb extconf.rb
+checking for rb_ary_subseq()... yes
+creating Makefile
+
+current directory: /Users/takumi/datespot-share-app/vendor/bundle/ruby/2.6.0/gems/racc-1.5.2/ext/racc/cparse
+make "DESTDIR=" clean
+
+current directory: /Users/takumi/datespot-share-app/vendor/bundle/ruby/2.6.0/gems/racc-1.5.2/ext/racc/cparse
+make "DESTDIR="
+compiling cparse.c
+linking shared-object racc/cparse.bundle
+
+current directory: /Users/takumi/datespot-share-app/vendor/bundle/ruby/2.6.0/gems/racc-1.5.2/ext/racc/cparse
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cparse.bundle ./.gem.20210427-85830-1kqo6l6/racc

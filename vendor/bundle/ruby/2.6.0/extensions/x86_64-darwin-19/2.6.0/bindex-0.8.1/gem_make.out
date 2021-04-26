@@ -1,0 +1,15 @@
+current directory: /Users/takumi/datespot-share-app/vendor/bundle/ruby/2.6.0/gems/bindex-0.8.1/ext/skiptrace
+/Users/takumi/.rbenv/versions/2.6.6/bin/ruby -I /Users/takumi/.rbenv/versions/2.6.6/lib/ruby/2.6.0 -r ./siteconf20210427-85830-5r6607.rb extconf.rb
+creating Makefile
+
+current directory: /Users/takumi/datespot-share-app/vendor/bundle/ruby/2.6.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" clean
+
+current directory: /Users/takumi/datespot-share-app/vendor/bundle/ruby/2.6.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR="
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.bundle
+
+current directory: /Users/takumi/datespot-share-app/vendor/bundle/ruby/2.6.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20210427-85830-127zvl/skiptrace/internal
