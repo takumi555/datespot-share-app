@@ -4,7 +4,8 @@
   .account_show_left
     .profile_avatar
       = image_tag @user.avatar_image,class: 'profile_avatar'
-    = render 'relationships/follow_form', user: @user
+    -if user_signed_in?
+      = render 'relationships/follow_form', user: @user
 
   .account_show_right.account
     .followers
@@ -19,5 +20,6 @@
     %p.mt-3.font-weight-bold #{@user.username}さんの投稿一覧
     - @posts.each do |post|
       = render 'commons/posts', post: post
-      
+
+        
     = paginate @posts
