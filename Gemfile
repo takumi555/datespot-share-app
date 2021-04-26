@@ -31,6 +31,7 @@ gem 'kaminari'
 gem 'mini_magick'
 gem 'activeadmin'
 gem 'rails-i18n'
+gem 'aws-sdk-s3', require: false
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

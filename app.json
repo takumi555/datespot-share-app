@@ -1,0 +1,16 @@
+{
+  "name": "datespot-share-app",
+  "description": "This is datespot-share-app",
+  "keywords": [],
+  "website": "",
+  "repository": "https://github.com/takumi555/datespot-share-app",
+  "env": {},
+  "addons": [
+    "heroku-postgresql:hobby-dev"
+  ],
+  "buildpacks": [{
+    "url": "heroku/nodejs"
+  }, {
+    "url": "heroku/ruby"
+  }]
+}
