@@ -22,6 +22,11 @@
   = link_to '質問部屋へ行く', questions_path, data: {"turbolinks" => false}
 %div.link_to_popular.mt-2
   = link_to '人気投稿を見る',populars_path, data: {"turbolinks" => false}
-%div.link_to_popular.mt-2.timeline_link
-  = link_to 'フォローしているユーザーの投稿', timelines_path, data: {"turbolinks" => false}
+- if user_signed_in?
+  - if current_page?(controller: 'timelines')
+    %div.link_to_popular.mt-2.timeline_link
+      = link_to 'すべての投稿一覧へ', root_path, data: {"turbolinks" => false}
+  - else
+    %div.link_to_popular.mt-2.timeline_link
+      = link_to 'フォローしているユーザーの投稿', timelines_path, data: {"turbolinks" => false}
 

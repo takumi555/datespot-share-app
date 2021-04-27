@@ -9,7 +9,6 @@ questions/index
 
 .questions_index_title {
   margin-top: 20px;
-  font-size: 20px;
   letter-spacing: 1px;
 
 }
@@ -47,10 +46,11 @@ questions/show
 .question_title {
   font-size: 30px;
   font-weight: bold;
-  margin: 30px 0;
+  margin-top: 30px;
 }
 
 .question_content {
+  margin-top: 20px;
 
 }
 .answer_form {
@@ -77,5 +77,15 @@ questions/new
 }
 .question_submit {
   width: 50%;
-
 }
+/*===================
+レスポンシブ
+====================*/ 
+@media only screen and (max-width:767px) {
+  .question_title {
+    font-size: 20px;
+  }
+
+  
+}
+
