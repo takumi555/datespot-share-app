@@ -3,8 +3,8 @@
     = @question.title
   - if current_user == @user
     .question_link.clear
-      = link_to '削除する', question_path(@question), data: { method: 'delete', confirm: '本当に削除してよろしいですか？' }
-      = link_to '編集する/', edit_question_path(@question)
+      = link_to '削除', question_path(@question), data: { method: 'delete', confirm: '本当に削除してよろしいですか？' }
+      = link_to '編集/', edit_question_path(@question)
   .question_content
     = simple_format(@question.content)
 

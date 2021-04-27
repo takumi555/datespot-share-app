@@ -6,3 +6,12 @@ ja:
       previous: <i class="fas fa-angle-left"></i>
       next: <i class="fas fa-angle-right"></i>
       truncate: "..."
+  activerecord:
+    attributes:
+      post: 
+        title: タイトル
+        prefecture: 都道府県
+        content: 説明
+      question: 
+        title: タイトル
+        content: 質問内容

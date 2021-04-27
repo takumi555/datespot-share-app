@@ -1,15 +1,15 @@
 .container
   = form_with model: @post do |f|
     %div
-      = f.label :title, 'Title'
+      = f.label :title, 'タイトル'
     %div
       = f.text_field :title, class: 'form'
     %div
-      = f.label :image, '画像'
+      = f.label :image, '画像', class: 'mt-2'
     %div
       = f.file_field :images, multiple: true
     %div 
-      = f.label :prefecture, '都道府県'
+      = f.label :prefecture, '都道府県', class: 'mt-2'
     %div
       = f.select :prefecture, [['東京都', '東京都'], ['神奈川県','神奈川県'],['千葉県','千葉県'],['埼玉県','埼玉県'],['その他','その他']], include_blank: '選択して下さい'
     %div
@@ -19,7 +19,7 @@
     %div
       = f.label :説明
     %div
-      = f.text_area :content, class: 'form'
+      = f.text_area :content, class: 'form large_form'
     %div
       = f.label :url, 'URL'
     %div

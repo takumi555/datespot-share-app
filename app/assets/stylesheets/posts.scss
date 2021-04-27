@@ -178,6 +178,9 @@ post/show
   height: 40px;
   margin-bottom: 8px;
 }
+.large_form {
+  height: 150px;
+}
 
 .favorite_container {
   width: 60%;
@@ -345,6 +348,9 @@ post/show
   .post_show_container {
     width: 100%;
     margin-left: 0px;
+  }
+  .post_show_title {
+    font-size: 20px;
   }
 
   .show_heart img{
