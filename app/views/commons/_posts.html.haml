@@ -1,7 +1,7 @@
 .post_container.clear
   .post_container_left
     - if post.images&.attached?
-      = image_tag post.images.first.variant(combine_options:{gravity: :center, resize:"250x200^", crop:"250x200+0+0"}).processed, class: 'thumbnail'
+      = image_tag post.images.first.variant(combine_options:{gravity: :center, resize:"250x180^", crop:"250x180+0+0"}).processed, class: 'thumbnail'
     - else
       = image_tag 'no-image.png', class: 'thumbnail'
   .post_container_right
@@ -13,7 +13,7 @@
     .clear
 
     .post_prefecture
-      = post.prefecture 
+      = post.prefecture
     .post_area
       = post.area 
     .post_content.box_read
