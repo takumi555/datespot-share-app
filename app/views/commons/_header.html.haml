@@ -6,17 +6,17 @@
   .header_right
     -if user_signed_in?
       - if request.path.include?("question")
-        .new_post_link2
+        .new_post_link
           = link_to '質問投稿',new_question_path, class: 'new_post_link_text'
         .new_post_link_response
           = link_to '質問投稿',new_question_path, class: 'new_post_response_text'
       - else
-        .new_post_link2
+        .new_post_link
           = link_to '新規投稿',new_post_path, class: 'new_post_link_text'
         .new_post_link_response
           = link_to '新規投稿',new_post_path, class: 'new_post_response_text'
     - else
-      .new_post_link2
+      .new_post_link
         = link_to 'ログイン',new_user_session_path, class: 'new_post_link_text'
       .new_post_link_response
         = link_to 'ログイン',new_user_session_path, class: 'new_post_response_text'

@@ -1,5 +1,5 @@
 .container
-  %h4 ユーザー登録
+  %h4 アカウント作成
   = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
     = render "devise/shared/error_messages", resource: resource
     .field
@@ -19,5 +19,5 @@
       %br/
       = f.password_field :password_confirmation, autocomplete: "new-password", class: 'form'
     .actions
-      = f.submit "サインアップ", class: 'mt-3 btn submit_btn'
+      = f.submit "アカウント作成", class: 'mt-3 btn submit_btn'
   = render "devise/shared/links"
