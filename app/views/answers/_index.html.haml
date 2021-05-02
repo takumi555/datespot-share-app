@@ -1,7 +1,16 @@
 - answers.each do |answer|
   .comment_container.clear
-    .comment_username
-      = answer.user.username
+    .user_info
+      - if user_signed_in?
+        - if answer.user.id == current_user.id
+          = link_to profile_path, data: {"turbolinks" => false} do
+            = image_tag answer.user.avatar_image, class: 'post_user_avatar'
+            %p.post_username=  answer.user.username
+        - else
+          = render 'commons/user_info', post: answer
+      - else 
+        = render 'commons/user_info', post: answer
+
     .comment_content
       = simple_format(answer.content)
     - if answer.user == current_user

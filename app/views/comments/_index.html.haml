@@ -1,7 +1,16 @@
 - comments.each do |comment|
   .comment_container.clear
-    .comment_username
-      = comment.user.username
+    .user_info
+      - if user_signed_in?
+        - if comment.user.id == current_user.id
+          = link_to profile_path, data: {"turbolinks" => false} do
+            = image_tag comment.user.avatar_image, class: 'post_user_avatar'
+            %p.post_username=  comment.user.username
+        - else
+          = render 'commons/user_info', post: comment
+      - else 
+        = render 'commons/user_info', post: comment
+
     .comment_content
       = comment.content
     - if comment.user == current_user
