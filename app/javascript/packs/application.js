@@ -40,7 +40,3 @@ $(function () {
     }
   });
 }());
-
-$(function(){
-  setTimeout("$('.flash_message').fadeOut('slow')",  1500);
-});
