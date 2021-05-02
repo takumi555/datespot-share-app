@@ -12,20 +12,14 @@
     %meta{:content => "width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0", :name => "viewport"}/
   
   %body
-    %div.wrapper
+    .wrapper
       %header
         = render 'commons/header'    
     
-      %div.main_container
-        - if flash[:notice]
-          .flash_message.alert.alert-info
-            %p.notice= notice
-        - if flash[:alert]
-          .flash_message.alert.alert-info
-            %p.alert= alert         
+      .main_container.clear
+        = render 'commons/flash_message'  
         = yield
-      .clear
-
+      
       %footer
         %p 東京デート倶楽部
         

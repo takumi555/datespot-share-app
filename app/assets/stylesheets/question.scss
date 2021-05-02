@@ -5,57 +5,54 @@ questions/index
 .question_index_container {
   width: 80%;
   margin: 0 auto; 
-}
 
-.questions_index_title {
-  margin-top: 20px;
-  letter-spacing: 1px;
-
-}
-
-.questions {
-  text-decoration: none;
-  margin-bottom: 25px;
-  background-color: rgb(241, 241, 241);
-  border-radius: 10px;
-  padding: 10px;
-
-  .questions_title {
-    font-size: 18px;
-    color: black;
-    font-weight: bold;
-
+  .questions_index_title {
+    margin-top: 20px;
+    letter-spacing: 1px;
+  
   }
 
-  .questions_content {
-    color: black;
-    font-size: 15px;
-
+  .questions {
+    text-decoration: none;
+    margin-bottom: 25px;
+    background-color: rgb(241, 241, 241);
+    border-radius: 10px;
+    padding: 10px;
+  
+    .questions_title {
+      font-size: 18px;
+      color: black;
+      font-weight: bold;
+  
+    }
+  
+    .questions_content {
+      color: black;
+      font-size: 15px;
+    }
+  
   }
-
 }
-
 /*===================
 questions/show
 =======================*/
 .question_show_container {
   width: 80%;
   margin: 0 auto;
-}
 
-.question_title {
-  font-size: 30px;
-  font-weight: bold;
-  margin-top: 30px;
-}
-
-.question_content {
-  margin-top: 20px;
-
+  .question_title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 30px;
+  }
+  
+  .question_content {
+    margin-top: 20px;
+  }
 }
 .answer_form {
   width: 50%;
-  height: 100px;
+  height: 150px!important;
 }
 .answer_btn {
   width: 50%;
@@ -64,21 +61,23 @@ questions/show
 .question_link a{
   color: lightgrey;
   float: right;
-
 }
+
 /*===================
 questions/new
 =======================*/ 
 .question_new_container {
   width: 80%;
   margin: 0 auto;
+
+  .question_new_title {
+    margin-top: 10px;
+  }
+  .question_submit {
+    width: 50%;
+  }
 }
-.question_new_title {
-  margin-top: 10px;
-}
-.question_submit {
-  width: 50%;
-}
+
 /*===================
 レスポンシブ
 ====================*/ 
@@ -86,7 +85,5 @@ questions/new
   .question_title {
     font-size: 20px;
   }
-
-  
 }
 

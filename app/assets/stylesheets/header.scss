@@ -1,29 +1,31 @@
+@import '_variables';
+
 header {
-  background-color: #082b48;
+  background-color: $main-color;
   color: white;
-}
 
-.header_container {
-  padding: 10px 0;
-  width: 90%;
-  margin:auto; 
-}
+  .header_container {
+    padding: 10px 0;
+    width: 90%;
+    margin:auto; 
 
-.header_left {
-  float: left;
+    .header_left {
+      float: left;
+    
+      .title img{
+        margin-top: 17px;
+        width: 230px;
+      }
+    }
 
-  .title img{
-    margin-top: 17px;
-    width: 230px;
+    .header_right {
+      float: right;
+    }
   }
 }
 
-.header_right {
-  float: right;
-}
-
 .new_post_link {
-  background-color: #eb5e6b;
+  background-color: $sub-color;
   border-radius: 5px;
   height: 40px;
   width: 150px;
@@ -45,7 +47,6 @@ header {
 .new_post_link_response {
   display: none;
 }
-
 .header_user_icon img{
   width: 55px;
   height: 55px;
@@ -55,9 +56,6 @@ header {
   padding: 5px;
   background-color: white;
 }
-
-
-
 
 /*=====================================
 レスポンシブ
@@ -84,7 +82,7 @@ header {
 
   .new_post_link_response {
     display: block;
-    background-color: #eb5e6b;
+    background-color: $sub-color;
     border-radius: 5px;
     height: 30px;
     width: 80px;

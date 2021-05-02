@@ -1,23 +1,21 @@
+@import '_variables';
+
 .container {
   width: 99%;
   margin-top: 30px;
-}
 
-.content_left {
-  width: 70%;
-  float: left;
-}
-
-.content_right {
-  width: 27%;
-  float: right;
-  height: 650px;
-  border-left: 1px solid lightgray;
-  padding-left: 25px;
-}
-
-.response_top_page{ 
-  display: none;
+  .content_left {
+    width: 70%;
+    float: left;
+  }
+  
+  .content_right {
+    width: 27%;
+    float: right;
+    height: 650px;
+    border-left: 1px solid lightgray;
+    padding-left: 25px;
+  }
 }
 
 .area_wrap {
@@ -40,7 +38,7 @@
   }
 }
 
-.link_to_popular {
+.content_right_link{
   border: 2px solid #000;
   padding: 7px;
   background: #fff;
@@ -49,7 +47,7 @@
     font-size: 13px;
   }
   &:hover {
-    background:#eb5e6b;
+    background: $sub-color;
     a {
       color: #fff;
     }
@@ -87,15 +85,29 @@
     .link_detail {
       color: lightslategray;
     }
+    .box_read {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .user_info {
+      text-decoration: none;
+      margin-top: 10px;
+      .post_user_avatar {
+        height: 30px;
+        width: 30px;
+        border-radius: 100%;
+        float: left;
+      }
+      .post_username {
+        margin-left: 40px;
+        padding-top: 3px;
+        color: black;
+      }
+    }
   }
-
-}
-
-.box_read {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
+} 
 
 .post_heart img{
   width: 30px;
@@ -103,21 +115,10 @@
   margin-right: 20px;
 }
 
-.user_info {
-  text-decoration: none;
-  margin-top: 10px;
-  .post_user_avatar {
-    height: 30px;
-    width: 30px;
-    border-radius: 100%;
-    float: left;
-  }
-  .post_username {
-    margin-left: 40px;
-    padding-top: 3px;
-    color: black;
-  }
+.response_top_page{ 
+  display: none;
 }
+
 /*===============================
 post/show
 =================================*/
@@ -126,96 +127,86 @@ post/show
   width: 50%;
   margin-left: 50px;
   float: left;
-}
-.post_show_title {
-  font-size: 30px;
-  font-weight: bold;
-  letter-spacing: 3px;
-  float: left;
-}
-.show_heart img{
-  margin-top: 5px;
+
+  .post_show_title {
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    float: left;
+  }
+  .show_heart img{
+    margin-top: 5px;
+    
+  }
+  .link_container{
+    margin-bottom: 20px;
+    a {
+    color: lightgray;
+    float: right;
+    margin-top: 5px;
+    }
+  }
+  .post_place_description {
+    font-size: 15px;
+    border-bottom: 1px solid lightgray;
+  }
+  .post_content_description {
+    font-size: 15px;
+    border-bottom: 1px solid lightgray;
+    margin-top: 20px;
+  }
+  .post_tag_description {
+    font-size: 15px;
+    border-bottom: 1px solid lightgray;
+    margin-top: 20px;
   
-}
-.link_container{
-  margin-bottom: 20px;
-  a {
-  color: lightgray;
-  float: right;
-  margin-top: 5px;
+  }
+  .post_url_description {
+    font-size: 15px;
+    border-bottom: 1px solid lightgray;
+    margin-top: 20px;
+  }
+
+  .post_url_description {
+    font-size: 15px;
+    border-bottom: 1px solid lightgray;
+    margin-top: 20px;
+  }
+
+  .comment_index {
+    font-size: 15px;
+    border-bottom: 1px solid lightgray;
+    margin-top: 20px;
+  }
+
+
+  
+  .add_comment_btn {
+    width: 100%;
+  }
+  
+  .comment_container {
+    margin-top: 10px;
+  
+    .comment_username {
+      font-weight: bold;
+    }
+
   }
 }
-.post_place_description {
-  font-size: 15px;
-  border-bottom: 1px solid lightgray;
-}
-.post_content_description {
-  font-size: 15px;
-  border-bottom: 1px solid lightgray;
-  margin-top: 20px;
-}
-.post_tag_description {
-  font-size: 15px;
-  border-bottom: 1px solid lightgray;
-  margin-top: 20px;
-
-}
-.post_url_description {
-  font-size: 15px;
-  border-bottom: 1px solid lightgray;
-  margin-top: 20px;
-}
-.comment_index {
-  font-size: 15px;
-  border-bottom: 1px solid lightgray;
-  margin-top: 20px;
-}
-
-.form {
-  width: 50%;
-  background: #F4F4F4;
-  border-radius: 10px; 
-  border: none;   
-  height: 40px;
-  margin-bottom: 8px;
-}
-.large_form {
-  height: 150px;
-}
-
-.favorite_container {
-  width: 60%;
-}
-
-.comment_form {
-  width: 100%;
-  height: 50px;
-  margin-top: 20px;
-}
-
-.add_comment_btn {
-  width: 100%;
-}
-
-.comment_container {
-  margin-top: 10px;
-
-}
-
-.comment_username {
-  font-weight: bold;
-}
-
 .comment_content {
   margin-top: 5px;
   float: left;
 }
-
 .comment_delete {
   color: lightgray;
   float: right;
 }
-
+.comment_form {
+  width: 100%!important;
+  height: 50px;
+  margin-top: 20px;
+}
 .new_post_icon img{
   width: 60px;
   z-index: 200px;
@@ -225,30 +216,23 @@ post/show
   bottom: 30px;
 }
 
+/*==================================================
+レスポンシブ
+====================================================*/
+
 @media only screen and (max-width: 1024px) {
   .post_show_container {
     width: 80%;
   }
 }
 
-/*==================================================
-レスポンシブ
-====================================================*/
-
 @media only screen and (max-width:767px) {
-  .post_show_container {
-    width: 100%;
-  } 
 
   .content_left {
-    width: 100%;
+    width: 100%!important;
   }
   .content_right {
     display: none;
-  }
-
-  .response_post_index_title {
-    margin-left: 25px;
   }
 
   .post_container_left {
@@ -271,37 +255,37 @@ post/show
 
   .response_top_page {
     display: block;
-  }
 
-  .response_search {
-    display: block;
-    height: 230px;
-    background-image: url(people-2568954_1920.jpg);
-    background-size: cover;
-    background-color:rgba(255,255,255,0.3);
-    background-blend-mode:lighten;
-
-
-    .response_search_form {
-      padding-top: 45px;
+    .response_search {
       display: block;
-      width: 80%;
-      margin: 0 auto;
+      height: 230px;
+      background-image: url(people-2568954_1920.jpg);
+      background-size: cover;
+      background-color:rgba(255,255,255,0.3);
+      background-blend-mode:lighten;
+  
+  
+      .response_search_form {
+        padding-top: 45px;
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+      }
     }
-  }
-
-  .response_area_search  {
-    width: 80%;
-    margin-top: 30px!important;
-    display: block;
-    margin:  0 auto;
-  }
-
-  .tag_wrap {
-    margin-top: 10px;
-    width: 80%;
-    display: block;
-    margin:  0 auto;
+  
+    .response_area_search  {
+      width: 80%;
+      margin-top: 30px!important;
+      display: block;
+      margin:  0 auto;
+    }
+  
+    .tag_wrap {
+      margin-top: 10px;
+      width: 80%;
+      display: block;
+      margin:  0 auto;
+    }
   }
 
   .response_link_background{
@@ -321,46 +305,29 @@ post/show
       }
         a:hover {
           color: #fff;
-          background:#eb5e6b;
+          background:$sub-color;
         }
-    }
-  }
-
-
-  }
-
-  .link_to_popular {
-    a {
-      border: 2px solid #000;
-      border-radius: 0;
-      padding: 10px;
-      background: #fff;
-      color: black;
-    }
-    a:hover {
-      color: #fff;
-      background: #eb5e6b;
+      }
     }
   }
 
   /*==================================
   show
   ====================================*/
-
   .post_show_container {
     width: 100%;
     margin-left: 0px;
-  }
-  .post_show_title {
-    font-size: 20px;
-  }
 
-  .show_heart img{
-    margin-right: 0px;
+    .post_show_title {
+      font-size: 20px;
+    }
+  
+    .show_heart img{
+      margin-right: 0px;
+    }
+  
+    .link_container{
+      margin-right: 0px;
+    }
   }
-
-  .link_container{
-    margin-right: 0px;
-  }
-
 }

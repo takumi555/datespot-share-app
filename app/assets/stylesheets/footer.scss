@@ -1,6 +1,8 @@
+@import '_variables';
+
 footer {
   margin-top: 30px;
-  background-color: #082b48;
+  background-color: $main-color;
   height: 50px;
   position: absolute;
   bottom: 0;
