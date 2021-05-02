@@ -34,7 +34,7 @@
       
     .post_content
       %p.post_content_description 説明
-      = @post.content
+      =  simple_format(@post.content)
 
     .post_tag
       %p.post_tag_description タグ
