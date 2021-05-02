@@ -14,9 +14,9 @@
  *= require_self
  */
 
+ @import '_variables';
  @import 'header';
  @import 'footer';
- @import 'devise';
  @import 'profile';
  @import 'tags';
  @import 'posts';
@@ -25,7 +25,7 @@
  @import 'show_images';
  @import 'question';
  @import 'error_msg';
-
+ @import 'flash_message';
 
 html,body {
   text-decoration: none;
@@ -39,30 +39,33 @@ html,body {
   padding-bottom: 70px;
 }
 
-.flash_message {
-  width:  80%;
-  margin: 10px auto;
-  height: 50px;
-
- 
-}
-
 .clear::after{
   content:"";
   clear: both;
   display: block;
 }
+
 .submit_btn {
-  background-color:  #eb5e6b;
+  background-color: $sub-color;
   color: white;
 }
+
 .hidden {
   display: none;
 }
-.notice_container {
-  float: center;
+
+.form {
+  width: 50%;
+  background: #F4F4F4;
+  border-radius: 10px; 
+  border: none;   
+  height: 40px;
+  margin-bottom: 8px;
 }
 
+.large_form {
+  height: 150px;
+}
 /*===============================================
 レスポンシブ
 ================================================*/
@@ -78,5 +81,4 @@ html,body {
     width: 100%;
   }
 }
-
  @import "bootstrap";

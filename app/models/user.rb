@@ -4,6 +4,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable
 
+  validates :username, presence: true
+  validates :email, presence: true
+  validates :password, presence: true
+
   has_many :posts, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
@@ -19,12 +23,6 @@ class User < ApplicationRecord
 
   has_many :follower_relationships, foreign_key: 'following_id', class_name: 'Relationship', dependent: :destroy
   has_many :followers, through: :follower_relationships, source: :follower
-
-  validates :username, presence: true
-  validates :email, presence: true
-  validates :password, presence: true
-
-  
 
   def prepare_profile
     profile || build_profile
@@ -55,7 +53,6 @@ class User < ApplicationRecord
 
   def has_followed?(user)
     following_relationships.exists?(following_id: user.id)
-
   end
 
   def following_count
@@ -65,7 +62,6 @@ class User < ApplicationRecord
   def follower_count
     followers.count
   end
-
 
   private
   def get_user_id(user)

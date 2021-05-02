@@ -1,5 +1,7 @@
+@import '_variables';
+
 .error_msg {
   list-style: none;
-  color: #eb5e6b;
+  color: $sub-color;
   font-size: 15px;
 }

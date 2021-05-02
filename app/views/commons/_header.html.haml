@@ -1,7 +1,7 @@
-%div.header_container.clear
+.header_container.clear
   .header_left
     .header_title
-      = link_to image_tag('ロゴ4.png'), root_path, class: 'title'
+      = link_to image_tag('logo.png'), root_path, class: 'title'
 
   .header_right
     -if user_signed_in?
@@ -21,8 +21,7 @@
       .new_post_link_response
         = link_to 'ログイン',new_user_session_path, class: 'new_post_response_text'
         
-
-    %div.header_user_icon.dropdwn
+    .header_user_icon.dropdwn
       - if user_signed_in?
         = image_tag current_user.avatar_image, class: 'dropdwn_btn' ,id: 'dropdwn_btn'
         .dropdwn_menu
@@ -32,7 +31,8 @@
             %li.dropdwn_item 
               = link_to 'いいねした投稿',favorites_path, data: {"turbolinks" => false}
             %li.dropdwn_item
-              = link_to '登録内容変更', edit_user_registration_path
+              - unless current_user.email == "test@example.com"
+                = link_to '登録内容変更', edit_user_registration_path
             %li.dropdwn_item
               - if user_signed_in?
                 = link_to 'ログアウト', destroy_user_session_path, data: { method: 'delete', confirm: 'ログアウトしますか？' }

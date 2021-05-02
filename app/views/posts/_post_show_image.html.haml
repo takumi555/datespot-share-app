@@ -35,3 +35,5 @@
     = image_tag @post.images.first.variant(combine_options:{gravity: :center, resize:"500x300^", crop:"500x300+0+0"}).processed, class: 'show_image_main image_size_1'
 - else 
   = image_tag 'no-image.png', class: 'show_image_main image_size_1  no_image'
+
+= javascript_pack_tag 'post_image'

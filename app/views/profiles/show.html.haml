@@ -19,8 +19,7 @@
       %p.follow_count= @user.following_count
       = link_to 'フォロー', account_followings_path(@user)
   .clear
-
-
+  
   .profile_post_container
     %p.mt-3.font-weight-bold.your_post あなたの投稿一覧
     - @posts.each do |post|
