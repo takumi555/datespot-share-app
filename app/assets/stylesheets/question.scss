@@ -51,7 +51,7 @@ questions/show
   }
 }
 .answer_form {
-  width: 50%;
+  width: 50%!important;
   height: 150px!important;
 }
 .answer_btn {
@@ -70,8 +70,8 @@ questions/new
   width: 80%;
   margin: 0 auto;
 
-  .question_new_title {
-    margin-top: 10px;
+  .question_new_top {
+    margin-top: 15px;
   }
   .question_submit {
     width: 50%;
@@ -84,6 +84,10 @@ questions/new
 @media only screen and (max-width:767px) {
   .question_title {
     font-size: 20px;
+  }
+
+  .question_submit {
+    width: 100%!important;
   }
 }
 

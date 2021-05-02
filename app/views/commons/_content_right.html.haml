@@ -18,15 +18,20 @@
     = link_to list.tag_name, posts_path(tag_id: list.id), class: 'tag_list'
   %div
     = link_to 'タグ一覧へ', tags_path
-.content_right_link
-  = link_to '質問部屋へ行く', questions_path, data: {"turbolinks" => false}
-.content_right_link.mt-2
-  = link_to '人気投稿を見る',populars_path, data: {"turbolinks" => false}
+= link_to questions_path, data: {"turbolinks" => false} do 
+  .content_right_link
+    %p 質問部屋へ行く
+= link_to populars_path, data: {"turbolinks" => false} do 
+  .content_right_link.mt-2
+    %p 人気投稿を見る
 - if user_signed_in?
   - if current_page?(controller: 'timelines')
-    .content_right_link.mt-2.timeline_link
-      = link_to 'すべての投稿一覧へ', root_path, data: {"turbolinks" => false}
+    = link_to root_path, data: {"turbolinks" => false} do
+      .content_right_link.mt-2
+        %p すべての投稿一覧へ
   - else
-    .content_right_link.mt-2.timeline_link
-      = link_to 'フォローしているユーザーの投稿', timelines_path, data: {"turbolinks" => false}
+    = link_to timelines_path, data: {"turbolinks" => false} do 
+      .content_right_link.mt-2
+        %p フォローしているユーザーの投稿
+
 
