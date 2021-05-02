@@ -25,6 +25,7 @@
  @import 'show_images';
  @import 'question';
  @import 'error_msg';
+ @import 'flash_message';
 
 html,body {
   text-decoration: none;
@@ -36,12 +37,6 @@ html,body {
   position: relative;
   min-height: 100%;
   padding-bottom: 70px;
-}
-
-.flash_message {
-  width:  80%;
-  margin: 10px auto;
-  height: 50px; 
 }
 
 .clear::after{
@@ -86,5 +81,4 @@ html,body {
     width: 100%;
   }
 }
-
  @import "bootstrap";
