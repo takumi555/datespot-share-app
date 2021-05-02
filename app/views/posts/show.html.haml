@@ -1,5 +1,17 @@
 .container
   .post_show_container#post-show{data: {post_id: @post.id}}
+    .user_info
+      - if user_signed_in?
+        - if @post.user.id == current_user.id
+          = link_to profile_path, data: {"turbolinks" => false} do
+            = image_tag @post.user.avatar_image, class: 'post_user_avatar'
+            %p.post_username=  @post.user.username
+        - else
+          = render 'commons/user_info', post: @post
+      - else 
+        = render 'commons/user_info', post: @post
+
+
     .post_show_title
       = @post.title 
 

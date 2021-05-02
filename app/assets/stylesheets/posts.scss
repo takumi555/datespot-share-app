@@ -75,6 +75,7 @@
   .post_container_right {
     width: 65%;
     float: right;
+    color: black;
     
     .post_title {
       font-size: 20px;
@@ -83,32 +84,27 @@
       float: left;
     }
 
-    .link_detail {
-      color: lightslategray;
-    }
-    .box_read {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
+    .post_content_index {
+      margin-bottom: 10px;
     }
 
-    .user_info {
-      text-decoration: none;
-      margin-top: 10px;
-      .post_user_avatar {
-        height: 30px;
-        width: 30px;
-        border-radius: 100%;
-        float: left;
-      }
-      .post_username {
-        margin-left: 40px;
-        padding-top: 3px;
-        color: black;
-      }
-    }
+
   }
 } 
+.user_info {
+  text-decoration: none;
+  .post_user_avatar {
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    float: left;
+  }
+  .post_username {
+    margin-left: 40px;
+    padding-top: 3px;
+    color: black;
+  }
+}
 
 .post_heart img{
   width: 30px;
@@ -179,30 +175,23 @@ post/show
     border-bottom: 1px solid lightgray;
     margin-top: 20px;
   }
-
-  .comment_index {
-    font-size: 15px;
-    border-bottom: 1px solid lightgray;
-    margin-top: 20px;
-  }
-
-
   
-  .add_comment_btn {
-    width: 100%;
-  }
-  
-  .comment_container {
-    margin-top: 10px;
-  
-    .comment_username {
-      font-weight: bold;
-    }
 
-  }
+}
+
+.comment_index {
+  font-size: 15px;
+  border-bottom: 1px solid lightgray;
+  margin-top: 20px;
+}
+.add_comment_btn {
+  width: 100%;
+}
+.comment_container {
+    margin-bottom:15px;
 }
 .comment_content {
-  margin-top: 5px;
+  margin-top: -10px;
   float: left;
 }
 .comment_delete {

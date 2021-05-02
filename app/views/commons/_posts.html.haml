@@ -1,35 +1,34 @@
-.post_container.clear
-  .post_container_left
-    - if post.images&.attached?
-      = image_tag post.images.first.variant(combine_options:{gravity: :center, resize:"250x180^", crop:"250x180+0+0"}).processed, class: 'thumbnail'
-    - else
-      = image_tag 'no-image.png', class: 'thumbnail'
-  .post_container_right
-    .post_title
-      = post.title
-    %div{:id => "likes_buttons_#{post.id}"}
-      = render partial: 'likes/like', locals: { post: post}
-    .clear
+= link_to post_path(id: post.id), data: {"turbolinks" => false} do
+  .post_container.clear
+    .post_container_left
+      - if post.images&.attached?
+        = image_tag post.images.first.variant(combine_options:{gravity: :center, resize:"250x180^", crop:"250x180+0+0"}).processed, class: 'thumbnail'
+      - else
+        = image_tag 'no-image.png', class: 'thumbnail'
+    .post_container_right
+      .post_title
+        = post.title
+      %div{:id => "likes_buttons_#{post.id}"}
+        = render partial: 'likes/like', locals: { post: post}
+      .clear
 
-    .post_prefecture
-      = post.prefecture 
-    .post_area
-      = post.area 
-    .post_content.box_read
-      = post.content
-    .post_detail_link
-      = link_to '詳しく見る', post_path(id: post.id), data: {"turbolinks" => false}, class: 'link_detail'
-    
-    .user_info
-      - if user_signed_in?
-        - if post.user.id == current_user.id
-          = link_to profile_path, data: {"turbolinks" => false} do
-            = image_tag post.user.avatar_image, class: 'post_user_avatar'
-            %p.post_username=  post.user.username
-        - else
+      .post_prefecture
+        = post.prefecture 
+      .post_area
+        = post.area 
+      .post_content_index
+        = post.content
+
+      .user_info
+        - if user_signed_in?
+          - if post.user.id == current_user.id
+            = link_to profile_path, data: {"turbolinks" => false} do
+              = image_tag post.user.avatar_image, class: 'post_user_avatar'
+              %p.post_username=  post.user.username
+          - else
+            = render 'commons/user_info', post: post
+        - else 
           = render 'commons/user_info', post: post
-      - else 
-        = render 'commons/user_info', post: post
 
 
 

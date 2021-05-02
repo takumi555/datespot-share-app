@@ -39,11 +39,11 @@ questions/show
 .question_show_container {
   width: 80%;
   margin: 0 auto;
+  margin-top: 30px;
 
   .question_title {
     font-size: 30px;
     font-weight: bold;
-    margin-top: 30px;
   }
   
   .question_content {
@@ -85,6 +85,10 @@ questions/new
   .question_title {
     font-size: 20px;
   }
+  .answer_form {
+  width: 100%!important;
+  height: 150px!important;
+}
 
   .question_submit {
     width: 100%!important;
