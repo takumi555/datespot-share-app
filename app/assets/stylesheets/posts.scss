@@ -67,7 +67,8 @@
 
     .thumbnail {
       max-width: 100%;
-      max-height: 90%;
+      height: 90%;
+      max-height: 180px;
       border-radius: 3px;
     }
   }
@@ -195,7 +196,7 @@ post/show
   float: left;
 }
 .comment_delete {
-  color: lightgray;
+  color: lightgray!important;
   float: right;
 }
 .comment_form {
