@@ -1,0 +1,112 @@
+@import '_variables';
+
+.talkroom {
+  padding: 30px;
+  margin: 0 auto;
+}
+
+.room_title {
+  font-weight: bold;
+}
+.msg_btn {
+  width: 150px;
+  margin-top: 10px;
+}
+.chat {
+  margin: 5px;
+  top: 3px;
+  max-width: 90%;
+  float: left;
+  
+  .talk_content {
+    float: right;
+    padding: 5px 10px;
+    border-radius: 3px;
+    background-color: rgb(244, 244, 244);
+    min-height: 35px;
+
+  }
+  .talk_img {
+    margin-left: 5px;
+    float: left;
+  }
+  
+}
+.my_talk {
+  float: right;
+  margin-top: 5px;
+  position: relative;
+  display: block;
+  margin: 5px 0;
+  max-width: 90%;
+  float: right;
+  margin-right: 5px; 
+  clear: both;
+
+  .my_talk_content {
+    float: left;
+    background-color: rgb(255, 206, 206);
+    border-radius: 3px;
+    padding: 5px 10px;
+    min-height: 35px;
+  }
+  .my_talk_img {
+    margin-left: 5px;
+    float: right;
+  }
+}
+
+.msg_form {
+  margin-top: 10px;
+  width: 80%!important;
+  padding-left: 10px;
+  float: left;
+}
+
+.msg_submit {
+width: 19%;
+float: right;
+margin-top: -13px;
+}
+
+
+.msg_avatar {
+  height: 35px;
+  width: 35px;
+  border-radius: 100%;
+  padding: 3px;
+  background-color: white;
+}
+
+/*==================================================
+レスポンシブ
+====================================================*/
+
+@media only screen and (max-width: 1024px) { 
+  .talkroom {
+    padding: 0px;
+    margin: 0 auto;
+  }
+  .room_title {
+    padding-top: 30px;
+    padding-left: 10px;
+  }
+  .msg_form_container {
+    width: 95%;
+    margin: 0 auto;
+      .msg_form {
+        width: 100%!important;
+        float: none;
+      }
+      
+      .msg_submit {
+        float: none;
+        margin-top: 5px;
+        
+    
+      }
+
+  }
+
+
+}

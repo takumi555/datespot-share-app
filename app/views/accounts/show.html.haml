@@ -16,7 +16,19 @@
       = link_to account_followings_path(@user) do
         %p.follow_count= @user.following_count
         %p.follower_btn フォロー
-     
+  
+  .direct_message_btn
+    - if @user.id == current_user.id
+    - else
+      - if @isRoom == true
+        .msg_btn
+          = link_to 'チャットへ', room_path(@roomId),class: 'btn submit_btn'
+      - else
+        = form_for @room do |f|
+          = fields_for @entry do |e|
+            = e.hidden_field :user_id, :value=> @user.id
+          = f.submit "チャットを始める"
+      
       
   .clear
   .profile_post_container
