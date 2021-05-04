@@ -67,7 +67,8 @@
 
     .thumbnail {
       max-width: 100%;
-      max-height: 90%;
+      height: 90%;
+      max-height: 180px;
       border-radius: 3px;
     }
   }
@@ -195,7 +196,7 @@ post/show
   float: left;
 }
 .comment_delete {
-  color: lightgray;
+  color: lightgray!important;
   float: right;
 }
 .comment_form {
@@ -255,7 +256,7 @@ post/show
     .response_search {
       display: block;
       height: 230px;
-      background-image: url(people-2568954_1920.jpg);
+      background-image: image-url('people-2568954_1920.jpg');
       background-size: cover;
       background-color:rgba(255,255,255,0.3);
       background-blend-mode:lighten;

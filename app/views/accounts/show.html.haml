@@ -9,11 +9,14 @@
 
   .account_show_right.account
     .followers
-      %p.follow_count= @user.follower_count
-      = link_to 'フォロワー', account_followers_path(@user), class: ''
+      = link_to account_followers_path(@user) do
+        %p.follow_count= @user.follower_count
+        %p.follower_btn フォロワー
     .followings
-      %p.follow_count= @user.following_count
-      = link_to 'フォロー', account_followings_path(@user), class: ''
+      = link_to account_followings_path(@user) do
+        %p.follow_count= @user.following_count
+        %p.follower_btn フォロー
+     
       
   .clear
   .profile_post_container
