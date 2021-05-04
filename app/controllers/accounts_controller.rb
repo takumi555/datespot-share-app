@@ -1,4 +1,5 @@
-class AccountsController < ApplicationController 
+class AccountsController < ApplicationController
+  
   def index
     @users=User.all
   end
@@ -13,11 +14,11 @@ class AccountsController < ApplicationController
     @userEntry=Entry.where(user_id: @user.id)
     if @user.id == current_user.id
     else
-      @currentUserEntry.each do |cu|
-        @userEntry.each do |u|
-          if cu.room_id == u.room_id then
+      @currentUserEntry.each do |current|
+        @userEntry.each do |user|
+          if current.room_id == user.room_id then
             @isRoom = true
-            @roomId = cu.room_id
+            @roomId = current.room_id
           end
         end
       end

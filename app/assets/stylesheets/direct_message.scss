@@ -8,10 +8,16 @@
 .room_title {
   font-weight: bold;
 }
-.msg_btn {
-  width: 150px;
-  margin-top: 10px;
+
+
+.msg_avatar {
+  height: 35px;
+  width: 35px;
+  border-radius: 100%;
+  padding: 3px;
+  background-color: white;
 }
+
 .chat {
   margin: 5px;
   top: 3px;
@@ -21,7 +27,7 @@
   .talk_content {
     float: right;
     padding: 5px 10px;
-    border-radius: 3px;
+    border-radius: 10px;
     background-color: rgb(244, 244, 244);
     min-height: 35px;
 
@@ -46,7 +52,7 @@
   .my_talk_content {
     float: left;
     background-color: rgb(255, 206, 206);
-    border-radius: 3px;
+    border-radius: 10px;
     padding: 5px 10px;
     min-height: 35px;
   }
@@ -67,15 +73,6 @@
 width: 19%;
 float: right;
 margin-top: -13px;
-}
-
-
-.msg_avatar {
-  height: 35px;
-  width: 35px;
-  border-radius: 100%;
-  padding: 3px;
-  background-color: white;
 }
 
 /*==================================================
