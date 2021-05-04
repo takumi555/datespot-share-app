@@ -4,9 +4,9 @@
 東京デート倶楽部は「　今度のデートどうしよう　」という悩みを解決するサービスです。  
 
 恋愛に関する悩みの一つにデートプランどうしよう、、というのは多くの方に経験があるかと思います。  
-1.どこに行けばいいのかわからない
-2.デートがマンネリ化してきた
-3.気になる場所があるけど不安がある、、  
+1.どこに行けばいいのかわからない  
+2.デートがマンネリ化してきた  
+3.気になる場所があるけど不安がある    
 など、実際、私も悩みに悩み続けてきました。
 
 その悩みを解決できるサービスとしてこの「東京デート倶楽部」を開発いたしました。
@@ -21,25 +21,25 @@
 
 
 ## 使用技術
--Ruby 2.6.6
--Ruby on Rails 6.0.3.6
--HTML
--CSS
--jQuery
--AWS
+Ruby 2.6.6  
+Ruby on Rails 6.0.3.6  
+HTML  
+CSS  
+jQuery  
+AWS 
 
 ## ER図
 
 
 ## 各種機能＆導入技術
-データベース（postgreSQL）
-テスト（Rspec、Capybara、factory_bot）
-CSS（Bootstrap4,sass）
-ユーザー登録＆ログイン(Devise)
-画像アップロード（Active_record、AWS S3）
-いいね、コメント投稿（Ajax）
-ページネーション（kaminari）
-管理者ページ（active admin）
+データベース（postgreSQL）  
+テスト（Rspec、Capybara、factory_bot）  
+CSS（Bootstrap4,sass）  
+ユーザー登録＆ログイン(Devise)  
+画像アップロード（Active_record、AWS S3）  
+いいね、コメント投稿（Ajax）  
+ページネーション（kaminari）  
+管理者ページ（active admin）  
 
 ## AWS構成図
 
