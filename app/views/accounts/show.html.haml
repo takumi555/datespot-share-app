@@ -29,7 +29,7 @@
             = form_for @room do |f|
               = fields_for @entry do |e|
                 = e.hidden_field :user_id, value: @user.id
-              = f.submit "ダイレクトメッセージを始める",class: 'btn submit_btn'
+              = f.submit "ダイレクトメッセージ",class: 'btn submit_btn'
         
   .clear
   .profile_post_container

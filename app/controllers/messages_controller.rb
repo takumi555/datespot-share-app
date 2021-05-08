@@ -9,6 +9,8 @@ class MessagesController < ApplicationController
         if @message.save
           @message = Message.new
           gets_entries_all_messages
+        else
+          render :"rooms/show"
         end
     else
       flash[:alert] = "メッセージの送信に失敗しました"
