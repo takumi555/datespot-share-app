@@ -33,7 +33,8 @@ Rails.application.routes.draw do
     resources :answers, only: [:index, :create, :destroy]
   end
 
-  resources :messages, only: [:create]
+  
   resources :rooms, only: [:create, :show, :index]
+  resources :messages, only: [:create]
 
 end

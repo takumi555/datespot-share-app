@@ -1,23 +1,7 @@
 .talkroom
   %p.room_title トークルーム
-  - if @messages.present?
-    - @messages.each do |message|
-      - if message.user.id == current_user.id 
-        .my_talk
-          .my_talk_content= message.content
-          .my_talk_img= image_tag message.user.avatar_image, class: 'msg_avatar'
-        .clear
-      - else 
-        .chat
-          .talk_img= image_tag message.user.avatar_image, class: 'msg_avatar'
-          .talk_content= message.content
-        .clear
-  - else
-    %p メッセージはまだありません
-
-  = form_for @message do |f|
-    .msg_form_container
-      = f.text_field :content, :placeholder => "メッセージを入力して下さい" , :size => 70, class: 'form msg_form'
-      = f.hidden_field :room_id, :value => @room.id
-      %br/
-      = f.submit "送信", class: 'btn submit_btn msg_submit'
+  %div
+    #messages_area
+      = render partial: 'rooms/index'
+    #messages_form_area
+      = render partial: 'rooms/form'
