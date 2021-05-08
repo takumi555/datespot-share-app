@@ -24,7 +24,7 @@
       - else
         .msg_btn
           - if @isRoom == true
-            = link_to 'ダイレクトメッセージ', room_path(@roomId),class: 'btn submit_btn'
+            = link_to 'ダイレクトメッセージ', room_path(@roomId, anchor: 'page_bottom'),class: 'btn submit_btn'
           - else
             = form_for @room do |f|
               = fields_for @entry do |e|
