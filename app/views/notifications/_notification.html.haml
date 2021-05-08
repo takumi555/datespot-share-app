@@ -26,6 +26,18 @@
       = "にコメントしました"
       %p.text-muted.mb-0
         = Comment.find_by(id: notification.comment_id)&.content
+    - when "answer" then
+      - if notification.question.user_id == visited.id
+        = link_to "あなたの質問", notification.question
+      - else
+        %span
+          = link_to question_path(notification.question) do
+            = image_tag visitor.avatar_image, class: 'msg_avatar'
+            %strong
+              = notification.question.user.username + 'さんの質問'
+      = "に回答しました"
+      %p.text-muted.mb-0
+        = Answer.find_by(id: notification.answer_id)&.content
 
   %span= "(#{time_ago_in_words(notification.created_at)}前)"
   %hr

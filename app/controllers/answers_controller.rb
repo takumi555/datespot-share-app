@@ -1,16 +1,16 @@
 class AnswersController < ApplicationController
   before_action :authenticate_user!, only: [:create, :destroy]
 
-  def index
-
-  end
 
   def create
     @question = Question.find(params[:question_id])
     @answer = @question.answers.build(answer_params)
     @answer.user_id = current_user.id
-    @answer.save!
-    render :index
+    @answer_question = @answer.question
+    if @answer.save!
+      @answer_question.create_notification_answer!(current_user, @answer.id)
+      render :index
+    end
   end
 
   def destroy
