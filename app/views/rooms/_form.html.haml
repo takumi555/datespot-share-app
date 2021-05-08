@@ -3,4 +3,4 @@
     = f.text_field :content, placeholder: "メッセージを入力して下さい", class: 'form msg_form'
     = f.hidden_field :room_id, value: @room.id
     %br/
-    = f.submit "送信", class: 'btn submit_btn msg_submit'
+    = f.submit "送信", class: 'btn submit_btn msg_submit',remote: true
