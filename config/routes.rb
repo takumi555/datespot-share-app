@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   resources :favorites, only: [:index]
   resource :profile, only: [:show, :update]
 
-  resources :accounts, only: [:show] do
+  resources :accounts, only: [:index, :show] do
     resources :follows, only: [:create]
     resources :unfollows, only: [:create]
     resources :followings, only: [:index]
@@ -32,5 +32,9 @@ Rails.application.routes.draw do
   resources :questions, only: [:index, :new, :create, :show, :edit, :update, :destroy] do
     resources :answers, only: [:index, :create, :destroy]
   end
+
+  
+  resources :rooms, only: [:create, :show, :index]
+  resources :messages, only: [:create]
 
 end

@@ -4,8 +4,7 @@
   .account_show_left
     .profile_avatar
       = image_tag @user.avatar_image,class: 'profile_avatar'
-    -if user_signed_in?
-      = render 'relationships/follow_form', user: @user
+
 
   .account_show_right.account
     .followers
@@ -16,8 +15,22 @@
       = link_to account_followings_path(@user) do
         %p.follow_count= @user.following_count
         %p.follower_btn フォロー
-     
-      
+  .follow__btn
+    -if user_signed_in?
+      = render 'relationships/follow_form', user: @user
+  .direct_message_btn
+    - if user_signed_in?
+      - if @user.id == current_user.id
+      - else
+        .msg_btn
+          - if @isRoom == true
+            = link_to 'ダイレクトメッセージ', room_path(@roomId, anchor: 'page_bottom'),class: 'btn submit_btn'
+          - else
+            = form_for @room do |f|
+              = fields_for @entry do |e|
+                = e.hidden_field :user_id, value: @user.id
+              = f.submit "ダイレクトメッセージを始める",class: 'btn submit_btn'
+        
   .clear
   .profile_post_container
     %p.mt-3.font-weight-bold #{@user.username}さんの投稿一覧
