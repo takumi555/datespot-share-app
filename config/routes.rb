@@ -32,9 +32,10 @@ Rails.application.routes.draw do
   resources :questions, only: [:index, :new, :create, :show, :edit, :update, :destroy] do
     resources :answers, only: [:index, :create, :destroy]
   end
-
   
   resources :rooms, only: [:create, :show, :index]
   resources :messages, only: [:create]
+
+  resources :notifications, only: [:index]
 
 end

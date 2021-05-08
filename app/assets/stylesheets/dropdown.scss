@@ -25,6 +25,21 @@
     }
   }
 
+  .notice_circle {
+    .fa-stack {
+      position: relative;
+    }
+    font-size: 5px;
+    color: #F58E7D;
+    position: absolute;
+    
+    position: relative;
+    top: 3px;
+    right: 16px;  
+    z-index: 150;
+
+  }
+
   .dropdwn_btn.is-open::after {
     content: "";
     width: 100%;
