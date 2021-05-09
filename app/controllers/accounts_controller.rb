@@ -8,7 +8,7 @@ class AccountsController < ApplicationController
     @user = User.find(params[:id])
     @posts = Post.where(user_id: @user.id )
     
-    @posts = Kaminari.paginate_array(@posts).page(params[:page]).per(5)
+    @posts = Kaminari.paginate_array(@posts).page(params[:page]).per(10)
 
     if user_signed_in?
       @currentUserEntry=Entry.where(user_id: current_user.id)

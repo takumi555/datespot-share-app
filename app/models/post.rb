@@ -44,12 +44,12 @@ class Post < ApplicationRecord
   end
 
   def create_notification_by(current_user)
-      notification = current_user.active_notifications.new(
-        post_id: id,
-        visited_id: user_id,
-        action: "like"
-      )
-      notification.save if notification.valid?
+    notification = current_user.active_notifications.new(
+      post_id: id,
+      visited_id: user_id,
+      action: "like"
+    )
+    notification.save if notification.valid?
   end
 
   def create_notification_comment!(current_user, comment_id)

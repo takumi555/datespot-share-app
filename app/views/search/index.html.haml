@@ -5,6 +5,9 @@
   .content_left
     .font-weight-bold
       = "「 #{@search} 」の検索結果" 
-    - @posts.each do |post|
-      = render 'commons/posts', post: post
-    = paginate @posts
+    - if @posts.present?
+      - @posts.each do |post|
+        = render 'commons/posts', post: post
+      = paginate @posts
+    - else 
+      %p.mt-3 検索結果はありませんでした

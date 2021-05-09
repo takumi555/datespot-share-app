@@ -4,7 +4,10 @@
 
   .content_left
     %p.font-weight-bold いいねした投稿
-    - @posts.each do |post|
-      = render 'commons/posts', post: post
+    - if @posts.present?
+      - @posts.each do |post|
+        = render 'commons/posts', post: post
+    - else 
+      %p.mt-3 いいねした投稿はありません
 
     = paginate @posts

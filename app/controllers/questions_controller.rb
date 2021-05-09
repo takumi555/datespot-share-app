@@ -3,7 +3,7 @@ class QuestionsController < ApplicationController
   before_action :baria_user, only: [:edit, :destroy]
 
   def index
-    @questions = Question.all.order(created_at: :desc)
+    @questions = Question.all.order(created_at: :desc).page(params[:page]).per(10)
 
   end
 
