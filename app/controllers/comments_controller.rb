@@ -11,6 +11,7 @@ class CommentsController < ApplicationController
       render :index
     end
   end
+  
 
   def destroy
 
