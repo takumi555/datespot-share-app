@@ -1,0 +1,8 @@
+.container  
+  %p.font-weight-bold 通知
+  - if @notifications.exists?
+    .users_index
+      = render @notifications
+      = paginate @notifications
+  - else
+    %p 通知はありません

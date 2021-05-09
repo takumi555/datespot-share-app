@@ -5,7 +5,7 @@ class ProfilesController < ApplicationController
     @user = current_user
     @profile = @user.prepare_profile
     @posts = Post.where(user_id: current_user.id )
-    @posts = Kaminari.paginate_array(@posts).page(params[:page]).per(5)
+    @posts = Kaminari.paginate_array(@posts).page(params[:page]).per(10)
   end
 
   def update

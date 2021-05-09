@@ -8,5 +8,6 @@
           = question.title 
         .questions_content
           = question.content.truncate(100)
+  = paginate @questions
           
        

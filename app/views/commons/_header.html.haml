@@ -30,6 +30,13 @@
               = link_to 'プロフィール', profile_path, data: {"turbolinks" => false}
             %li.dropdwn_item 
               = link_to 'いいねした投稿',favorites_path, data: {"turbolinks" => false}
+            %li.dropdwn_item 
+              - if unchecked_notifications.any?
+                .fa-stack
+                  = link_to '通知', notifications_path
+                %i.fas.fa-circle.notice_circle
+              - else 
+                = link_to '通知', notifications_path
             %li.dropdwn_item
               - unless current_user.email == "test@example.com"
                 = link_to '登録内容変更', edit_user_registration_path
@@ -40,4 +47,3 @@
                 = link_to 'ログイン', new_user_session_path
       - else 
         = image_tag 'fish.jpeg'
-        

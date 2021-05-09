@@ -5,13 +5,12 @@ class PostsController < ApplicationController
   def index
     if params[:tag_id].present?
       @tag = Tag.find(params[:tag_id])
-      @posts = @tag.posts.order(created_at: :desc)
+      @posts = @tag.posts.order(created_at: :desc).page(params[:page]).per(10)
     else
-      @posts = Post.all.order(created_at: :desc)
+      @posts = Post.all.order(created_at: :desc).page(params[:page]).per(10)
     end
     @tag_lists = Tag.all.limit(15)
 
-    @posts = Kaminari.paginate_array(@posts).page(params[:page]).per(5)
   end
 
   def show
