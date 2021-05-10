@@ -32,7 +32,8 @@
           %div{class: 'thumbs__lists__item' , data: {index:1}}
             =image_tag @post.images.second,  alt: "画像1", class: "thumbs__lists__item__image"
   - else
-    = image_tag @post.images.first.variant(combine_options:{gravity: :center}).processed, class: 'show_image_main image_size_1'
+    .main__lists__image
+      = image_tag @post.images.first.variant(combine_options:{gravity: :center}).processed, class: 'show_image_main', id: 'image_size_1'
 - else 
   = image_tag 'no-image.png', class: 'show_image_main image_size_1  no_image'
 

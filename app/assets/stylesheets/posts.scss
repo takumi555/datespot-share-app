@@ -66,11 +66,16 @@
     float: left;
 
     .thumbnail {
-      max-width: 100%;
+      width: 100%;
       height: 90%;
-      max-height: 180px;
       border-radius: 3px;
+      object-fit: cover;
+      border: 1px solid #ccc;
     }
+
+  }
+  #noimage_thumbmail {
+    height: auto!important;
   }
   
   .post_container_right {
@@ -283,6 +288,10 @@ post/show
       display: block;
       margin:  0 auto;
     }
+  }
+
+  .thumbnail {
+    min-height: 220px;
   }
 
   .response_link_background{

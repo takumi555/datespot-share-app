@@ -2,9 +2,9 @@
   .post_container.clear
     .post_container_left
       - if post.images&.attached?
-        = image_tag post.images.first.variant(combine_options:{gravity: :center, resize:"250x180^", crop:"250x180+0+0"}).processed, class: 'thumbnail'
+        = image_tag post.images.first.variant(gravity: :center, resize:"500x350^", crop:"500x350+0+0").processed, class: 'thumbnail'
       - else
-        = image_tag 'no-image.png', class: 'thumbnail'
+        = image_tag 'no-image.png', class: 'thumbnail', id: 'noimage_thumbmail'
     .post_container_right
       .post_title
         = post.title

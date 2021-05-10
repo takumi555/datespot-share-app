@@ -43,13 +43,19 @@ class Post < ApplicationRecord
     return self.images.first.variant(resize: '150×100')
   end
 
-  def create_notification_by(current_user)
-    notification = current_user.active_notifications.new(
+  def create_notification_like!(current_user)
+    temp =  Notification.where(["visitor_id = ? and visited_id = ? and post_id = ? and action = ? ", current_user.id, user_id, id, 'like'])
+    if temp.blank?
+      notification = current_user.active_notifications.new(
       post_id: id,
       visited_id: user_id,
       action: "like"
-    )
-    notification.save if notification.valid?
+      )
+      if notification.visitor_id == notification.visited_id
+        notification.checked = true
+      end
+      notification.save if notification.valid?
+    end
   end
 
   def create_notification_comment!(current_user, comment_id)
