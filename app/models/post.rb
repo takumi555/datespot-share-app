@@ -3,18 +3,14 @@ class Post < ApplicationRecord
   validates :prefecture, presence: true
   validates :content, presence: true
 
-
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
-
   has_many :tagmaps, dependent: :destroy
   has_many :tags, through: :tagmaps
+  has_many_attached :images
+  has_many :notifications, dependent: :destroy
 
   belongs_to :user
-
-  has_many_attached :images
-
-  has_many :notifications, dependent: :destroy
 
 
   def self.search(search)

@@ -1,6 +1,5 @@
 .question_index_container
   %p.questions_index_title.font-weight-bold 質問部屋
-
   - @questions.each do |question|
     .questions
       = link_to question_path(id: question.id) do

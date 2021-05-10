@@ -9,7 +9,6 @@
         = render 'commons/user_info', post: @question
     - else 
       = render 'commons/user_info', post: @question
-
   .question_title
     = @question.title
   - if current_user == @user

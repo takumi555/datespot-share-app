@@ -52,7 +52,6 @@
     p {
       color: #fff;
     }
-
   }
 }
 
@@ -99,12 +98,9 @@
       margin-bottom: 15px;
       float: left;
     }
-
     .post_content_index {
       margin-bottom: 10px;
     }
-
-
   }
 } 
 .user_info {
@@ -191,8 +187,6 @@ post/show
     border-bottom: 1px solid lightgray;
     margin-top: 20px;
   }
-  
-
 }
 
 .comment_index {
@@ -274,8 +268,7 @@ post/show
       background-size: cover;
       background-color:rgba(255,255,255,0.3);
       background-blend-mode:lighten;
-  
-  
+      
       .response_search_form {
         padding-top: 45px;
         display: block;

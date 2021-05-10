@@ -9,7 +9,6 @@ questions/index
   .questions_index_title {
     margin-top: 20px;
     letter-spacing: 1px;
-  
   }
 
   .questions {
@@ -35,12 +34,12 @@ questions/index
       color: black;
       font-size: 15px;
     }
-  
   }
 }
 /*===================
 questions/show
 =======================*/
+
 .question_show_container {
   width: 80%;
   margin: 0 auto;
@@ -71,6 +70,7 @@ questions/show
 /*===================
 questions/new
 =======================*/ 
+
 .question_new_container {
   width: 80%;
   margin: 0 auto;
@@ -94,7 +94,6 @@ questions/new
   width: 100%;
   height: 150px;
 }
-
   .question_submit {
     width: 100%;
   }
