@@ -2,7 +2,7 @@
 - visited = notification.visited
 - post = notification.post
 
-.user-view.clearfix
+.notification
   = link_to account_path(visitor) do
     = image_tag visitor.avatar_image, class: 'msg_avatar'
     = visitor.username
@@ -45,5 +45,6 @@
         %p.text-muted.mb-0
           = Message.find_by(id: notification.message_id)&.content
 
-  %span= "(#{time_ago_in_words(notification.created_at)}前)"
+  %span.notification_time_ago.text-muted= "#{time_ago_in_words(notification.created_at)}前"
+  .clear
   %hr

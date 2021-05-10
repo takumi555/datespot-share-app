@@ -5,11 +5,11 @@
     .field
       = f.label :ユーザーネーム
       %br/
-      = f.text_field :username, class: 'form'
+      = f.text_field :username, autofocus: true, class: 'form'
     .field
       = f.label :メール
       %br/
-      = f.email_field :email, autofocus: true, autocomplete: "email", class: 'form'
+      = f.email_field :email, autocomplete: "email", class: 'form'
     .field
       = f.label :パスワード
       %br/
