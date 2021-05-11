@@ -1,5 +1,5 @@
 class FavoritesController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, only: [:index]
   
   def index
     @posts = current_user.favorite_posts
