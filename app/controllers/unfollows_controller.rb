@@ -1,5 +1,5 @@
 class UnfollowsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, only: [:create]
 
   def create
     current_user.unfollow!(params[:account_id])

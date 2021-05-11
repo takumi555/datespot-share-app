@@ -25,3 +25,13 @@ $(function(){
     });
   });
 }); 
+
+
+
+$('.show_image_main').on('click',() => {
+  if ($('.show_image_main').hasClass('js_image')){
+    $('.show_image_main').removeClass('js_image');
+  } else {
+    $('.show_image_main').addClass('js_image');
+  }
+});

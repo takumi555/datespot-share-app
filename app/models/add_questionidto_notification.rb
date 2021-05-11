@@ -1,2 +1,0 @@
-class AddQuestionidtoNotification < ApplicationRecord
-end

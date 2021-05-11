@@ -10,7 +10,6 @@ class MessagesController < ApplicationController
       if @message.save
         @roommembernotme=Entry.where(room_id: @room.id).where.not(user_id: current_user.id)
         @theid=@roommembernotme.find_by(room_id: @room.id)
-
         notification = current_user.active_notifications.new(
             room_id: @room.id,
             message_id: @message.id,
@@ -31,7 +30,6 @@ class MessagesController < ApplicationController
       flash[:alert] = "メッセージの送信に失敗しました"
     end
   end
-
 
   private
 

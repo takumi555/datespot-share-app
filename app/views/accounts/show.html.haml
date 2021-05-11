@@ -5,7 +5,6 @@
     .profile_avatar
       = image_tag @user.avatar_image,class: 'profile_avatar'
 
-
   .account_show_right.account
     .followers
       = link_to account_followers_path(@user) do

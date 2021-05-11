@@ -4,7 +4,7 @@
   .dropdown_menu_button {
     @include light-button;
     position: relative;
-    padding-right: 22px !important;
+    padding-right: 22px;
     cursor: pointer;
 
     &:before {
