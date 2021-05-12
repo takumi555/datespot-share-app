@@ -1,9 +1,9 @@
 {
-  "name": "datespot-share-app",
-  "description": "This is datespot-share-app",
+  "name": "tokyodateclub",
+  "description": "This is tokyodateclub",
   "keywords": [],
   "website": "",
-  "repository": "https://github.com/takumi555/datespot-share-app",
+  "repository": "https://github.com/takumi555/TokyoDateClub",
   "env": {},
   "addons": [
     "heroku-postgresql:hobby-dev"
