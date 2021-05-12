@@ -9,7 +9,7 @@ class PostsController < ApplicationController
     else
       @posts = Post.all.order(created_at: :desc).page(params[:page]).per(10)
     end
-    @tag_lists = Tag.all.limit(15)
+    @tag_lists = Tag.all.limit(20)
 
   end
 

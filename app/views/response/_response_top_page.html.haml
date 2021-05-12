@@ -6,14 +6,7 @@
       = submit_tag '検索', :name => nil, class: 'btn submit_btn w-100 mt-2'
 
 .response_area_search
-  .area_wrap
-    %p.font-weight-bold エリアから探す
-    .area_container
-      = link_to '東京', prefectures_path(prefecture: '東京都')
-      = link_to '神奈川', prefectures_path(prefecture: '神奈川県')
-    .area_container
-      = link_to '千葉', prefectures_path(prefecture: '千葉県')
-      = link_to '埼玉', prefectures_path(prefecture: '埼玉県')
+  = render 'commons/prefecture'
 .response_link_background
   .response_link_question
     .link_wrap

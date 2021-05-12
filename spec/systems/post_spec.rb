@@ -33,7 +33,7 @@ RSpec.describe 'Post', type: :system do
       fill_in 'post[content]', with: 'Faker::Lorem.characters(number: 30)'
       select '東京都', from: '都道府県'
       click_on '登録'
-      expect(page). to have_css('.post_index_title', text: '投稿一覧')
+      expect(page).to have_css('.post_index_title', text: '投稿一覧')
       expect(page).to have_content '投稿が完了しました！'
     end
 
@@ -46,7 +46,7 @@ RSpec.describe 'Post', type: :system do
       fill_in 'post[url]', with: 'Faker::Lorem.characters(number: 10)'
       fill_in 'post[tag_name]', with: 'Faker::Lorem.characters(number: 10)'
       click_on '登録'
-      expect(page). to have_css('.post_index_title', text: '投稿一覧')
+      expect(page).to have_css('.post_index_title', text: '投稿一覧')
       expect(page).to have_content '投稿が完了しました！'
     end
   end
