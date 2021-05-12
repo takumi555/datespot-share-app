@@ -81,7 +81,6 @@ test:
 #
 production:
   <<: *default
-  database: <%= ENV['DB_NAME'] %>
-  username: <%= ENV['DB_USERNAME'] %>
-  password: <%= ENV['DB_PASSWORD'] %>
-  host: <%= ENV['DB_HOSTNAME'] %>
+  database: datespot_share_app_production
+  username: datespot_share_app
+  password: <%= ENV['DATESPOT_SHARE_APP_DATABASE_PASSWORD'] %>
