@@ -1,7 +1,7 @@
 .header_container.clear
   .header_left
     .header_title
-      = link_to image_tag('logo.png'), root_path, class: 'title', id: 'title'
+      = link_to image_tag('logo.png'), root_path, data: {"turbolinks" => false}, class: 'title', id: 'title'
 
   .header_right
     -if user_signed_in?

@@ -1,37 +1,31 @@
+.link_container
+  = link_to questions_path, data: {"turbolinks" => false} do 
+    .content_right_link
+      %p 質問部屋へ行く
+  = link_to populars_path, data: {"turbolinks" => false} do 
+    .content_right_link.mt-2
+      %p 人気投稿を見る
+  - if user_signed_in?
+    - if current_page?(controller: 'timelines')
+      = link_to root_path, data: {"turbolinks" => false} do
+        .content_right_link.mt-2
+          %p すべての投稿一覧へ
+    - else
+      = link_to timelines_path, data: {"turbolinks" => false} do 
+        .content_right_link.mt-2
+          %p フォローしているユーザーの投稿
+
 .search_form.mb-3
   %p.font-weight-bold 検索ワードで探す
   = form_tag(search_index_path,:method => 'get') do
     = text_field_tag :search, '', class: 'form w-100'
     = submit_tag '検索', :name => nil, class: 'btn submit_btn w-100 mt-2'
 
-.area_wrap
-  %p.font-weight-bold エリアから探す
-  .area_container
-    = link_to '東京', prefectures_path(prefecture: '東京都')
-    = link_to '神奈川', prefectures_path(prefecture: '神奈川県')
-  .area_container
-    = link_to '千葉', prefectures_path(prefecture: '千葉県')
-    = link_to '埼玉', prefectures_path(prefecture: '埼玉県')
+= render 'commons/prefecture'
+
 .tag_wrap
   %p.font-weight-bold タグで探す
   - @tag_lists.each do |list|
-    = link_to list.tag_name, posts_path(tag_id: list.id), class: 'tag_list'
+    = link_to list.tag_name, posts_path(tag_id: list.id), data: {"turbolinks" => false}, class: 'tag_list'
   %div
-    = link_to 'タグ一覧へ', tags_path
-= link_to questions_path, data: {"turbolinks" => false} do 
-  .content_right_link
-    %p 質問部屋へ行く
-= link_to populars_path, data: {"turbolinks" => false} do 
-  .content_right_link.mt-2
-    %p 人気投稿を見る
-- if user_signed_in?
-  - if current_page?(controller: 'timelines')
-    = link_to root_path, data: {"turbolinks" => false} do
-      .content_right_link.mt-2
-        %p すべての投稿一覧へ
-  - else
-    = link_to timelines_path, data: {"turbolinks" => false} do 
-      .content_right_link.mt-2
-        %p フォローしているユーザーの投稿
-
-
+    = link_to 'タグ一覧へ', tags_path, data: {"turbolinks" => false}, class: 'tag_index_link'

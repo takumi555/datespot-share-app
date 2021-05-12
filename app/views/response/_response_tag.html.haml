@@ -3,4 +3,4 @@
   - @tag_lists.each do |list|
     = link_to list.tag_name, posts_path(tag_id: list.id), class: 'tag_list'
   %div
-    = link_to 'タグ一覧へ', tags_path
+    = link_to 'タグ一覧へ', tags_path, data: {"turbolinks" => false}, class: 'tag_index_link'
