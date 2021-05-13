@@ -19,7 +19,7 @@
   %p.font-weight-bold 検索ワードで探す
   = form_tag(search_index_path,:method => 'get') do
     = text_field_tag :search, '', class: 'form w-100'
-    = submit_tag '検索', :name => nil, class: 'btn submit_btn w-100 mt-2'
+    = submit_tag '検索', :name => nil, class: 'btn submit_btn search_btn w-100 mt-2'
 
 = render 'commons/prefecture'
 
