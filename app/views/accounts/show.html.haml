@@ -16,11 +16,11 @@
         %p.follower_btn フォロー
   .follow__btn
     -if user_signed_in?
-      = render 'relationships/follow_form', user: @user
+      - unless @user.id == current_user.id
+        = render 'relationships/follow_form', user: @user
   .direct_message_btn
     - if user_signed_in?
-      - if @user.id == current_user.id
-      - else
+      - unless @user.id == current_user.id
         .msg_btn
           - if @isRoom == true
             = link_to 'ダイレクトメッセージ', room_path(@roomId, anchor: 'page_bottom'),class: 'btn submit_btn'

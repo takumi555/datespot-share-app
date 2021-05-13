@@ -58,8 +58,10 @@
     }
     &:hover {
       background: $sub-color;
+      
       p {
         color: #fff;
+       text-decoration: none;
       }
     }
   }
@@ -136,6 +138,7 @@
     border-radius: 100%;
     float: left;
     object-fit: cover;
+
   }
   .post_username {
     margin-left: 40px;
