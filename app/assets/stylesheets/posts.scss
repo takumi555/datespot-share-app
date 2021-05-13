@@ -48,7 +48,7 @@
 .link_container {
   margin: 20px 0;
   .content_right_link{
-    border: 2px solid #000;
+    border: 1px solid #000;
     background: #fff;
     padding: 10px;
     p {
@@ -74,6 +74,10 @@
   .tag_index_link {
     float: right;
   }
+}
+
+.search_btn:hover {
+  background-color:#f27985;
 }
 
 .post_container {
@@ -131,6 +135,7 @@
     width: 30px;
     border-radius: 100%;
     float: left;
+    object-fit: cover;
   }
   .post_username {
     margin-left: 40px;
@@ -326,7 +331,7 @@ post/show
       .response_link {
         a {
           margin-top: 10px;
-          border: 2px solid #000;
+          border: 1px solid #000;
           border-radius: 0;
           padding: 10px;
           background: #fff;

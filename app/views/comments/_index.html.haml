@@ -10,9 +10,8 @@
           = render 'commons/user_info', post: comment
       - else 
         = render 'commons/user_info', post: comment
-
+        
     .comment_content
       = simple_format(comment.content)
     - if comment.user == current_user
       = link_to '×', post_comment_path(comment.post_id, comment.id), data: { method: 'delete', confirm: '本当に削除してよろしいですか？' }, remote: true, class: 'comment_delete'
-= paginate @comments

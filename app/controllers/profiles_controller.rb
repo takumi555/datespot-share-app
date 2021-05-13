@@ -4,7 +4,7 @@ class ProfilesController < ApplicationController
   def show
     @user = current_user
     @profile = @user.prepare_profile
-    @posts = Post.where(user_id: current_user.id )
+    @posts = Post.where(user_id: current_user.id ).order(created_at: :desc)
     @posts = Kaminari.paginate_array(@posts).page(params[:page]).per(10)
   end
 

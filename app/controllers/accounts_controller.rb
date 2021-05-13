@@ -6,7 +6,7 @@ class AccountsController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @posts = Post.where(user_id: @user.id )
+    @posts = Post.where(user_id: @user.id ).order(created_at: :desc)
     @posts = Kaminari.paginate_array(@posts).page(params[:page]).per(10)
 
     if user_signed_in?
