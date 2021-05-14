@@ -1,0 +1,15 @@
+current directory: /Users/takumi/TokyoDateClub/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.7.5/ext/bootsnap
+/Users/takumi/.rbenv/versions/2.6.6/bin/ruby -I /Users/takumi/.rbenv/versions/2.6.6/lib/ruby/2.6.0 -r ./siteconf20210514-50187-1nqteq8.rb extconf.rb
+creating Makefile
+
+current directory: /Users/takumi/TokyoDateClub/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.7.5/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /Users/takumi/TokyoDateClub/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.7.5/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+
+current directory: /Users/takumi/TokyoDateClub/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.7.5/ext/bootsnap
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20210514-50187-1bof6q6/bootsnap
