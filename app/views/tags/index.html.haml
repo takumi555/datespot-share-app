@@ -5,4 +5,4 @@
     %p.font-weight-bold すべてのタグ
     .tag_all
       - @tags.each do |tag|
-        = link_to tag.tag_name, posts_path(tag_id: tag.id), class: 'tag_list'
+        = link_to tag.tag_name, posts_path(tag_id: tag.id), data: {"turbolinks" => false}, class: 'tag_list'
