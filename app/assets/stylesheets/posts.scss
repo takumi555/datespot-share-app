@@ -48,12 +48,14 @@
 .link_container {
   margin: 20px 0;
   .content_right_link{
-    border: 1px solid #000;
+    border: 2px solid $main-color;
+    border-radius: 15px;
     background: #fff;
     padding: 10px;
     p {
-      color: black;
-      font-size: 13px;
+      color: $main-color;
+      font-size: 12px;
+      font-weight: bold;
       margin: auto 0;
     }
     &:hover {
@@ -348,11 +350,15 @@ post/show
       .response_link {
         a {
           margin-top: 10px;
-          border: 1px solid #000;
+          border: 2px solid $main-color;
           border-radius: 0;
+          border-radius: 15px;
           padding: 10px;
           background: #fff;
           color: black;
+          font-size: 12px;
+   
+          
       }
         a:hover {
           color: #fff;
