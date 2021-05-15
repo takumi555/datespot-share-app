@@ -4,7 +4,6 @@
   .account_show_left
     .profile_avatar
       = image_tag @user.avatar_image,class: 'profile_avatar'
-
   .account_show_right.account
     .followers
       = link_to account_followers_path(@user) do
@@ -14,6 +13,7 @@
       = link_to account_followings_path(@user) do
         %p.follow_count= @user.following_count
         %p.follower_btn フォロー
+  .clear
   .follow__btn
     -if user_signed_in?
       - unless @user.id == current_user.id
