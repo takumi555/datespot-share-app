@@ -92,7 +92,7 @@ questions/new
 レスポンシブ
 ====================*/ 
 @media only screen and (max-width:767px) {
-  .question_title {
+  .question_title.question_title {
     font-size: 20px;
   }
   .answer_form.answer_form {
