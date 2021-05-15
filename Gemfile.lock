@@ -78,7 +78,7 @@ GEM
     autoprefixer-rails (10.2.5.0)
       execjs (< 2.8.0)
     aws-eventstream (1.1.1)
-    aws-partitions (1.455.0)
+    aws-partitions (1.456.0)
     aws-sdk-core (3.114.0)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.239.0)
@@ -206,7 +206,7 @@ GEM
     minitest (5.14.4)
     msgpack (1.4.2)
     nio4r (2.5.7)
-    nokogiri (1.11.3)
+    nokogiri (1.11.4)
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
     orm_adapter (0.5.0)
@@ -392,4 +392,4 @@ RUBY VERSION
    ruby 2.6.6p146
 
 BUNDLED WITH
-   1.17.2
+   2.1.4
