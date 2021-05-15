@@ -125,8 +125,13 @@
       margin-bottom: 15px;
       float: left;
     }
+    .post_items {
+      font-size: 14px;
+    }
+
     .post_content_index {
       margin-bottom: 10px;
+
     }
   }
 } 
@@ -185,7 +190,7 @@ post/show
   .link_container{
     margin-bottom: 20px;
     a {
-    color: lightgray;
+    color: lightslategrey;
     float: right;
     margin-top: 5px;
     }
@@ -216,6 +221,15 @@ post/show
     border-bottom: 1px solid lightgray;
     margin-top: 20px;
   }
+}
+.post_show_user {
+  float: left;
+}
+
+.create_time   {
+  color: lightslategrey;
+  float: right;
+  margin-top: 5px;
 }
 
 .comment_index {

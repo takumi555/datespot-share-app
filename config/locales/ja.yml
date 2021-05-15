@@ -15,3 +15,6 @@ ja:
       question: 
         title: タイトル
         content: 質問内容
+  time:
+    formats:
+      default: "%Y/%m/%d"

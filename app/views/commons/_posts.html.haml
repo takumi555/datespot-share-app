@@ -11,13 +11,13 @@
       %div{:id => "likes_buttons_#{post.id}"}
         = render partial: 'likes/like', locals: { post: post}
       .clear
-
-      .post_prefecture
-        = post.prefecture 
-      .post_area
-        = post.area 
-      .post_content_index
-        = post.content
+      .post_items
+        .post_prefecture
+          = post.prefecture
+        .post_area
+          = post.area
+        .post_content_index
+          = post.content
 
       .user_info
         - if user_signed_in?
