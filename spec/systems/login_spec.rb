@@ -1,15 +1,15 @@
 require 'rails_helper'
 
-RSpec.describe 'ログインとログアウト' do
+RSpec.describe 'ログインとログアウト', type: :system do
   before do
-    @user = User.create!(username: 'samplename', email: 'foo@example.com', password: '123456')
+    @user = User.create!(username: 'samplename', email: 'example@example.com', password: '123456')
   end
   describe 'ログイン' do
     it 'ログインできる' do
       visit new_user_session_path
-      fill_in 'user[email]', with: 'foo@example.com'
+      fill_in 'user[email]', with: 'example@example.com'
       fill_in 'user[password]', with: '123456'
-      click_on 'ログイン'
+      find('.login_btn').click
       expect(page). to have_css('.post_index_title', text: '投稿一覧')
     end
   end

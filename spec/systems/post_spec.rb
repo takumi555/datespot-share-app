@@ -13,7 +13,7 @@ RSpec.describe 'Post', type: :system do
 
   it '詳細画面へ遷移' do
     visit root_path
-    click_link '詳細', match: :first
+    first('.post_title').click
     expect(page). to have_css('.post_show_title')
   end
 
@@ -31,17 +31,17 @@ RSpec.describe 'Post', type: :system do
       visit new_post_path
       fill_in 'post[title]', with: 'Faker::Lorem.characters(number: 10)'
       fill_in 'post[content]', with: 'Faker::Lorem.characters(number: 30)'
-      select '東京都', from: '都道府県'
+      select '東京', from: '都道府県'
       click_on '登録'
       expect(page).to have_css('.post_index_title', text: '投稿一覧')
       expect(page).to have_content '投稿が完了しました！'
     end
 
-    it '画像以外全ての項目を入力し、投稿を保存できる' do
+    it '項目を全て入力し、投稿を保存できる' do
       visit new_post_path
       fill_in 'post[title]', with: 'Faker::Lorem.characters(number: 10)'
       fill_in 'post[content]', with: 'Faker::Lorem.characters(number: 30)'
-      select '東京都', from: '都道府県'
+      select '東京', from: '都道府県'
       fill_in 'post[area]', with: '渋谷'
       fill_in 'post[url]', with: 'Faker::Lorem.characters(number: 10)'
       fill_in 'post[tag_name]', with: 'Faker::Lorem.characters(number: 10)'

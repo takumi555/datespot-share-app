@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'アカウント作成' do
+RSpec.describe 'アカウント作成', type: :system do
 
   it 'サインアップできる' do
     visit new_user_registration_path

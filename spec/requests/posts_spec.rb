@@ -82,7 +82,9 @@ RSpec.describe "Posts", type: :request do
         sign_in user
       end
 
-      pending '記事が保存される' do
+      it '記事が保存される' do
+        pending('gsubがundefinedになる')
+
         post_params = attributes_for(:post)
         post posts_path({post: post_params})
         expect(response).to have_http_status(302)
