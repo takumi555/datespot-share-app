@@ -4,7 +4,7 @@ import { csrfToken } from 'rails-ujs'
 
 axios.defaults.headers.common['X-CSRF-Token'] = csrfToken()
 
-$(function(){
+$(document).on('turbolinks:load', function() {
   $(".thumbs__lists__item__image").first().css('opacity', '1'); 
   $(".thumbs__lists__item__image").mouseover(function(e){       
     let mainDataIndex = $(this).parent().attr('data-index')     
@@ -27,11 +27,12 @@ $(function(){
 }); 
 
 
-
-$('.show_image_main').on('click',() => {
-  if ($('.show_image_main').hasClass('js_image')){
-    $('.show_image_main').removeClass('js_image');
-  } else {
-    $('.show_image_main').addClass('js_image');
-  }
-});
+$(document).on('turbolinks:load', function() {
+  $('.show_image_main').on('click',() => {
+    if ($('.show_image_main').hasClass('js_image')){
+      $('.show_image_main').removeClass('js_image');
+    } else {
+      $('.show_image_main').addClass('js_image');
+    }
+  });
+}); 

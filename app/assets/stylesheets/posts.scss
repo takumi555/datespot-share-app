@@ -212,11 +212,16 @@ post/show
     margin-top: 20px;
   
   }
-  .post_url_description {
-    font-size: 15px;
-    border-bottom: 1px solid lightgray;
-    margin-top: 20px;
+  .post_url {
+    word-break: break-all;
+    .post_url_description {
+      font-size: 15px;
+      border-bottom: 1px solid lightgray;
+      margin-top: 20px;
+      
+    }
   }
+
 
   .post_url_description {
     font-size: 15px;
@@ -357,8 +362,7 @@ post/show
           background: #fff;
           color: black;
           font-size: 12px;
-   
-          
+          font-weight: bold;
       }
         a:hover {
           color: #fff;

@@ -3,7 +3,7 @@
     .user_info.post_show_user.clear
       - if user_signed_in?
         - if @post.user.id == current_user.id
-          = link_to profile_path, data: {"turbolinks" => false} do
+          = link_to profile_path do
             = image_tag @post.user.avatar_image, class: 'post_user_avatar'
             %p.post_username=  @post.user.username
         - else

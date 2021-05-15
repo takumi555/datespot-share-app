@@ -1,7 +1,7 @@
 .header_container.clear
   .header_left
     .header_title
-      = link_to image_tag('logo.png'), root_path, data: {"turbolinks" => false}, class: 'title', id: 'title'
+      = link_to image_tag('logo.png'), root_path, class: 'title', id: 'title'
 
   .header_right
     -if user_signed_in?
@@ -29,7 +29,7 @@
             %li.dropdwn_item
               = link_to 'プロフィール', profile_path, data: {"turbolinks" => false}
             %li.dropdwn_item 
-              = link_to 'いいねした投稿',favorites_path, data: {"turbolinks" => false}
+              = link_to 'いいねした投稿',favorites_path
             %li.dropdwn_item 
               - if unchecked_notifications.any?
                 .fa-stack

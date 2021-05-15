@@ -30,7 +30,7 @@ import { csrfToken } from 'rails-ujs'
 
 axios.defaults.headers.common['X-CSRF-Token'] = csrfToken()
 
-$(function () {
+$(document).on('turbolinks:load', function() {
   document.addEventListener('turbolinks:load', function() {
     const btn = document.getElementById('dropdwn_btn');
     if(btn) {
@@ -41,8 +41,7 @@ $(function () {
   });
 }());
 
-
-$(function(){
+$(document).on('turbolinks:load', function() {
   $('.area_more_btn').prevAll().hide();
   $('.area_more_btn').click(function() {
     if ($(this).prevAll().is(':hidden')) {
@@ -53,4 +52,4 @@ $(function(){
         $(this).text('もっと見る')
     }
   });
-});
+}); 
