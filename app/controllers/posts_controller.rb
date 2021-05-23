@@ -3,14 +3,9 @@ class PostsController < ApplicationController
   before_action :baria_user, only: [:edit, :destroy]
 
   def index
-    if params[:tag_id].present?
-      @tag = Tag.find(params[:tag_id])
-      @posts = @tag.posts.order(created_at: :desc).page(params[:page]).per(10)
-    else
-      @posts = Post.all.order(created_at: :desc).page(params[:page]).per(10)
-    end
+    @posts = Post.all.order(created_at: :desc).page(params[:page]).per(10)
+    
     @tag_lists = Tag.all.limit(20)
-
   end
 
   def show

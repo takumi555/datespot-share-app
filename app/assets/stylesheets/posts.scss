@@ -33,15 +33,23 @@
     a {
       color: lightslategrey;
       margin-right: 20px;
-      font-size: 12px;
+      font-size: 14px;
+      &:hover {
+        color: rgb(75, 75, 75);
+        text-decoration: none;
+      }
     }
   }
 
   .area_more_btn {
     float: right;
-    font-size: 12px;
+    font-size: 14px;
     color: lightslategrey;
     cursor: pointer;
+    &:hover {
+      color: rgb(75, 75, 75);
+    }
+
   }
 }
 
@@ -73,16 +81,20 @@
   margin-bottom: 30px;
   a {
     color: lightslategrey;
-    font-size: 12px;
+    font-size: 14px;
+    &:hover {
+      color: rgb(75, 75, 75);
+      text-decoration: none;
+   
+    }
   }
   .tag_index_link {
     float: right;
+
   }
 }
 
-.search_btn:hover {
-  background-color:#f27985;
-}
+
 
 .post_container {
 
@@ -270,6 +282,16 @@ post/show
   position: fixed;
   right: 30px;
   bottom: 30px;
+}
+/*===============================
+post/new
+=================================*/
+
+.tag_form {
+  padding-left: 10px;
+}
+.post_btn {
+  width: 50%;
 }
 
 /*==================================================

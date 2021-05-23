@@ -1,0 +1,15 @@
+.container
+  - @another_entries.each do |entry|
+    - @message = Message.find_by(id: entry.room.message_ids.last)
+    .talk_index
+      = link_to room_path(entry.room) do
+        = image_tag entry.user.avatar_image, class: 'talk_user_avatar'
+        .talk_index_right
+          = entry.user.username
+          .last_msg
+            = @message&.content
+            - if @message&.created_at
+              %span.talk_time_ago.text-muted= "#{time_ago_in_words(@message&.created_at)}前"
+      .clear
+    %hr
+  = paginate @another_entries

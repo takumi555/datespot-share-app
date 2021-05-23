@@ -74,6 +74,37 @@ float: right;
 margin-top: -13px;
 }
 
+
+.talk_index {
+  padding:10px;
+  a {
+    color: gray;
+    &:hover {
+      text-decoration: none;
+      color: gray;
+    }
+  }
+  .talk_index_right {
+    margin-left: 70px;
+    color: gray;
+    .talk_index_name{
+      color: black;
+    }
+  }
+
+  .talk_user_avatar {
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  object-fit: cover;
+  float: left;
+  }
+
+  .talk_time_ago {
+    float: right;
+  }
+}
+
 /*==================================================
 レスポンシブ
 ====================================================*/

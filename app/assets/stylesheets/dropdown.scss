@@ -2,7 +2,7 @@
   position: relative;
 
   .dropdwn_btn {
-    cursor: pointer;
+    display: block;
   }
   .dropdwn_menu {
     width: 190px;
@@ -25,6 +25,7 @@
     }
   }
 
+
   .notice_circle {
     .fa-stack {
       position: relative;
@@ -36,7 +37,7 @@
     position: relative;
     top: 3px;
     right: 16px;  
-    z-index: 150;
+    z-index: 6;
 
   }
 
@@ -48,12 +49,12 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: 4;
   }
   
   .dropdwn_btn.is-open + .dropdwn_menu {
     display: block;
-    z-index: 101;
+    z-index: 5;
   }
 }
 

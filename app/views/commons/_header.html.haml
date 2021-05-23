@@ -23,11 +23,14 @@
         
     .header_user_icon.dropdwn
       - if user_signed_in?
-        = image_tag current_user.avatar_image, class: 'dropdwn_btn' ,id: 'dropdwn_btn'
+        #dropdwn_btn.dropdwn_btn
+          = image_tag current_user.avatar_image
         .dropdwn_menu
           %ul.dropdwn_list
             %li.dropdwn_item
               = link_to 'プロフィール', profile_path, data: {"turbolinks" => false}
+            %li.dropdwn_item
+              = link_to 'トーク一覧', rooms_path        
             %li.dropdwn_item 
               = link_to 'いいねした投稿',favorites_path
             %li.dropdwn_item 

@@ -33,7 +33,7 @@ header {
   float: left;
   margin-right: 100px;
   &:hover {
-    background-color: #f27985;
+    background-color: #ff8490;
    }
 
   a {
@@ -97,6 +97,11 @@ header {
     float: left;
     margin-right: 15px;
     margin-top: 8px;
+    &:hover {
+      background-color: #ff8490;
+      
+      
+    }
     
     a {
       line-height: 30px;
@@ -105,7 +110,11 @@ header {
       display: block;
       font-size: 11px;
       letter-spacing: 1px;
-      
+      &:hover {
+        text-decoration: none;
+        color: #fff; 
+      }
+
      }
   } 
 }

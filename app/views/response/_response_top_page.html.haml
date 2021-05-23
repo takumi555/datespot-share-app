@@ -18,7 +18,7 @@
       - if user_signed_in?
         - if current_page?(controller: 'timelines')
           .response_link
-            = link_to 'すべての投稿一覧へ', root_path, class: 'btn submit_btn'
+            = link_to '一覧へ', root_path, class: 'btn submit_btn'
         - else
           .response_link
             = link_to 'フォローしているユーザーの投稿', timelines_path, class: 'btn submit_btn'
