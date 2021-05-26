@@ -14,7 +14,7 @@
             %p= user.username
             .dm_list_message
               - if message.present?
-                = message.content
+                = message.content.truncate(30)
                 %p.msg_created_time= l message.created_at
               - else
                 %p.dm_list_message "まだメッセージはありません"
