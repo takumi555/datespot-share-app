@@ -1,12 +1,16 @@
 .question_index_container
   %p.questions_index_title.font-weight-bold 質問部屋
-  - @questions.each do |question|
-    .questions
-      = link_to question_path(id: question.id) do
-        .questions_title
-          = question.title 
-        .questions_content
-          = question.content.truncate(100)
+  - if @questions..present?
+    - @questions.each do |question|
+      .questions
+        = link_to question_path(id: question.id) do
+          .questions_title
+            = question.title 
+          .questions_content
+            = question.content.truncate(100)
+  - else 
+    %p.mt-3  質問がありません
+
   = paginate @questions
           
        
