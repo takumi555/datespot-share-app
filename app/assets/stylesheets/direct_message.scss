@@ -1,12 +1,67 @@
 @import '_variables';
 
+/*================================
+rooms/index
+==================================*/
+
+.dm_list {
+  p,a {
+    color: black;
+    &:hover {
+      text-decoration: none;
+      color: black;
+    }
+  }
+
+}
+
+.dm_list_left {
+  float: left;
+
+  .dm_list_avatar {
+    width: 55px;
+    height:55px;
+    border-radius: 100px;
+    margin-top: 5px;
+  }
+}
+.dm_list_right {
+  margin-left: 70px; 
+
+  .msg_created_time {
+    float: right;
+    color: gray;
+  }
+}
+
+
+
+
+
+/*================================
+rooms/show
+==================================*/
+
 .talkroom {
   padding: 30px;
   margin: 0 auto;
 }
 
+.user_link {
+  color: black;
+
+  &:hover {
+    color: black;
+    text-decoration: none;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
 .room_title {
   font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .msg_avatar {
@@ -61,6 +116,12 @@
   }
 }
 
+#messages_area {
+}
+#messages_form_area{
+  margin-top: 30px;
+}
+
 .msg_form.msg_form {
   margin-top: 10px;
   width: 80%;
@@ -75,35 +136,7 @@ margin-top: -13px;
 }
 
 
-.talk_index {
-  padding:10px;
-  a {
-    color: gray;
-    &:hover {
-      text-decoration: none;
-      color: gray;
-    }
-  }
-  .talk_index_right {
-    margin-left: 70px;
-    color: gray;
-    .talk_index_name{
-      color: black;
-    }
-  }
 
-  .talk_user_avatar {
-  height: 40px;
-  width: 40px;
-  border-radius: 100%;
-  object-fit: cover;
-  float: left;
-  }
-
-  .talk_time_ago {
-    float: right;
-  }
-}
 
 /*==================================================
 レスポンシブ

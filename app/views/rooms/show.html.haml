@@ -1,5 +1,8 @@
 .talkroom
-  %p.room_title トークルーム
+  - entry = @room.entries.where.not(user_id: current_user)
+  - user = entry[0].user
+  = link_to account_path(user.id),class: 'user_link' do
+    .room_title= "#{user.username} さんとのトークルーム"
   %div
     #messages_area
       = render partial: 'rooms/index'

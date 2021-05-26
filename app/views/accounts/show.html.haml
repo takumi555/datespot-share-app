@@ -29,7 +29,7 @@
               = fields_for @entry do |e|
                 = e.hidden_field :user_id, value: @user.id
               = f.submit "ダイレクトメッセージ",class: 'btn submit_btn'
-        
+      
   .clear
   .profile_post_container
     %p.mt-3.font-weight-bold #{@user.username}さんの投稿一覧

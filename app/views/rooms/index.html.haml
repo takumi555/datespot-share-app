@@ -1,15 +1,22 @@
 .container
-  - @another_entries.each do |entry|
-    - @message = Message.find_by(id: entry.room.message_ids.last)
-    .talk_index
-      = link_to room_path(entry.room) do
-        = image_tag entry.user.avatar_image, class: 'talk_user_avatar'
-        .talk_index_right
-          = entry.user.username
-          .last_msg
-            = @message&.content
-            - if @message&.created_at
-              %span.talk_time_ago.text-muted= "#{time_ago_in_words(@message&.created_at)}前"
-      .clear
-    %hr
-  = paginate @another_entries
+  .dm_list
+    - @rooms.each do |room|
+      - message = room.messages.order(updated_at: :desc).limit(1)
+      - message = message[0]
+      - entry = room.entries.where.not(user_id: current_user)
+      - user = entry[0].user
+
+      .dm_list_content
+        = link_to room_path(room, anchor: 'page_bottom'), class: "dm_list_link" do
+          .dm_list_left
+            = image_tag user.avatar_image, class: 'dm_list_avatar'
+          .dm_list_right
+            %p= user.username
+            .dm_list_message
+              - if message.present?
+                = message.content
+                %p.msg_created_time= l message.created_at
+              - else
+                %p.dm_list_message "まだメッセージはありません"
+        .clear
+      %hr

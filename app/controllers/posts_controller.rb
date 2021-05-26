@@ -12,7 +12,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @user = @post.user
     @comment = Comment.new
-    @comments = @post.comments.page(params[:page]).per(10)
+    @comments = @post.comments
     
     @tag_list = @post.tags.pluck(:tag_name).join(',')
   end

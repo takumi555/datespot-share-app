@@ -1,13 +1,8 @@
 class RoomsController < ApplicationController
-  before_action :authenticate_user!, only: [:create,:show]
-  
+  before_action :authenticate_user!, only: [:index, :create,:show]
+
   def index
-    current_entries = current_user.entries
-    my_room_ids = []
-    current_entries.each do |entry|
-      my_room_ids << entry.room.id
-    end
-    @another_entries = Entry.where(room_id: my_room_ids).where.not(user_id: current_user.id).page(params[:page]).per(3)
+    @rooms = current_user.rooms.joins(:messages).includes(:messages).order("messages.created_at DESC")
   end
   
   def create
