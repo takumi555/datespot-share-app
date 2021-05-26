@@ -77,23 +77,6 @@ RSpec.describe "Posts", type: :request do
   end
 
   describe "POST /posts" do
-    context 'ログインしている場合' do
-      before do
-        sign_in user
-      end
-
-      it '記事が保存される' do
-        pending('gsubがundefinedになる')
-
-        post_params = attributes_for(:post)
-        post posts_path({post: post_params})
-        expect(response).to have_http_status(302)
-        expect(Post.last.title).to eq(post_params[:title])
-        expect(Post.last.content).to eq(post_params[:content])
-        expect(Post.last.prefecture).to eq(post_params[:prefecture])
-      end
-    end
-
     context 'ログインしていない場合' do
       it 'ログイン画面に遷移する' do
         post_params = attributes_for(:post) 

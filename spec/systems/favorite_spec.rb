@@ -11,7 +11,7 @@ RSpec.describe 'Favorite', type: :system do
 
     it 'いいね一覧画面に遷移' do
       visit root_path
-      find('.dropdwn_btn').click
+      find('#dropdown_icon').click
       click_link 'いいねした投稿'
       expect(page). to have_text('いいねした投稿')
     end

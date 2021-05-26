@@ -9,6 +9,6 @@ RSpec.describe 'アカウント作成', type: :system do
     fill_in 'user[password]', with: '123456'
     fill_in 'user[password_confirmation]', with: '123456'
     click_on 'アカウント作成'
-    expect(page). to have_css('.post_index_title', text: '投稿一覧')
+    expect(page). to have_css('.post_index_title', text: 'すべての投稿')
   end
 end

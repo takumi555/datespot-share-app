@@ -24,7 +24,7 @@
     .header_user_icon.dropdwn
       - if user_signed_in?
         #dropdwn_btn.dropdwn_btn
-          = image_tag current_user.avatar_image
+          = image_tag current_user.avatar_image, id: 'dropdown_icon'
         .dropdwn_menu
           %ul.dropdwn_list
             %li.dropdwn_item
