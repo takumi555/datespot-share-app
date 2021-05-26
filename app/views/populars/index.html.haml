@@ -4,7 +4,7 @@
     
   .content_left
     %p.font-weight-bold.popular_post_title 人気投稿
-    
     - @posts.each do |post|
       = render 'commons/posts', post: post
+    
     = paginate @posts

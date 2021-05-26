@@ -7,10 +7,8 @@
 
   .content_left
     %p.font-weight-bold.response_post_index_title.post_index_title フォローしているユーザーの投稿一覧
-
     - @posts.each do |post|
       = render 'commons/posts', post: post
-    
     = paginate @posts
 
 .response_top_page
