@@ -45,10 +45,10 @@ $(document).on('turbolinks:load', function() {
   $('.area_more_btn').prevAll().hide();
   $('.area_more_btn').click(function() {
     if ($(this).prevAll().is(':hidden')) {
-        $(this).prevAll().slideDown(300);
+        $(this).prevAll().slideDown(10);
         $(this).text('閉じる')
     } else {
-        $(this).prevAll().slideUp(300);
+        $(this).prevAll().slideUp(10);
         $(this).text('もっと見る')
     }
   });
