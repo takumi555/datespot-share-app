@@ -50,6 +50,10 @@ html,body {
 .submit_btn {
   background-color: $sub-color;
   color: #fff;
+
+  &:hover {
+    background-color: #ff8490;
+  }
 }
 
 .hidden {

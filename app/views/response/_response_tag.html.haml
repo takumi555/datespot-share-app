@@ -1,6 +1,6 @@
 .tag_wrap
   %p.font-weight-bold タグで探す
   - @tag_lists.each do |list|
-    = link_to list.tag_name, posts_path(tag_id: list.id),class: 'tag_list'
+    = link_to list.tag_name, tags_path(tag_id: list.id),class: 'tag_list'
   %div
-    = link_to 'タグ一覧へ', tags_path, class: 'tag_index_link'
+    = link_to 'タグ一覧へ', taglists_path, class: 'tag_index_link'

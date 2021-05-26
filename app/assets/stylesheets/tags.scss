@@ -1,4 +1,10 @@
+@import '_variables';
+
 .tag_list {
   margin-right: 20px;
-  color: lightslategrey;
+  color: $link-color;
+  &:hover {
+    color: rgb(75, 75, 75);
+    text-decoration: none;
+  }
 }

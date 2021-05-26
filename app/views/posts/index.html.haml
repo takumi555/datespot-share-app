@@ -6,10 +6,11 @@
     = render 'commons/content_right' 
 
   .content_left
-    %p.font-weight-bold.response_post_index_title.post_index_title すべての投稿一覧
+    %p.font-weight-bold.response_post_index_title.post_index_title すべての投稿
     - if @posts.present?
-      - @posts.each do |post|
-        = render 'commons/posts', post: post
+      %div.jscroll.scroll_list
+        - @posts.each do |post|
+          = render 'commons/posts', post: post
     - else 
       %p.mt-3  投稿がありません
 

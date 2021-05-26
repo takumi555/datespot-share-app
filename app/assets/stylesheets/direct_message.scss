@@ -1,12 +1,63 @@
 @import '_variables';
 
+/*================================
+rooms/index
+==================================*/
+
+.dm_list {
+  p,a {
+    color: black;
+    &:hover {
+      text-decoration: none;
+      color: black;
+    }
+  }
+
+}
+
+.dm_list_left {
+  float: left;
+
+  .dm_list_avatar {
+    width: 55px;
+    height:55px;
+    border-radius: 100px;
+    margin-top: 5px;
+  }
+}
+.dm_list_right {
+  margin-left: 70px; 
+
+  .msg_created_time {
+    float: right;
+    color: gray;
+  }
+}
+
+/*================================
+rooms/show
+==================================*/
+
 .talkroom {
   padding: 30px;
   margin: 0 auto;
 }
 
+.user_link {
+  color: black;
+
+  &:hover {
+    color: black;
+    text-decoration: none;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
 .room_title {
   font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .msg_avatar {
@@ -61,18 +112,28 @@
   }
 }
 
+#messages_area {
+  margin-bottom: 30px;
+}
+#messages_form_area{
+ 
+  position: absolute;
+  bottom: 60px;
+  width: 95%;
+}
 .msg_form.msg_form {
   margin-top: 10px;
   width: 80%;
   padding-left: 10px;
   float: left;
 }
-
 .msg_submit {
 width: 19%;
 float: right;
 margin-top: -13px;
 }
+
+
 
 /*==================================================
 レスポンシブ
@@ -83,6 +144,7 @@ margin-top: -13px;
     padding: 0px;
     margin: 0 auto;
   }
+
   .room_title {
     padding-top: 30px;
     padding-left: 10px;
@@ -98,10 +160,18 @@ margin-top: -13px;
       .msg_submit {
         float: none;
         margin-top: 5px;
+        width: 100%;
         
     
       }
 
+  }
+
+  #messages_area {
+    margin-bottom: 90px;
+  }
+  #messages_form_area{
+    width: 100%;
   }
 
 

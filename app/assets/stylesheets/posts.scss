@@ -31,27 +31,39 @@
     justify-content: left;
     flex-wrap: wrap;
     a {
-      color: lightslategrey;
+      color: $link-color;
       margin-right: 20px;
-      font-size: 12px;
+      font-size: 14px;
+      &:hover {
+        color: rgb(75, 75, 75);
+        text-decoration: none;
+      }
     }
   }
 
   .area_more_btn {
     float: right;
-    font-size: 12px;
-    color: lightslategrey;
+    font-size: 14px;
+    color: $link-color;
     cursor: pointer;
+    &:hover {
+      color: rgb(75, 75, 75);
+    }
+
   }
 }
 
 .link_container {
   margin: 20px 0;
+  a:hover {
+    text-decoration: none;
+  }
   .content_right_link{
     border: 2px solid $main-color;
     border-radius: 15px;
     background: #fff;
     padding: 10px;
+
     p {
       color: $main-color;
       font-size: 12px;
@@ -60,28 +72,27 @@
     }
     &:hover {
       background: $sub-color;
-      
       p {
         color: #fff;
-       text-decoration: none;
       }
     }
   }
 }
 
+
 .tag_wrap {
   margin-bottom: 30px;
   a {
-    color: lightslategrey;
-    font-size: 12px;
+    color: $link-color;
+    font-size: 14px;
+    &:hover {
+      color: rgb(75, 75, 75);
+      text-decoration: none;
+    }
   }
   .tag_index_link {
     float: right;
   }
-}
-
-.search_btn:hover {
-  background-color:#f27985;
 }
 
 .post_container {
@@ -155,7 +166,7 @@
 }
 
 .post_heart img{
-  width: 30px;
+  width: 25px;
   float: right;
   margin-right: 20px;
 }
@@ -192,7 +203,7 @@ post/show
   .link_container{
     margin-bottom: 20px;
     a {
-    color: lightslategrey;
+    color: $link-color;
     float: right;
     margin-top: 5px;
     }
@@ -234,7 +245,7 @@ post/show
 }
 
 .create_time   {
-  color: lightslategrey;
+  color: $link-color;
   float: right;
   margin-top: 5px;
 }
@@ -270,6 +281,16 @@ post/show
   position: fixed;
   right: 30px;
   bottom: 30px;
+}
+/*===============================
+post/new
+=================================*/
+
+.tag_form {
+  padding-left: 10px;
+}
+.post_btn {
+  width: 50%;
 }
 
 /*==================================================

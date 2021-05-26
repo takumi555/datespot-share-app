@@ -3,12 +3,12 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
-//= require jquery
-//= require jquery.turbolinks
-//= require rails-ujs
 //= require activestorage
 //= require turbolinks
+//= require jquery.turbolinks
 //= require_tree .
+//= require jquery
+//= require rails-ujs
 
 require("@rails/ujs").start()
 require("turbolinks").start()
@@ -53,3 +53,4 @@ $(document).on('turbolinks:load', function() {
     }
   });
 }); 
+

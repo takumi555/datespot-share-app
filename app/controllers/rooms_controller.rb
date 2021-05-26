@@ -1,8 +1,8 @@
 class RoomsController < ApplicationController
-  before_action :authenticate_user!, only: [:create,:show]
-  
+  before_action :authenticate_user!, only: [:index, :create,:show]
+
   def index
-    @rooms = current_user.rooms.includes(:messages).order("messages.created_at desc")
+    @rooms = current_user.rooms.joins(:messages).includes(:messages).order("messages.created_at DESC")
   end
   
   def create

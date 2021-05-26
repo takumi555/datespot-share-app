@@ -10,7 +10,7 @@ RSpec.describe 'ログインとログアウト', type: :system do
       fill_in 'user[email]', with: 'example@example.com'
       fill_in 'user[password]', with: '123456'
       find('.login_btn').click
-      expect(page). to have_css('.post_index_title', text: '投稿一覧')
+      expect(page). to have_css('.post_index_title', text: 'すべての投稿')
     end
   end
 
@@ -21,10 +21,10 @@ RSpec.describe 'ログインとログアウト', type: :system do
 
     it 'ログアウトできる' do
       visit root_path
-      find('.dropdwn_btn').click
+      find('#dropdown_icon').click
       click_on 'ログアウト'
       page.driver.browser.switch_to.alert.accept
-      expect(page). to have_css('.post_index_title', text: '投稿一覧')
+      expect(page). to have_content('ログイン')
     end
   end
 end
