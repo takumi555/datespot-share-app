@@ -34,10 +34,6 @@ rooms/index
   }
 }
 
-
-
-
-
 /*================================
 rooms/show
 ==================================*/
@@ -117,24 +113,25 @@ rooms/show
 }
 
 #messages_area {
+  margin-bottom: 30px;
 }
 #messages_form_area{
-  margin-top: 30px;
+ 
+  position: absolute;
+  bottom: 60px;
+  width: 95%;
 }
-
 .msg_form.msg_form {
   margin-top: 10px;
   width: 80%;
   padding-left: 10px;
   float: left;
 }
-
 .msg_submit {
 width: 19%;
 float: right;
 margin-top: -13px;
 }
-
 
 
 
@@ -147,6 +144,7 @@ margin-top: -13px;
     padding: 0px;
     margin: 0 auto;
   }
+
   .room_title {
     padding-top: 30px;
     padding-left: 10px;
@@ -162,10 +160,18 @@ margin-top: -13px;
       .msg_submit {
         float: none;
         margin-top: 5px;
+        width: 100%;
         
     
       }
 
+  }
+
+  #messages_area {
+    margin-bottom: 90px;
+  }
+  #messages_form_area{
+    width: 100%;
   }
 
 
