@@ -4,7 +4,7 @@
 
 
 ## URL
-http://tokyodateclub.com/
+http://tokyodateclub.com/  
 ※ログイン画面のゲストログインボタンから簡単にログインができます。
 
 ## サービス概要 
@@ -73,15 +73,11 @@ AWS
 
 ## 各種機能＆導入技術
 - ユーザー登録＆ログイン(Devise)
-- 画像アップロード機能（Active_record、AWS S3）
+- 画像アップロード機能（Active_storage、AWS S3）
 - いいね、コメントと質問回答投稿、ダイレクトメッセージ（Ajax）
 - ページネーション機能（kaminari）
 - 管理者ページ（Active_admin)
-- ユーザー登録＆ログイン(Devise)
-- 画像アップロード機能（Active_record、AWS S3)
-- いいね、コメントと質問回答投稿、ダイレクトメッセージ（Ajax）
-- ページネーション機能（kaminari）
-- 管理者ページ（Active_admin)
+
 
 #### テスト
 Rspec  
