@@ -24,7 +24,7 @@ header {
   }
 }
 
-.new_post_link {
+.header_link {
   background-color: $sub-color;
   border-radius: 5px;
   height: 40px;
@@ -44,6 +44,7 @@ header {
     font-size: 15px;
     margin: 5px 20px;
     margin-top: -1px;
+    letter-spacing: 1px;
     &:hover {
       text-decoration: none;
       color: #fff;
@@ -51,16 +52,22 @@ header {
    }
 }
 
-.new_post_link_response {
+.new_user_link {
+  position: absolute;
+  left: -170px;
+
+}
+
+.header_link_response {
   display: none;
 }
 .header_user_icon img{
   width: 55px;
   height: 55px;
-   border-radius: 99px;
+  border-radius: 99px;
   float: right;
   margin-top: -48px;
-  padding: 5px;
+  padding: 3px;
   background-color: #fff;
   object-fit: cover;
 }
@@ -75,7 +82,7 @@ header {
     width: 130px;
     margin-top: 10px;
   }
-  .new_post_link  {
+  .header_link  {
     display: none;
   }
 
@@ -88,7 +95,7 @@ header {
     }
   }
 
-  .new_post_link_response {
+  .header_link_response {
     display: block;
     background-color: $sub-color;
     border-radius: 5px;
