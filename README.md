@@ -63,3 +63,6 @@ CSS（Bootstrap4,sass）
 ## AWS構成図
 
 ## 各画面の説明
+
+<img width="1440" alt="スクリーンショット 2021-05-29 13 46 43" src="https://user-images.githubusercontent.com/67146063/120058242-808ef280-c084-11eb-8c14-80bff6d60d22.png">
+
