@@ -77,6 +77,26 @@ http://tokyodateclub.com/
 - factory_bot  
 
 ## 各画面の説明
-<img src="https://user-images.githubusercontent.com/67146063/120078674-91268380-c0eb-11eb-9319-05cfa1fce6b8.png" width="750px">
+### ①投稿一覧画面  
+<img src="https://user-images.githubusercontent.com/67146063/120078674-91268380-c0eb-11eb-9319-05cfa1fce6b8.png" width="800px">  
+投稿一覧画面です。
+都道府県で絞る、タグで検索する、フリーワードで検索するなど様々な検索方法が可能です。
+また、いいね数が多い人気投稿順や、フォローしているユーザーの投稿のみを表示させることも可能です。
+
+②投稿詳細画面
+
+投稿詳細画面です。
+コメント、いいねはAjaxで行うことができます。
+
+
+③質問詳細画面
+
+質問を投稿し、他のユーザーは質問に対し回答をすることができます。
+質問内容は恋愛に関すること出れば基本なんでもOKです。
+回答はAjaxでできるようにしています。
+
+### ④ダイレクトメッセージ画面
+<img src="https://user-images.githubusercontent.com/67146063/120079756-60951880-c0f0-11eb-95d4-6c1bece8ef1b.png" width="800px">  
+多くの人が使い慣れているような、わかりやすい機能とデザインを意識しました。
 
 ## レスポンシブデザイン
