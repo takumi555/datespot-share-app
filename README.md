@@ -1,6 +1,7 @@
-# 東京デート倶楽部
+## 東京デート倶楽部
 
- ![logo_transparent](https://user-images.githubusercontent.com/67146063/120076691-d6de4e80-c0e1-11eb-890b-9a31ac536cf3.png)
+  
+<img src="https://user-images.githubusercontent.com/67146063/120076691-d6de4e80-c0e1-11eb-890b-9a31ac536cf3.png" width="400px">
 
 東京デート倶楽部は「　今度のデートどうしよう　」という悩みを解決するサービスです。
 
