@@ -71,6 +71,9 @@ AWS
 
 ## AWS構成図
 
+![AWS構成図](https://user-images.githubusercontent.com/67146063/120066440-530c6e00-c0b1-11eb-8b3f-7aa5e7ee9887.png)
+
+
 ## 各種機能＆導入技術
 - ユーザー登録＆ログイン(Devise)
 - 画像アップロード機能（Active_storage、AWS S3）
