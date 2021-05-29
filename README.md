@@ -1,5 +1,7 @@
 # 東京デート倶楽部
 
+ ![logo_transparent](https://user-images.githubusercontent.com/67146063/120076691-d6de4e80-c0e1-11eb-890b-9a31ac536cf3.png)
+
 東京デート倶楽部は「　今度のデートどうしよう　」という悩みを解決するサービスです。
 
 
@@ -62,12 +64,13 @@ http://tokyodateclub.com/
 - Capistrano
 
 #### インフラ
-AWS
-- VPC
-- EC2
-- RDS
-- S3
-- Route53
+AWS  
+・VPC    
+・EC2  
+・RDS  
+・S3  
+・Route53 
+
 
 ## AWS構成図
 
@@ -92,7 +95,6 @@ Rspec
 Capybara  
 factory_bot  
 
-## モデルの図
 
 ## 各画面の説明
 
