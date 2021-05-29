@@ -72,6 +72,7 @@ AWS
 ## AWS構成図
 
 <img src="https://user-images.githubusercontent.com/67146063/120066689-94514d80-c0b2-11eb-9169-02da88b6b922.png" width="600px">
+※ap-northeast-1cの2つのサブネットはそれぞれALB、RDSの利用条件を満たすために設置。
 
 
 ## 各種機能＆導入技術
