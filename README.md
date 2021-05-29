@@ -51,14 +51,7 @@ http://tokyodateclub.com/
 - jQuery
 - RSpec
 - Capistrano
-
-#### インフラ
-AWS  
-　VPC    
-　EC2  
-　RDS  
-　S3  
-　Route53 
+- AWS (VPC、EC2、RDS、S3、Route53)
 
 
 ## AWS構成図
@@ -76,13 +69,14 @@ AWS
 
 
 #### テスト
-Rspec  
-　単体テスト(model)
-　機能テスト(request)
-　統合テスト(system)
-Capybara  
-factory_bot  
+- Rspec  
+　単体テスト(model)  
+　機能テスト(request)  
+　統合テスト(system)  
+- Capybara  
+- factory_bot  
 
 ## 各画面の説明
+<img src="https://user-images.githubusercontent.com/67146063/120078674-91268380-c0eb-11eb-9319-05cfa1fce6b8.png" width="750px">
 
 ## レスポンシブデザイン
