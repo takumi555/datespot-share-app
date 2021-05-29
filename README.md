@@ -71,7 +71,7 @@ AWS
 
 ## AWS構成図
 
-![AWS構成図](https://user-images.githubusercontent.com/67146063/120066440-530c6e00-c0b1-11eb-8b3f-7aa5e7ee9887.png)
+<img src="https://user-images.githubusercontent.com/67146063/120066689-94514d80-c0b2-11eb-9169-02da88b6b922.png" width="600px">
 
 
 ## 各種機能＆導入技術
