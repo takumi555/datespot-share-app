@@ -83,14 +83,14 @@ http://tokyodateclub.com/
 また、いいね数が多い人気投稿順や、フォローしているユーザーの投稿のみを表示させることもできます。
 
 ### ②投稿詳細画面
-<img src="https://user-images.githubusercontent.com/67146063/120091024-06bd3e80-c142-11eb-9df0-b8ca69259f20.gif" width="800px">  
+<img src="https://user-images.githubusercontent.com/67146063/120096782-5ca4dd00-c168-11eb-8b65-85f557696bbf.gif" width="800px">  
 
 投稿詳細画面です。  
 コメント、いいねはAjaxで行うことができます。  
 画像が複数枚あるときは、メイン画像下の画像リストをホバーすることで切り替えができ、メイン画像をクリックすることで大きさを変更できます。
 
 ### ③質問詳細画面
-<img src="https://user-images.githubusercontent.com/67146063/120091376-91ec0380-c145-11eb-9db5-26e9975c2739.gif" width="800px">  
+<img src="https://user-images.githubusercontent.com/67146063/120097427-5f550180-c16b-11eb-8d84-f2dd2885acae.gif" width="800px">  
 
 質問を投稿し、他のユーザーは質問に対し回答をすることができます。  
 回答はAjaxでできるようにしています。  
@@ -111,10 +111,10 @@ PCだけでなく、タブレット、スマホのレスポンシブデザイン
 <img src="https://user-images.githubusercontent.com/67146063/120091786-391e6a00-c149-11eb-83c7-e023d1a31fb2.gif" width="200px">  
 
 ### ②投稿詳細画面 
-<img src="https://user-images.githubusercontent.com/67146063/120091843-91556c00-c149-11eb-8a22-244c616ec5e7.gif" width="200px">  
+<img src="https://user-images.githubusercontent.com/67146063/120097643-a099e100-c16c-11eb-8f2a-b2c92570bad7.gif" width="200px">  
 
 ### ③質問詳細画面  
-<img src="https://user-images.githubusercontent.com/67146063/120091845-93b7c600-c149-11eb-9703-4d4ac918b80d.gif" width="200px">  
+<img src="https://user-images.githubusercontent.com/67146063/120097645-a55e9500-c16c-11eb-89fc-55b17000ccaf.gif" width="200px">  
 
 ### ④ダイレクトメッセージ画面  
 <img src="https://user-images.githubusercontent.com/67146063/120091636-01fb8900-c148-11eb-828e-7d72c8ff5a63.PNG" width="200px">  
