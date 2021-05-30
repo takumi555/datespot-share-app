@@ -4,11 +4,11 @@
       .main
         .main__lists
           %div{class: 'main__lists__image', data: {index:0}, style: "z-index:99;"}
-            =image_tag @post.images.first.variant(combine_options:{gravity: :center}).processed, alt: "画像0", class: 'show_image_main'
+            =image_tag @post.images.first, alt: "画像0", class: 'show_image_main'
           %div{class: 'main__lists__image', data: {index:1}, style: "z-index:-1;"}
-            =image_tag @post.images.second.variant(combine_options:{gravity: :center}).processed, alt: "画像1", class: 'show_image_main'
+            =image_tag @post.images.second, alt: "画像1", class: 'show_image_main'
           %div{class: 'main__lists__image', data: {index:2}, style: "z-index:-1;"}
-            =image_tag @post.images.third.variant(combine_options:{gravity: :center}).processed, alt: "画像2", class: 'show_image_main'
+            =image_tag @post.images.third, alt: "画像2", class: 'show_image_main'
       .thumbs
         .thumbs__lists
           %div{class: 'thumbs__lists__item' , data: {index:0}}
@@ -22,9 +22,9 @@
       .main
         .main__lists
           %div{class: 'main__lists__image', data: {index:0}, style: "z-index:99;"}
-            =image_tag @post.images.first.variant(combine_options:{gravity: :center}).processed, alt: "画像0", class: 'show_image_main'
+            =image_tag @post.images.first, alt: "画像0", class: 'show_image_main'
           %div{class: 'main__lists__image', data: {index:1}, style: "z-index:-1;"}
-            =image_tag @post.images.second.variant(combine_options:{gravity: :center}).processed, alt: "画像1", class: 'show_image_main'
+            =image_tag @post.images.second, alt: "画像1", class: 'show_image_main'
       .thumbs
         .thumbs__lists.iii
           %div{class: 'thumbs__lists__item' , data: {index:0}}
@@ -33,7 +33,7 @@
             =image_tag @post.images.second,  alt: "画像1", class: "thumbs__lists__item__image"
   - else
     .main__lists__image
-      = image_tag @post.images.first.variant(combine_options:{gravity: :center}).processed, class: 'show_image_main', id: 'image_size_1'
+      = image_tag @post.images.first, class: 'show_image_main', id: 'image_size_1'
 - else 
   = image_tag 'no-image.png', class: 'show_image_main image_size_1  no_image'
 
