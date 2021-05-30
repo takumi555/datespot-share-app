@@ -1,6 +1,5 @@
 ## 東京デート倶楽部
-
-  
+<br>
 <img src="https://user-images.githubusercontent.com/67146063/120076691-d6de4e80-c0e1-11eb-890b-9a31ac536cf3.png" width="400px">
 
 東京デート倶楽部は「　今度のデートどうしよう　」という悩みを解決するサービスです。
@@ -47,8 +46,8 @@ http://tokyodateclub.com/
 - Ruby 2.6.6
 - Ruby on Rails 6.0.3.6
 - HTML/CSS
-- jQuery
-- PostgreSQL
+- jQuery　1.12.4
+- PostgreSQL　11.11　
 - RSpec
 - Capistrano
 - AWS (VPC、EC2、RDS、S3、Route53)
@@ -93,8 +92,7 @@ http://tokyodateclub.com/
 <img src="https://user-images.githubusercontent.com/67146063/120097427-5f550180-c16b-11eb-8d84-f2dd2885acae.gif" width="800px">  
 
 質問を投稿し、他のユーザーは質問に対し回答をすることができます。  
-回答はAjaxでできるようにしています。  
-質問内容は恋愛に関すること出れば基本なんでもOKです。  
+回答はAjaxでできるようにしています。 
 
 ### ④ダイレクトメッセージ画面
 <img src="https://user-images.githubusercontent.com/67146063/120079756-60951880-c0f0-11eb-95d4-6c1bece8ef1b.png" width="800px">  
@@ -104,7 +102,7 @@ http://tokyodateclub.com/
 多くの人が使い慣れているような、わかりやすい機能とデザインを意識しました。
 
 ## レスポンシブデザイン
-PCだけでなく、タブレット、スマホのレスポンシブデザインにも対応しています。
+PCだけでなく、タブレット、スマホのレスポンシブデザインにも対応しています。  
 下記はスマホのレスポンシブデザインです。
 
 ### ①投稿一覧画面
