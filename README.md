@@ -47,8 +47,8 @@ http://tokyodateclub.com/
 - Ruby 2.6.6
 - Ruby on Rails 6.0.3.6
 - HTML/CSS
-- PostgreSQL
 - jQuery
+- PostgreSQL
 - RSpec
 - Capistrano
 - AWS (VPC、EC2、RDS、S3、Route53)
@@ -61,10 +61,10 @@ http://tokyodateclub.com/
 
 ## 各種機能＆導入技術
 - ユーザー登録＆ログイン(Devise)
-- 画像アップロード機能（Active_storage）
+- 画像アップロード機能（Active Storage）
 - いいね、コメントと質問回答投稿、ダイレクトメッセージ（Ajax）
 - ページネーション機能（kaminari）
-- 管理者ページ（Active_admin)
+- 管理者ページ（Active Admin)
 
 #### テスト
 - Rspec  
@@ -87,7 +87,7 @@ http://tokyodateclub.com/
 
 投稿詳細画面です。  
 コメント、いいねはAjaxで行うことができます。  
-画像が複数枚あるときは、下の画像リストをホバーすることで切り替えができ、画像をクリックすることで大きさを変更できます。
+画像が複数枚あるときは、メイン画像下の画像リストをホバーすることで切り替えができ、メイン画像をクリックすることで大きさを変更できます。
 
 ### ③質問詳細画面
 <img src="https://user-images.githubusercontent.com/67146063/120091376-91ec0380-c145-11eb-9db5-26e9975c2739.gif" width="800px">  
