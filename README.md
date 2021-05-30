@@ -84,15 +84,14 @@ http://tokyodateclub.com/
 また、いいね数が多い人気投稿順や、フォローしているユーザーの投稿のみを表示させることも可能です。
 
 ### ②投稿詳細画面
-
-![投稿詳細画面②](https://user-images.githubusercontent.com/67146063/120091024-06bd3e80-c142-11eb-9df0-b8ca69259f20.gif)  
-
+<img src="https://user-images.githubusercontent.com/67146063/120091024-06bd3e80-c142-11eb-9df0-b8ca69259f20.gif" width="800px">  
 
 投稿詳細画面です。
 コメント、いいねはAjaxで行うことができます。
 
 
 ### ③質問詳細画面
+<img src="https://user-images.githubusercontent.com/67146063/120091376-91ec0380-c145-11eb-9db5-26e9975c2739.gif" width="800px">  
 
 質問を投稿し、他のユーザーは質問に対し回答をすることができます。  
 質問内容は恋愛に関すること出れば基本なんでもOKです。  
@@ -103,5 +102,17 @@ http://tokyodateclub.com/
 多くの人が使い慣れているような、わかりやすい機能とデザインを意識しました。
 
 ## レスポンシブデザイン
+### ①投稿一覧画面
+<img src="https://user-images.githubusercontent.com/67146063/120091786-391e6a00-c149-11eb-83c7-e023d1a31fb2.gif" width="200px">  
+
+
+### ②投稿詳細画面 
+<img src="https://user-images.githubusercontent.com/67146063/120091843-91556c00-c149-11eb-8a22-244c616ec5e7.gif" width="200px">  
+
+### ③質問詳細画面  
+<img src="https://user-images.githubusercontent.com/67146063/120091845-93b7c600-c149-11eb-9703-4d4ac918b80d.gif" width="200px">  
+
+### ④ダイレクトメッセージ画面  
+<img src="https://user-images.githubusercontent.com/67146063/120091636-01fb8900-c148-11eb-828e-7d72c8ff5a63.PNG" width="200px">  
 
 
