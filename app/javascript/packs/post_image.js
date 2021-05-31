@@ -18,7 +18,7 @@ $(document).on('turbolinks:load', function() {
     });
     $(".main__lists__image").each(function(index){              
       if(index == mainDataIndex){                               
-        $(this).css('z-index', 99);
+        $(this).css('z-index', 10);
       } else {
         $(this).css('z-index', -1);
       };
