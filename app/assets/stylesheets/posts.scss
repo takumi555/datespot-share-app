@@ -265,10 +265,13 @@ post/show
 .comment_content {
   margin-top: -10px;
   float: left;
+  width: 95%;
 }
 .comment_delete {
   color: lightgray;
   float: right;
+  margin-top: -10px;
+ 
 }
 .comment_form.comment_form {
   width: 100%;
