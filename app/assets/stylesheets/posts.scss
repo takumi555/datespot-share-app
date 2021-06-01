@@ -82,12 +82,17 @@
 
 .tag_wrap {
   margin-bottom: 30px;
-  a {
-    color: $link-color;
-    font-size: 14px;
-    &:hover {
-      color: rgb(75, 75, 75);
-      text-decoration: none;
+  .tag_list {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    a {
+      color: $link-color;
+      font-size: 14px;
+      &:hover {
+        color: rgb(75, 75, 75);
+        text-decoration: none;
+      }
     }
   }
   .tag_index_link {
