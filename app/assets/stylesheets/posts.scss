@@ -1,7 +1,7 @@
 @import '_variables';
 
 .container {
-  width: 99%;
+  width: 100%;
   margin-top: 30px;
 
   .content_left {
@@ -265,10 +265,13 @@ post/show
 .comment_content {
   margin-top: -10px;
   float: left;
+  width: 95%;
 }
 .comment_delete {
   color: lightgray;
   float: right;
+  margin-top: -10px;
+ 
 }
 .comment_form.comment_form {
   width: 100%;
@@ -293,6 +296,7 @@ post/new
 .post_btn {
   width: 50%;
 }
+
 
 /*==================================================
 レスポンシブ

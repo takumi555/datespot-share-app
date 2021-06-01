@@ -11,7 +11,7 @@
           = render 'commons/user_info', post: comment
       - else 
         = render 'commons/user_info', post: comment
-        
+      
     .comment_content
       = simple_format(comment.content)
     - if comment.user == current_user

@@ -73,9 +73,10 @@ rooms/show
   top: 3px;
   max-width: 90%;
   float: left;
+  display: flex;
+  justify-content: flex-start;
   
   .talk_content {
-    float: right;
     padding: 5px 10px;
     border-radius: 10px;
     background-color: rgb(244, 244, 244);
@@ -84,7 +85,6 @@ rooms/show
   }
   .talk_img {
     margin-left: 5px;
-    float: left;
   }
   
 }
@@ -95,12 +95,10 @@ rooms/show
   display: block;
   margin: 5px 0;
   max-width: 90%;
-  float: right;
   margin-right: 5px; 
-  clear: both;
-
+  display: flex;
+  justify-content: flex-end;
   .my_talk_content {
-    float: left;
     background-color: rgb(255, 206, 206);
     border-radius: 10px;
     padding: 5px 10px;
@@ -108,7 +106,6 @@ rooms/show
   }
   .my_talk_img {
     margin-left: 5px;
-    float: right;
   }
 }
 
@@ -127,9 +124,9 @@ rooms/show
   float: left;
 }
 .msg_submit {
-width: 19%;
-float: right;
-margin-top: -13px;
+  width: 19%;
+  float: right;
+  margin-top: -13px;
 }
 
 
@@ -143,11 +140,11 @@ margin-top: -13px;
     padding: 0px;
     margin: 0 auto;
   }
-
   .room_title {
     padding-top: 30px;
     padding-left: 10px;
   }
+
   .msg_form_container {
     width: 95%;
     margin: 0 auto;

@@ -37,7 +37,7 @@
     position: relative;
     top: 3px;
     right: 16px;  
-    z-index: 6;
+    z-index: 16;
   }
 
   .dropdwn_btn.is-open::after {
@@ -48,12 +48,12 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 4;
+    z-index: 14;
   }
   
   .dropdwn_btn.is-open + .dropdwn_menu {
     display: block;
-    z-index: 5;
+    z-index: 15;
   }
 }
 
