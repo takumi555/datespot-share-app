@@ -6,7 +6,7 @@
 
 
 ## URL
-http://tokyodateclub.com/  
+https://tokyodateclub.com/  
 ※ログイン画面のゲストログインボタンから簡単にログインができます。
 
 ## サービス概要 
