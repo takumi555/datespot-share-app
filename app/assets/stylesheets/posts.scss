@@ -79,7 +79,6 @@
   }
 }
 
-
 .tag_wrap {
   margin-bottom: 30px;
   .tag_list {
@@ -97,6 +96,9 @@
   }
   .tag_index_link {
     float: right;
+    font-size: 14px;
+    text-decoration: none;
+    margin-top: 5px;
   }
 }
 
@@ -360,15 +362,13 @@ post/new
   
     .response_area_search  {
       width: 80%;
-      margin-top: 30px!important;
       display: block;
       margin:  0 auto;
+      margin-top: 30px!important;
     }
   
     .tag_wrap {
-      margin-top: 10px;
       width: 80%;
-      display: block;
       margin:  0 auto;
     }
   }
