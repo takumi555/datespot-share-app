@@ -115,5 +115,5 @@ PCだけでなく、タブレット、スマホのレスポンシブデザイン
 <img src="https://user-images.githubusercontent.com/67146063/120097645-a55e9500-c16c-11eb-89fc-55b17000ccaf.gif" width="200px">  
 
 ### ④ダイレクトメッセージ画面  
-<img src="https://user-images.githubusercontent.com/67146063/120091636-01fb8900-c148-11eb-828e-7d72c8ff5a63.PNG" width="200px">  
+<img src="https://user-images.githubusercontent.com/67146063/120896033-9e4af180-c65a-11eb-95be-266fa5354e49.PNG" width="200px">  
 
