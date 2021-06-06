@@ -64,6 +64,8 @@ https://tokyodateclub.com/
 - いいね、コメントと質問回答投稿、ダイレクトメッセージ（Ajax）
 - ページネーション機能（kaminari）
 - 管理者ページ（Active Admin)
+- コードフォーマッティング(Rubocop)
+- デバッグ(pry-byebug)
 
 #### テスト
 - Rspec  
