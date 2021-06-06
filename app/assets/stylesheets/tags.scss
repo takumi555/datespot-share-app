@@ -8,3 +8,9 @@
     text-decoration: none;
   }
 }
+
+.tag_all {
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+}
