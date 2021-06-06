@@ -1,5 +1,5 @@
 @import '_variables';
-
+ 
 .container {
   width: 100%;
   margin-top: 30px;
@@ -296,14 +296,16 @@ post/show
 /*===============================
 post/new
 =================================*/
-
-.tag_form {
-  padding-left: 10px;
+.post_new_container {
+  width: 90%;
+  margin: 0 auto; 
+  .tag_form {
+    padding-left: 10px;
+  }
 }
 .post_btn {
   width: 50%;
 }
-
 
 /*==================================================
 レスポンシブ
