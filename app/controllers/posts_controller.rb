@@ -1,10 +1,10 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy ]
-  before_action :baria_user, only: [:edit, :destroy]
+  before_action :authenticate_user!, only: %i[new create edit update destroy]
+  before_action :baria_user, only: %i[edit destroy]
 
   def index
     @posts = Post.all.order(created_at: :desc).page(params[:page]).per(10)
-    
+
     @tag_lists = Tag.all.limit(20)
   end
 
@@ -13,7 +13,7 @@ class PostsController < ApplicationController
     @user = @post.user
     @comment = Comment.new
     @comments = @post.comments
-    
+
     @tag_list = @post.tags.pluck(:tag_name).join(',')
   end
 
@@ -25,14 +25,13 @@ class PostsController < ApplicationController
     @post = current_user.posts.build(post_params)
     tag_list = params[:post][:tag_name].gsub(/[[:space:]]/, '').split(',')
 
-    if  @post.save
-        @post.save_posts(tag_list)
-        redirect_to post_path(@post.id), notice: '投稿が完了しました！'
+    if @post.save
+      @post.save_posts(tag_list)
+      redirect_to post_path(@post.id), notice: '投稿が完了しました！'
     else
       flash.now[:error] = '投稿できませんでした'
       render :new
     end
-    
   end
 
   def edit
@@ -50,7 +49,6 @@ class PostsController < ApplicationController
       flash.now[:error] = '更新できませんでした'
       render :edit
     end
-
   end
 
   def destroy
@@ -60,13 +58,14 @@ class PostsController < ApplicationController
   end
 
   private
+
   def post_params
     params.require(:post).permit(:title, :prefecture, :area, :content, :url, images: [])
   end
 
-  def baria_user 
+  def baria_user
     unless Post.find(params[:id]).user_id == current_user.id
-      flash[:notice] = "権限がありません"
+      flash[:notice] = '権限がありません'
       redirect_to root_path
     end
   end

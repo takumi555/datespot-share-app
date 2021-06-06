@@ -1,10 +1,9 @@
 class QuestionsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy ]
-  before_action :baria_user, only: [:edit, :destroy]
+  before_action :authenticate_user!, only: %i[new create edit update destroy]
+  before_action :baria_user, only: %i[edit destroy]
 
   def index
     @questions = Question.all.order(created_at: :desc).page(params[:page]).per(10)
-
   end
 
   def show
@@ -12,8 +11,6 @@ class QuestionsController < ApplicationController
     @user = @question.user
     @answer = Answer.new
     @answers = @question.answers
-
-
   end
 
   def new
@@ -28,7 +25,6 @@ class QuestionsController < ApplicationController
       flash.now[:error] = '投稿できませんでした'
       render :new
     end
-    
   end
 
   def edit
@@ -44,24 +40,23 @@ class QuestionsController < ApplicationController
       render :edit
     end
   end
-  
+
   def destroy
     @question = Question.find(params[:id])
     @question.destroy!
     redirect_to questions_path, notice: '削除しました'
   end
 
+  private
 
-private
   def question_params
     params.require(:question).permit(:title, :content)
   end
 
-  def baria_user 
+  def baria_user
     unless Question.find(params[:id]).user_id == current_user.id
-      flash[:notice] = "権限がありません"
+      flash[:notice] = '権限がありません'
       redirect_to questions_path
     end
   end
-
 end

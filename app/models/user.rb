@@ -11,7 +11,7 @@ class User < ApplicationRecord
   has_many :posts, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
-  
+
   has_many :favorite_posts, through: :likes, source: :post
   has_one :profile
 
@@ -71,7 +71,7 @@ class User < ApplicationRecord
   end
 
   def create_notification_follow!(current_user)
-    temp = Notification.where(["visitor_id = ? and visited_id = ? and action = ? ",current_user.id, id, 'follow'])
+    temp = Notification.where(['visitor_id = ? and visited_id = ? and action = ? ', current_user.id, id, 'follow'])
     if temp.blank?
       notification = current_user.active_notifications.new(
         visited_id: id,
@@ -82,11 +82,13 @@ class User < ApplicationRecord
   end
 
   private
+
   def get_user_id(user)
     if user.is_a?(User)
-      user_id = user.id
+      user.id
     else
-      user_id = user
+      user
     end
   end
+
 end

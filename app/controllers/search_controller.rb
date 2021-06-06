@@ -1,5 +1,4 @@
-class SearchController < ApplicationController 
-
+class SearchController < ApplicationController
   def index
     @search = params[:search]
     @posts = Post.search(@search).order(created_at: :desc)
