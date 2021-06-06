@@ -61,6 +61,7 @@ https://tokyodateclub.com/
 ## 各種機能＆導入技術
 - ユーザー登録＆ログイン(Devise)
 - 画像アップロード機能（Active Storage）
+- 画像のリサイズ(MiniMagick)
 - いいね、コメントと質問回答投稿、ダイレクトメッセージ（Ajax）
 - ページネーション機能（kaminari）
 - 管理者ページ（Active Admin)
