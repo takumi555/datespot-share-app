@@ -3,6 +3,6 @@
     = render 'commons/content_right'
   .content_left
     %p.font-weight-bold すべてのタグ
-    .tag_all
+    .tag_all 
       - @tags.each do |tag|
         = link_to tag.tag_name, tags_path(tag_id: tag.id), class: 'tag_list'
