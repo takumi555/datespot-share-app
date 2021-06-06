@@ -297,7 +297,7 @@ post/show
 post/new
 =================================*/
 .post_new_container {
-  width: 90%;
+  max-width: 90%;
   margin: 0 auto; 
   .tag_form {
     padding-left: 10px;
