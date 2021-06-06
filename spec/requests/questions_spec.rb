@@ -1,16 +1,16 @@
 require 'rails_helper'
 
-RSpec.describe "Questions", type: :request do
+RSpec.describe 'Questions', type: :request do
   let!(:user) { create(:user) }
-  
-  describe "GET /questions" do
+
+  describe 'GET /questions' do
     it '200ステータスが返ってくる' do
       get questions_path
       expect(response).to have_http_status(200)
     end
   end
 
-  describe "GET /question/show" do
+  describe 'GET /question/show' do
     let!(:question) { create(:question, user: user) }
     it '200ステータスが返ってくる' do
       get question_path(id: question.id)
@@ -18,17 +18,17 @@ RSpec.describe "Questions", type: :request do
     end
   end
 
-  describe "GET /question/new" do
+  describe 'GET /question/new' do
     context 'ログインしている場合' do
       before do
         sign_in user
       end
-      
+
       it '200ステータスが返ってくる' do
         get new_question_path
         expect(response).to have_http_status(200)
       end
-    end 
+    end
 
     context 'ログインしていない場合' do
       it 'ログイン画面に遷移する' do
@@ -38,17 +38,16 @@ RSpec.describe "Questions", type: :request do
     end
   end
 
-  describe "GET /question/edit" do
+  describe 'GET /question/edit' do
     let!(:question) { create(:question, user: user) }
     let!(:user2) { create(:user) }
 
     describe 'ログインしている場合' do
-
       context '編集者が質問投稿者の場合' do
         before do
           sign_in user
         end
-        
+
         it '200ステータスが返ってくる' do
           get edit_question_path(id: question.id)
           expect(response).to have_http_status(200)
@@ -56,7 +55,7 @@ RSpec.describe "Questions", type: :request do
       end
 
       context '編集者が質問投稿者ではない場合' do
-        before do 
+        before do
           sign_in user2
         end
 
@@ -75,7 +74,7 @@ RSpec.describe "Questions", type: :request do
     end
   end
 
-  describe "POST /questions" do
+  describe 'POST /questions' do
     context 'ログインしている場合' do
       before do
         sign_in user
@@ -83,7 +82,7 @@ RSpec.describe "Questions", type: :request do
 
       it '記事が保存される' do
         question_params = attributes_for(:question)
-        post questions_path({question: question_params})
+        post questions_path({ question: question_params })
         expect(response).to have_http_status(302)
         expect(Question.last.title).to eq(question_params[:title])
         expect(Question.last.content).to eq(question_params[:content])
@@ -93,7 +92,7 @@ RSpec.describe "Questions", type: :request do
     context 'ログインしていない場合' do
       it 'ログイン画面に遷移する' do
         question_params = attributes_for(:question)
-        post questions_path({question: question_params})
+        post questions_path({ question: question_params })
         expect(response).to redirect_to(new_user_session_path)
       end
     end
@@ -101,7 +100,7 @@ RSpec.describe "Questions", type: :request do
 
   describe 'DELETE /question/destroy' do
     let!(:sample_question) { create(:question, user: user) }
-    let!(:user2) {create(:user)}
+    let!(:user2) { create(:user) }
 
     describe 'ログインしている場合' do
       context 'ログイン中のユーザーが質問投稿者の場合' do
@@ -112,7 +111,7 @@ RSpec.describe "Questions", type: :request do
           count = Question.all.count
           delete question_path(id: sample_question.id)
           expect(response).to have_http_status(302)
-          expect(Question.all.count).to eq (count - 1)
+          expect(Question.all.count).to eq(count - 1)
         end
       end
 
@@ -124,7 +123,7 @@ RSpec.describe "Questions", type: :request do
           count = Question.all.count
           delete question_path(id: sample_question.id)
           expect(response).to have_http_status(302)
-          expect(Question.all.count).not_to eq (count - 1)
+          expect(Question.all.count).not_to eq(count - 1)
         end
       end
     end

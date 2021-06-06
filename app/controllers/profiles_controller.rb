@@ -4,7 +4,7 @@ class ProfilesController < ApplicationController
   def show
     @user = current_user
     @profile = @user.prepare_profile
-    @posts = Post.where(user_id: current_user.id ).order(created_at: :desc)
+    @posts = Post.where(user_id: current_user.id).order(created_at: :desc)
     @posts = Kaminari.paginate_array(@posts).page(params[:page]).per(10)
   end
 
@@ -18,12 +18,11 @@ class ProfilesController < ApplicationController
       flash.now[:error] = '更新できませんでした'
       render :show
     end
-
   end
 
   private
+
   def profile_params
     params.require(:profile).permit(:avatar)
   end
-
 end

@@ -11,8 +11,8 @@ module DatespotShareApp
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 
-    config.assets.paths << config.root.join("vendor/assets/javascripts")
-    config.assets.paths << config.root.join("vendor/assets/stylesheets")
+    config.assets.paths << config.root.join('vendor/assets/javascripts')
+    config.assets.paths << config.root.join('vendor/assets/stylesheets')
 
     if Rails.env.development? || Rails.env.test?
       Bundler.require(*Rails.groups)

@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
-
   context 'タイトルと都道府県と内容が保存されている場合' do
     let!(:post) { build(:post) }
 
@@ -14,7 +13,7 @@ RSpec.describe Post, type: :model do
     let!(:post) { build(:post, title: nil) }
     it 'エラーになる' do
       post.valid?
-      expect(post.errors.messages[:title][0]).to eq("を入力してください")
+      expect(post.errors.messages[:title][0]).to eq('を入力してください')
     end
   end
 
@@ -22,7 +21,7 @@ RSpec.describe Post, type: :model do
     let!(:post) { build(:post, content: nil) }
     it 'エラーになる' do
       post.valid?
-      expect(post.errors.messages[:content][0]).to eq("を入力してください")
+      expect(post.errors.messages[:content][0]).to eq('を入力してください')
     end
   end
 
@@ -30,17 +29,16 @@ RSpec.describe Post, type: :model do
     let!(:post) { build(:post, prefecture: nil) }
     it 'エラーになる' do
       post.valid?
-      expect(post.errors.messages[:prefecture][0]).to eq("を入力してください")
+      expect(post.errors.messages[:prefecture][0]).to eq('を入力してください')
     end
   end
 
-  context 'userがいない場合' do 
+  context 'userがいない場合' do
     let!(:post) { build(:post, user: nil) }
 
     it 'エラーになる' do
       post.valid?
-      expect(post.errors.messages[:user]).to include "を入力してください"
+      expect(post.errors.messages[:user]).to include 'を入力してください'
     end
   end
-  
 end

@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-
   describe 'バリデーションのテスト' do
     context 'username, email ,passwordが登録されている場合' do
       let!(:user) { build(:user) }
@@ -11,7 +10,7 @@ RSpec.describe User, type: :model do
         expect(user).to be_valid
       end
     end
-    
+
     context 'usernameがない場合' do
       let!(:user) { build(:user, username: nil) }
 
@@ -36,6 +35,5 @@ RSpec.describe User, type: :model do
         expect(user.errors[:password]).to include('を入力してください')
       end
     end
-
   end
 end

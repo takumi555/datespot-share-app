@@ -1,20 +1,20 @@
 # config valid for current version and patch releases of Capistrano
-lock "~> 3.16.0"
+lock '~> 3.16.0'
 
-set :application, "tokyodateclub"
-set :repo_url, "git@github.com:takumi555/tokyodateclub.git"
+set :application, 'tokyodateclub'
+set :repo_url, 'git@github.com:takumi555/tokyodateclub.git'
 set :rbenv_ruby, File.read('.ruby-version').strip
 
 set :nginx_config_name, "#{fetch(:application)}.conf"
-set :nginx_sites_enabled_path, "/etc/nginx/conf.d"
+set :nginx_sites_enabled_path, '/etc/nginx/conf.d'
 
-append :linked_files, "config/master.key"
-append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "node_modules"
+append :linked_files, 'config/master.key'
+append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'node_modules'
 
 namespace :deploy do
   desc 'db_seed'
   task :db_seed do
-    on roles(:db) do |host|
+    on roles(:db) do |_host|
       with rails_env: fetch(:rails_env) do
         within current_path do
           execute :bundle, :exec, :rake, 'db:seed'

@@ -1,10 +1,10 @@
 class RoomsController < ApplicationController
-  before_action :authenticate_user!, only: [:index, :create,:show]
+  before_action :authenticate_user!, only: %i[index create show]
 
   def index
-    @rooms = current_user.rooms.joins(:messages).includes(:messages).order("messages.created_at DESC")
+    @rooms = current_user.rooms.joins(:messages).includes(:messages).order('messages.created_at DESC')
   end
-  
+
   def create
     @room = Room.create
     @joinCurrentUser = Entry.create(room_id: @room.id, user_id: current_user.id)
@@ -24,9 +24,8 @@ class RoomsController < ApplicationController
   end
 
   private
-  
+
   def join_room_params
     params.require(:entry).permit(:user_id, :room_id).merge(room_id: @room.id)
   end
-
 end

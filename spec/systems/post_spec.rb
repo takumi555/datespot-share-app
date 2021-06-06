@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Post', type: :system do
   let!(:user) { create(:user) }
   let!(:posts) { create_list(:post, 3, user: user) }
- 
+
   it '記事一覧が表示される' do
     visit root_path
     posts.each do |post|
@@ -14,7 +14,7 @@ RSpec.describe 'Post', type: :system do
   it '詳細画面へ遷移' do
     visit root_path
     first('.post_title').click
-    expect(page). to have_css('.post_show_title')
+    expect(page).to have_css('.post_show_title')
   end
 
   describe 'ログインしている場合' do
@@ -24,29 +24,29 @@ RSpec.describe 'Post', type: :system do
     it '新規投稿画面へ遷移' do
       visit root_path
       click_link '新規投稿'
-      expect(page). to have_css('.new_post_title', text: 'タイトル')
+      expect(page).to have_css('.new_post_title', text: 'タイトル')
     end
 
     it '最低限の内容を入力し、投稿を保存できる' do
       visit new_post_path
-      fill_in 'post[title]', with: 'Faker::Lorem.characters(number: 10)'
+      fill_in 'post[title]', with: '新規投稿'
       fill_in 'post[content]', with: 'Faker::Lorem.characters(number: 30)'
       select '東京', from: '都道府県'
       click_on '登録'
-      expect(page).to have_css('.post_index_title', text: 'すべての投稿')
+      expect(page).to have_css('.post_show_title', text: '新規投稿')
       expect(page).to have_content '投稿が完了しました！'
     end
 
     it '項目を全て入力し、投稿を保存できる' do
       visit new_post_path
-      fill_in 'post[title]', with: 'Faker::Lorem.characters(number: 10)'
+      fill_in 'post[title]', with: '新規投稿'
       fill_in 'post[content]', with: 'Faker::Lorem.characters(number: 30)'
       select '東京', from: '都道府県'
       fill_in 'post[area]', with: '渋谷'
       fill_in 'post[url]', with: 'Faker::Lorem.characters(number: 10)'
       fill_in 'post[tag_name]', with: 'Faker::Lorem.characters(number: 10)'
       click_on '登録'
-      expect(page).to have_css('.post_index_title', text: 'すべての投稿')
+      expect(page).to have_css('.post_show_title', text: '新規投稿')
       expect(page).to have_content '投稿が完了しました！'
     end
   end

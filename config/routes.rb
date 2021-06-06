@@ -7,15 +7,15 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root to: 'posts#index'
 
-  resources :posts, only: [:index, :new, :create, :show, :edit, :update, :destroy] do
-    resources :comments, only: [:index, :create, :destroy]
-    resource :like, only: [:show, :create, :destroy]
+  resources :posts, only: %i[index new create show edit update destroy] do
+    resources :comments, only: %i[index create destroy]
+    resource :like, only: %i[show create destroy]
   end
 
   resources :favorites, only: [:index]
-  resource :profile, only: [:show, :update]
+  resource :profile, only: %i[show update]
 
-  resources :accounts, only: [:index, :show] do
+  resources :accounts, only: %i[index show] do
     resources :follows, only: [:create]
     resources :unfollows, only: [:create]
     resources :followings, only: [:index]
@@ -26,17 +26,16 @@ Rails.application.routes.draw do
   resources :search, only: [:index]
   resources :tags, only: [:index]
   resources :taglists, only: [:index]
-  resources :prefectures, only: [:index, :show]
+  resources :prefectures, only: %i[index show]
 
   resources :timelines, only: [:index]
 
-  resources :questions, only: [:index, :new, :create, :show, :edit, :update, :destroy] do
-    resources :answers, only: [:index, :create, :destroy]
+  resources :questions, only: %i[index new create show edit update destroy] do
+    resources :answers, only: %i[index create destroy]
   end
-  
-  resources :rooms, only: [:index, :create, :show]
+
+  resources :rooms, only: %i[index create show]
   resources :messages, only: [:create]
 
   resources :notifications, only: [:index]
-  
 end
