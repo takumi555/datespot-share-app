@@ -36,7 +36,11 @@ class Post < ApplicationRecord
   end
 
   def thumbnail
-    return self.images.first.variant(resize: '150×100')
+    return self.images.first.variant(resize: '200×200')
+  end
+
+  def thumbnail_resize
+    return self.image.variant(resize: '300x300').processed
   end
 
   def create_notification_like!(current_user)
@@ -74,7 +78,6 @@ class Post < ApplicationRecord
     end
     notification.save if notification.valid?
   end
-
 
 
 end
