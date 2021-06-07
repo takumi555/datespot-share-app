@@ -46,8 +46,8 @@ https://tokyodateclub.com/
 - Ruby 2.6.6
 - Ruby on Rails 6.0.3.6
 - HTML/CSS
-- jQuery　1.12.4
-- PostgreSQL　11.11　
+- jQuery 1.12.4
+- PostgreSQL 11.11　
 - RSpec
 - Capistrano
 - AWS (VPC、EC2、RDS、S3、Route53)
