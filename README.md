@@ -59,7 +59,7 @@ https://tokyodateclub.com/
 
 
 ## 各種機能＆導入技術
-- ユーザー登録＆ログイン(Devise)
+- ユーザー登録＆ログイン(devise)
 - 画像アップロード機能（Active Storage）
 - 画像のリサイズ(MiniMagick)
 - いいね、コメントと質問回答投稿、ダイレクトメッセージ（Ajax）
@@ -74,8 +74,8 @@ https://tokyodateclub.com/
 　機能テスト(request)  
 　統合テスト(system)  
 - Capybara  
-- faker  
-- factory_bot
+- Faker  
+- FactoryBot
 
 ## 各画面の説明
 ### ①投稿一覧画面  
