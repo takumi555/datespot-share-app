@@ -27,13 +27,16 @@ questions/index
       color: black;
       margin-bottom: 5px;
       font-weight: bold;
-  
     }
   
     .questions_content {
       color: black;
       font-size: 15px;
 
+    }
+    .question_index_userinfo {
+      margin-top: 10px;
+      margin-bottom: -10px;
     }
   }
 }
@@ -66,6 +69,9 @@ questions/show
 .question_link a{
   color: ¥link-color;
   float: right;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 /*===================

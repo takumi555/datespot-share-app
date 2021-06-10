@@ -57,6 +57,7 @@
   margin: 20px 0;
   a:hover {
     text-decoration: none;
+    
   }
   .content_right_link{
     border: 2px solid $main-color;
@@ -214,6 +215,9 @@ post/show
     color: $link-color;
     float: right;
     margin-top: 5px;
+    &:hover {
+      color: rgb(75, 75, 75);
+    }
     }
   }
   .post_place_description {
