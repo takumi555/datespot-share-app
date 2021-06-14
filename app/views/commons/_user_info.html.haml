@@ -1,3 +1,3 @@
 = link_to account_path(post.user.id) do
-  = image_tag post.user.avatar_image, class: 'post_user_avatar'
-  %p.post_username=  post.user.username
+  = image_tag post.user.avatar_image, class: 'post_user_avatar question_avatar'
+  %p.post_username.question_username=  post.user.username
