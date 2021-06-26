@@ -142,6 +142,7 @@
     color: black;
     
     .post_title {
+      width: 90%;
       font-size: 20px;
       font-weight: bold;
       margin-bottom: 15px;
@@ -200,13 +201,14 @@ post/show
   float: left;
 
   .post_show_title {
+    width: 90%;
     font-size: 30px;
     font-weight: bold;
     letter-spacing: 3px;
     float: left;
   }
   .show_heart img{
-    margin-top: 5px;
+    margin-top: 10px;
     
   }
   .link_container{
@@ -417,6 +419,7 @@ post/new
 
     .post_show_title {
       font-size: 20px;
+      
     }
   
     .show_heart img{
