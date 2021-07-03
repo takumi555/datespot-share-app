@@ -142,12 +142,16 @@
     color: black;
     
     .post_title {
-      width: 85%;
+      width: 90%;
       font-size: 20px;
       font-weight: bold;
       margin-bottom: 15px;
       float: left;
     }
+    .sign_in_status_title {
+      width: 100%;
+    }
+
     .post_items {
       font-size: 14px;
     }
@@ -206,6 +210,9 @@ post/show
     font-weight: bold;
     letter-spacing: 3px;
     float: left;
+  }
+  .sign_in_status_title {
+    width: 100%;
   }
   .show_heart img{
     margin-top: 10px;
@@ -345,6 +352,9 @@ post/new
     width: 95%;
     .post_title {
       width: 80%;
+    }
+    .sign_in_status_title {
+      width: 100%;
     }
   }
 
