@@ -6,8 +6,13 @@
       - else
         = image_tag 'no-image.png', class: 'thumbnail', id: 'noimage_thumbmail'
     .post_container_right
-      .post_title
-        = post.title
+      - if user_signed_in?
+        .post_title
+          = post.title
+      - else
+        .post_title.sign_in_status_title
+          = post.title
+        
       %div{:id => "likes_buttons_#{post.id}"}
         = render partial: 'likes/like', locals: { post: post}
       .clear
