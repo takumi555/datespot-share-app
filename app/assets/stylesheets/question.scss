@@ -1,3 +1,4 @@
+@import '_variables';
 /*===================
 questions/index
 =======================*/
@@ -14,7 +15,7 @@ questions/index
   .questions {
     text-decoration: none;
     margin-bottom: 25px;
-    border: 1px solid lightgray;
+    border: 1px solid $link-color;
     border-radius: 10px;
     padding: 10px;
 
